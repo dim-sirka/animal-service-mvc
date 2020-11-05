@@ -1,0 +1,35 @@
+# ===============================
+# DATABASE
+# ===============================
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto: update
+spring.jpa.show-sql: true
+spring.jpa.generate-ddl: true
+spring.datasource.url: ${DB_URL:jdbc:postgresql://localhost:5433/animal_db}
+spring.datasource.username: ${DB_USERNAME:postgres}
+spring.datasource.password: ${DB_PASSWORD:postgres}
+
+# ===============================
+# LOGGER
+# ===============================
+logging:
+  level:
+    root: INFO
+    org.springframework.boot: INFO
+    com.dimsirka.animalservice: INFO
+    org.hibernate.stat: DEBUG
+
+# ===============================
+#Mail Config
+# ===============================
+mail.host: smtp.gmail.com
+mail.port: 587
+mail.username: ${EMAIL_USERNAME:email@gmail.com}
+mail.password: ${EMAIL_PASSWORD:password}
+mail.protocol: smtp
+mail.smtp.starttls.enable: true
+mail.debug: true
+mail.smtp.auth: true
+mail.adminEmail: ${ADMIN_EMAIL:admin@gmail.com}
+server:
+  port: 8070
