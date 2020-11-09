@@ -1,3 +1,6 @@
+spring.freemarker.template-loader-path: classpath:/templates
+spring.freemarker.suffix: .ftl
+
 # ===============================
 # DATABASE
 # ===============================
@@ -20,7 +23,7 @@ logging:
     org.hibernate.stat: DEBUG
 
 # ===============================
-#Mail Config
+# Mail Config
 # ===============================
 mail.host: smtp.gmail.com
 mail.port: 587
@@ -31,5 +34,3 @@ mail.smtp.starttls.enable: true
 mail.debug: true
 mail.smtp.auth: true
 mail.adminEmail: ${ADMIN_EMAIL:admin@gmail.com}
-server:
-  port: 8070

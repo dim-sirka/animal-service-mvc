@@ -12,6 +12,7 @@ import lombok.ToString;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -29,6 +30,8 @@ public class AnimalDto {
     private String description;
     @NotNull(message = "Animal status should be specified")
     private AnimalStatus animalStatus;
+    private Set<String> mediaLinks;
+    private String age;
     private Timestamp createdDate;
     private Timestamp updatedDate;
 }

@@ -11,7 +11,6 @@ before_install:
   - chmod +x gradlew
 
 script:
-  - ./gradlew build --stacktrace
   - ./gradlew sonarqube --stacktrace
 
 before_cache:

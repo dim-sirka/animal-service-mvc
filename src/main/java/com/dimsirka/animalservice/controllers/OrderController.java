@@ -9,6 +9,8 @@ import com.dimsirka.animalservice.services.OrderService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @PropertySource("classpath:application.yaml")
-@RestController
+@Controller
 @RequestMapping("api/orders")
 public class OrderController {
 
@@ -38,6 +40,12 @@ public class OrderController {
         this.orderService = orderService;
         this.mapper = mapper;
         this.emailService = emailService;
+    }
+
+    @GetMapping("/{id}")
+    public String create(@PathVariable Long id, Model model){
+        model.addAttribute("id", id);
+        return "orders/create";
     }
 
     @PostMapping

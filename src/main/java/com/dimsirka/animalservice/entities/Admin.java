@@ -29,7 +29,7 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name = "admins")
-public class Admin implements UserDetails{
+public class Admin implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

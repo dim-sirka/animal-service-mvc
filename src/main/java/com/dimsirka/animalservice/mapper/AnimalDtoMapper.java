@@ -4,6 +4,11 @@ import com.dimsirka.animalservice.dtoes.AnimalDto;
 import com.dimsirka.animalservice.entities.Animal;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 @Component
 public class AnimalDtoMapper implements EntityDtoMapper<Animal, AnimalDto> {
 
@@ -15,6 +20,8 @@ public class AnimalDtoMapper implements EntityDtoMapper<Animal, AnimalDto> {
                 .createdDate(animal.getCreatedDate())
                 .updatedDate(animal.getUpdatedDate())
                 .description(animal.getDescription())
+                .age(animal.getAge())
+                .mediaLinks(toMediaSet(animal.getMediaLinks()))
                 .animalType(animal.getAnimalType()).build();
     }
 
@@ -24,6 +31,17 @@ public class AnimalDtoMapper implements EntityDtoMapper<Animal, AnimalDto> {
                 .name(animal.getName())
                 .animalStatus(animal.getAnimalStatus())
                 .description(animal.getDescription())
+                .age(animal.getAge())
+                .mediaLinks(toMediaString(animal.getMediaLinks()))
                 .animalType(animal.getAnimalType()).build();
+    }
+
+    private HashSet<String> toMediaSet(String mediaLinks){
+        String[] arr = mediaLinks.split(":::");
+        return new HashSet<>(Arrays.asList(arr));
+    }
+
+    private String toMediaString(Set<String> mediaLinks){
+        return mediaLinks.stream().collect(Collectors.joining(":::"));
     }
 }

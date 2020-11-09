@@ -22,11 +22,14 @@ public class Animal {
     private Long id;
     @Column(unique = true)
     private String name;
+    private String age;
     @Enumerated(EnumType.STRING)
     private AnimalType animalType;
     private String description;
     @Enumerated(EnumType.STRING)
     private AnimalStatus animalStatus;
+    @Column(columnDefinition="text")
+    private String mediaLinks;
     @CreationTimestamp
     private Timestamp createdDate;
     @UpdateTimestamp

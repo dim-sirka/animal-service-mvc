@@ -44,7 +44,8 @@ dependencies {
     implementation 'org.apache.httpcomponents:httpclient:4.5.13'
     //for sending messages to user and admin regarding the new order
     implementation 'org.springframework.boot:spring-boot-starter-mail:2.3.4.RELEASE'
-
+    //for rendering .ftl pages
+    implementation 'org.springframework.boot:spring-boot-starter-freemarker:2.3.5.RELEASE'
 }
 
 test {
