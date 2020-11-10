@@ -13,13 +13,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -42,22 +41,23 @@ public class OrderController {
         this.emailService = emailService;
     }
 
-    @GetMapping("/{id}")
-    public String create(@PathVariable Long id, Model model){
+    @GetMapping("/new/{id}")
+    public String getCreateForm(@PathVariable Long id, Model model){
         model.addAttribute("id", id);
-        return "orders/create";
+        return "order/create";
     }
 
-    @PostMapping
+    @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
-    public OrderDto create(@Validated @RequestBody OrderDto orderDto){
-        OrderDto persistentOrder = mapper.toDto(orderService.create(mapper.toEntity(orderDto)));
+    public String create(@ModelAttribute OrderDto orderDto, Model model){
+        orderService.create(mapper.toEntity(orderDto));
         emailService.sendMessage(orderDto.getUserEmail(),"", EmailMessageType.USER_MESSAGE);
         emailService.sendMessage(adminEmail,"", EmailMessageType.ADMIN_MESSAGE);
-        return persistentOrder;
+        model.addAttribute("message", "The order has been pended!");
+        return "redirect:/home";
     }
 
-    @PutMapping("/{orderId}")
+    @PostMapping("/{orderId}")
     @ResponseStatus(HttpStatus.OK)
     public OrderDto update(@Validated @RequestBody OrderDto orderDto, @PathVariable Long orderId){
         orderDto.setId(orderId);
@@ -76,13 +76,13 @@ public class OrderController {
         return mapper.toDtoList(orderService.getAll());
     }
 
-    @PutMapping("/cancel/{orderId}")
+    @PostMapping("/cancel/{orderId}")
     @ResponseStatus(HttpStatus.OK)
     public void cancel(@PathVariable Long orderId) {
         orderService.cancelOrConfirm(orderId, OrderStatus.CANCELED);
     }
 
-    @PutMapping("/confirm/{orderId}")
+    @PostMapping("/confirm/{orderId}")
     @ResponseStatus(HttpStatus.OK)
     public void confirm(@PathVariable Long orderId){
         orderService.cancelOrConfirm(orderId, OrderStatus.CONFIRMED);

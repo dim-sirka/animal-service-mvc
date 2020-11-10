@@ -8,6 +8,9 @@
 <div class="container h-100">
     <div class="row justify-content-center">
                 <div class="card mb-2">
+                    <a href="/api/animals?animalStatus=${animal.animalStatus}" class="row ml-1">
+                        <button class="btn btn-secondary text-center" type="submit">Назад</button>
+                    </a>
                     <div class="row justify-content-center mt-2">
                             <div class="col-6 block">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" ondbclick="zoomPhoto()">
@@ -63,8 +66,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                    <a href="api/orders/${animal.id}" class="row justify-content-center tm-10">
+                    </div>
+                    <a href="api/orders/new/${animal.id}" class="row justify-content-center tm-10">
                         <button class="col-4 btn btn-primary text-center" type="submit">Створити замовлення</button>
                     </a>
             </div>
