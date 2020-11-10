@@ -66,13 +66,13 @@
                 <a class="nav-link nav-item-color" href="/" title="About us">Про нас</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-item-color active" href="/" title="">Віддаємо</a>
+                <a class="nav-link nav-item-color active" href="/api/animals?animalStatus=FREE" title="">Віддаємо</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-item-color" href="" title="">Лікування</a>
+                <a class="nav-link nav-item-color" href="/api/animals?animalStatus=TREATMENT" title="">Лікування</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-item-color" href="/api/animals/" title="">Архів</a>
+                <a class="nav-link nav-item-color" href="/api/animals?animalStatus=ARCHIVE" title="">Архів</a>
             </li>
         </ul>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">

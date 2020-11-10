@@ -12,9 +12,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-import java.util.List;
 
 @Controller
 public class AnimalController {
@@ -27,7 +32,7 @@ public class AnimalController {
         this.mapper = mapper;
     }
 
-    @PostMapping
+    @PostMapping("/api/animals")
     @ResponseStatus(HttpStatus.CREATED)
     public AnimalDto create(@Validated @RequestBody AnimalDto animalDto){
         try {
@@ -37,7 +42,7 @@ public class AnimalController {
         }
     }
 
-    @PutMapping("/{animalId}")
+    @PostMapping("/api/animals/{animalId}")
     @ResponseStatus(HttpStatus.OK)
     public AnimalDto update(@Validated @RequestBody AnimalDto animalDto, @PathVariable Long animalId){
         animalDto.setId(animalId);
@@ -57,9 +62,10 @@ public class AnimalController {
         return "animal/list";
     }
 
-    @GetMapping("/api/animals/")
+    @GetMapping("/api/animals")
     @ResponseStatus(HttpStatus.OK)
-    public List<AnimalDto> getByIdAndAnimalStatus(@RequestParam AnimalStatus animalStatus){
-        return mapper.toDtoList(animalService.getAllByAnimalStatus(animalStatus));
+    public String getByAnimalStatus(@RequestParam AnimalStatus animalStatus, ModelMap model){
+        model.addAttribute("animals", mapper.toDtoList(animalService.getAllByAnimalStatus(animalStatus)));
+        return "animal/list";
     }
 }

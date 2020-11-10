@@ -5,7 +5,7 @@
         <#list animals as animal>
             <div class="col-4 clearfix d-none d-md-block mt-5">
                         <div class="card mb-2 zoom">
-                            <a href="api/animals/${animal.id}">
+                            <a href="/api/animals/${animal.id}">
                                 <img class="card-img-top card-item-img" src="${animal.mediaLinks[0]}">
                             </a>
                             <div class="card-body">
