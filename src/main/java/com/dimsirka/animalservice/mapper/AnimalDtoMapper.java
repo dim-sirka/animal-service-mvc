@@ -9,6 +9,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
+
 @Component
 public class AnimalDtoMapper implements EntityDtoMapper<Animal, AnimalDto> {
 
@@ -37,8 +39,11 @@ public class AnimalDtoMapper implements EntityDtoMapper<Animal, AnimalDto> {
     }
 
     private HashSet<String> toMediaSet(String mediaLinks){
-        String[] arr = mediaLinks.split(":::");
-        return new HashSet<>(Arrays.asList(arr));
+        if (!isNull(mediaLinks)) {
+            String[] arr = mediaLinks.split(":::");
+            return new HashSet<>(Arrays.asList(arr));
+        }
+        return null;
     }
 
     private String toMediaString(Set<String> mediaLinks){
