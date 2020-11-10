@@ -57,7 +57,7 @@ public class AnimalController {
         return "animal/list";
     }
 
-    @GetMapping("/")
+    @GetMapping("/api/animals/")
     @ResponseStatus(HttpStatus.OK)
     public List<AnimalDto> getByIdAndAnimalStatus(@RequestParam AnimalStatus animalStatus){
         return mapper.toDtoList(animalService.getAllByAnimalStatus(animalStatus));

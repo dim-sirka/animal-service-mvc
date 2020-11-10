@@ -52,8 +52,10 @@
 <body>
 <nav class="navbar navbar-expand-lg" style="background-color: #581845;">
 
-    <img src="https://drive.google.com/file/d/1_B69s-BKXOheklN1iG38J7bt-fMxvJyE/view" width="70" height="50" class="d-inline-block align-top" alt="">
-
+<#--    <img src="https://lh4.googleusercontent.com/vZLFgGVrHqK_sYXaWPW-0ZRq73L8lmXB_BOqIjChO4OEcNM4fksGI5AEotJxAbowFv3Dbi_0cNTc0QHZbpnB=w1915-h850-rw" width="70" height="50" class="d-inline-block align-top" alt="">-->
+<#--    -->
+    <img src="https://lh4.googleusercontent.com/vZLFgGVrHqK_sYXaWPW-0ZRq73L8lmXB_BOqIjChO4OEcNM4fksGI5AEotJxAbowFv3Dbi_0cNTc0QHZbpnB=w1915-h850-rw"
+         width="70" height="50" aria-hidden="true">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -70,7 +72,7 @@
                 <a class="nav-link nav-item-color" href="" title="">Лікування</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-item-color" href="/" title="">Перетримка</a>
+                <a class="nav-link nav-item-color" href="/api/animals/" title="">Архів</a>
             </li>
         </ul>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
