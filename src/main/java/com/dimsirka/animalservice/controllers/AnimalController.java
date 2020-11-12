@@ -1,7 +1,9 @@
 package com.dimsirka.animalservice.controllers;
 
 import com.dimsirka.animalservice.dtoes.AnimalDto;
+import com.dimsirka.animalservice.entities.Animal;
 import com.dimsirka.animalservice.entities.AnimalStatus;
+import com.dimsirka.animalservice.entities.AnimalType;
 import com.dimsirka.animalservice.exceptions.EntityDuplicateException;
 import com.dimsirka.animalservice.mapper.AnimalDtoMapper;
 import com.dimsirka.animalservice.services.AnimalService;
@@ -18,6 +20,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
+
+import java.util.Arrays;
 
 
 @Controller
@@ -57,7 +61,7 @@ public class AnimalController {
 
     @GetMapping({"/home", "/"})
     public String getAll(ModelMap model){
-        model.addAttribute("animals", mapper.toDtoList(animalService.getAll()));
+        model.addAttribute("animals", mapper.toDtoList(animalService.getAllByAnimalStatus(AnimalStatus.FREE)));
         return "animal/list";
     }
 

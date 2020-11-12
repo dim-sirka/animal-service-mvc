@@ -39,10 +39,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilterBefore(tokenFilter, BasicAuthenticationFilter.class)
                 .authenticationProvider(authenticationProvider)
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/api/animals/**").permitAll()
-                .antMatchers(HttpMethod.POST, "/api/orders").permitAll()
+                .antMatchers("/api/**").permitAll()
+               // .antMatchers(HttpMethod.POST, "/api/orders").permitAll()
                 .antMatchers("/api/login").permitAll()
-                .antMatchers("/api/**").authenticated()
+                //.antMatchers("/api/**").authenticated()
                 .and()
                 .exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint);

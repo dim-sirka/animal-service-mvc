@@ -39,7 +39,7 @@ public class AnimalDtoMapper implements EntityDtoMapper<Animal, AnimalDto> {
     }
 
     private HashSet<String> toMediaSet(String mediaLinks){
-        if (!isNull(mediaLinks)) {
+       if (!isNull(mediaLinks)) {
             String[] arr = mediaLinks.split(":::");
             return new HashSet<>(Arrays.asList(arr));
         }
