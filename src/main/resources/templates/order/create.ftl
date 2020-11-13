@@ -1,5 +1,11 @@
 <#include "../header.ftl">
 <div class="container">
+    <#if success??>
+        <div class="alert alert-success">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> Ваше замовлення зареєстровано!
+        </div>
+    </#if>
     <div class="card mb-2">
         <div class="row justify-content-center mt-2">
             <form id="client" action="/api/orders/new" method="post" autocomplete="off">

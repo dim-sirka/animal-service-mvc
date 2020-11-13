@@ -1,6 +1,5 @@
 <html>
 <head>
-    <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -52,9 +51,7 @@
 <body>
 <nav class="navbar navbar-expand-lg" style="background-color: #581845;">
 
-<#--    <img src="https://lh4.googleusercontent.com/vZLFgGVrHqK_sYXaWPW-0ZRq73L8lmXB_BOqIjChO4OEcNM4fksGI5AEotJxAbowFv3Dbi_0cNTc0QHZbpnB=w1915-h850-rw" width="70" height="50" class="d-inline-block align-top" alt="">-->
-<#--    -->
-    <img src="https://lh4.googleusercontent.com/vZLFgGVrHqK_sYXaWPW-0ZRq73L8lmXB_BOqIjChO4OEcNM4fksGI5AEotJxAbowFv3Dbi_0cNTc0QHZbpnB=w1915-h850-rw"
+    <img src="https://scontent.fifo3-1.fna.fbcdn.net/v/t1.0-9/10359525_533153870181872_950620908699330674_n.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=4BmR1muTXK8AX9Yfwm2&_nc_ht=scontent.fifo3-1.fna&oh=c6b9f22ec933496bf630e405971dc170&oe=5FD4C4D5"
          width="70" height="50" aria-hidden="true">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
