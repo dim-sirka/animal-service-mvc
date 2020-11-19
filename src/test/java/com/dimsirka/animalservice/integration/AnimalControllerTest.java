@@ -1,7 +1,7 @@
 package com.dimsirka.animalservice.integration;
 
 import com.dimsirka.animalservice.AnimalServiceApplication;
-import com.dimsirka.animalservice.dtoes.AnimalDto;
+import com.dimsirka.animalservice.dtoes.animal.AnimalDto;
 import com.dimsirka.animalservice.dtoes.LoginDto;
 import com.dimsirka.animalservice.entities.Animal;
 import com.dimsirka.animalservice.entities.AnimalStatus;

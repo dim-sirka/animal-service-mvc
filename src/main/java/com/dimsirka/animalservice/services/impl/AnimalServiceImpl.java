@@ -4,10 +4,15 @@ import com.dimsirka.animalservice.entities.Animal;
 import com.dimsirka.animalservice.entities.AnimalStatus;
 import com.dimsirka.animalservice.exceptions.AnimalNotFoundException;
 import com.dimsirka.animalservice.exceptions.EntityDuplicateException;
+import com.dimsirka.animalservice.exceptions.ServiceException;
 import com.dimsirka.animalservice.repositories.AnimalRepository;
 import com.dimsirka.animalservice.services.AnimalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,6 +20,10 @@ import java.util.List;
 @Service
 public class AnimalServiceImpl implements AnimalService{
     private AnimalRepository animalRepository;
+
+    private static final int PAGE_SIZE = 3;
+
+    private static final Sort SORT = Sort.by("updatedDate").descending();
 
     @Autowired
     public AnimalServiceImpl(AnimalRepository animalRepository) {
@@ -56,18 +65,24 @@ public class AnimalServiceImpl implements AnimalService{
         return getByIdOrThrowException(id);
     }
 
-    @Override
-    public List<Animal> getAll() {
-        return animalRepository.findAll();
-    }
 
     @Override
-    public List<Animal> getAllByAnimalStatus(AnimalStatus animalStatus) {
-        return animalRepository.findAllByAnimalStatus(animalStatus);
+    public Page<Animal> getAllByAnimalStatus(int pageNumber, AnimalStatus animalStatus) {
+        Pageable pageable = createPageable(pageNumber);
+        return animalRepository.findAllByAnimalStatus(animalStatus, pageable);
     }
 
     private Animal getByIdOrThrowException(Long id){
         return animalRepository.findById(id).
                 orElseThrow(()-> new AnimalNotFoundException("Animal with a specified id isn't found!"));
+    }
+
+    private Pageable createPageable(int pageNumber) {
+
+        if (pageNumber < 1) {
+            throw new ServiceException("Incorrect page number!");
+        }
+
+        return PageRequest.of(pageNumber - 1, PAGE_SIZE, SORT);
     }
 }
