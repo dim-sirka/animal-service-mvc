@@ -51,7 +51,7 @@
 <body>
 <nav class="navbar navbar-expand-lg" style="background-color: #581845;">
 
-    <img src="https://scontent.fifo3-1.fna.fbcdn.net/v/t1.0-9/10359525_533153870181872_950620908699330674_n.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=4BmR1muTXK8AX9Yfwm2&_nc_ht=scontent.fifo3-1.fna&oh=c6b9f22ec933496bf630e405971dc170&oe=5FD4C4D5"
+    <img src="https://cdn1.savepice.ru/uploads/2020/11/20/698671d079af0fa613934c3bca2a8228-full.png"
          width="70" height="50" aria-hidden="true">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
