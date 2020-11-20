@@ -21,7 +21,7 @@ import java.util.List;
 public class AnimalServiceImpl implements AnimalService{
     private AnimalRepository animalRepository;
 
-    private static final int PAGE_SIZE = 3;
+    private static final int PAGE_SIZE = 6;
 
     private static final Sort SORT = Sort.by("updatedDate").descending();
 

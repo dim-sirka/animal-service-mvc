@@ -1,14 +1,48 @@
 <#include "../header.ftl">
+<script>
+    function handleAnimalTypeCheckBoxes() {
+        let list = document.getElementById('animalType');
+        let types;
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].checked) {
+                types += ',' + list[i].value()
+            }
+        }
+
+        $.ajax({
+            url: '/?page=1&types=' + 'CAT',
+            success: function (res) {
+                $("#animalList").empty();
+               // $("#animalList").append(res);
+            }
+        });
+    }
+</script>
 <div class="container">
+
+
+     <#if animals.content[0].animalStatus == "FREE">
+         <h1 class="text-center font-italic font-weight-bold font-family">Не купуй - візьми!</h1>
+     <#elseif animals.content[0].animalStatus == "TREATMENT">
+         <h1 class="text-center font-italic font-weight-bold font-family">Нам потрібна ваша підтримка!</h1>
+     </#if>
+
     <#if animals.totalPageNumber != 0 >
-
-            <#if animals.content[0].animalStatus == "FREE">
-                <h1 class="text-center font-italic font-weight-bold font-family">Не купуй - візьми!</h1>
-            <#elseif animals.content[0].animalStatus == "TREATMENT">
-                <h1 class="text-center font-italic font-weight-bold font-family">Нам потрібна ваша підтримка!</h1>
-            </#if>
-
-        <div class="row justify-content-center">
+        <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="animalType" value="DOG" onclick="handleAnimalTypeCheckBoxes()">
+                    <label class="form-check-label" for="inlineCheckbox1">Собаки</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="animalType" value="CAT" onclick="handleAnimalTypeCheckBoxes()">
+                    <label class="form-check-label" for="inlineCheckbox2">Коти</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="animalType" value="OTHER" onclick="handleAnimalTypeCheckBoxes()">
+                    <label class="form-check-label" for="inlineCheckbox3">Інше</label>
+                </div>
+        </div>
+        <div class="row justify-content-center" id="animalList">
             <#list animals.content as animal>
                 <div class="col-4 clearfix d-none d-md-block mt-5">
                             <div class="card mb-2 zoom">
@@ -56,6 +90,8 @@
         </div>
     </#if>
 
+    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+    <div id="coinmarketcap-widget-marquee" coins="1,1027,52,2,1831" currency="USD" theme="dark" transparent="false" show-symbol-logo="true"></div>
 
 </div>
 <#include "../footer.ftl">
