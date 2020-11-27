@@ -72,11 +72,6 @@ public class OrderController {
         emailService.sendMessage(adminEmail,"", EmailMessageType.ADMIN_MESSAGE);
         model.addAttribute("success", true);
         return "order/create";
-//        orderService.create(mapper.toEntity(orderDto));
-//        emailService.sendMessage(orderDto.getUserEmail(),"", EmailMessageType.USER_MESSAGE);
-//        emailService.sendMessage(adminEmail,"", EmailMessageType.ADMIN_MESSAGE);
-//        model.addAttribute("success", true);
-//        return "order/create";
     }
 
     @PostMapping("/{orderId}")
