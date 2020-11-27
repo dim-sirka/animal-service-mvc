@@ -6,6 +6,9 @@ import com.dimsirka.animalservice.entities.OrderStatus;
 import com.dimsirka.animalservice.mapper.OrderDtoMapper;
 import com.dimsirka.animalservice.services.EmailService;
 import com.dimsirka.animalservice.services.OrderService;
+import com.dimsirka.animalservice.validation.DataValidator;
+import com.dimsirka.animalservice.validation.ValidationResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
@@ -29,6 +32,16 @@ public class OrderController {
     private OrderDtoMapper mapper;
     private EmailService emailService;
 
+    private DataValidator dataValidator;
+
+    @Autowired
+    public OrderController(OrderService orderService, OrderDtoMapper mapper, EmailService emailService, DataValidator dataValidator) {
+        this.orderService = orderService;
+        this.mapper = mapper;
+        this.emailService = emailService;
+        this.dataValidator = dataValidator;
+    }
+
     public OrderController(OrderService orderService,
                            OrderDtoMapper mapper,
                            EmailService emailService) {
@@ -38,24 +51,47 @@ public class OrderController {
     }
 
     @GetMapping("/new/{id}")
-    public String getCreateForm(@PathVariable Long id, Model model){
+    public String getCreateForm(@PathVariable String id, Model model){
         model.addAttribute("id", id);
         return "order/create";
     }
 
     @PostMapping("/new")
     public String create(@ModelAttribute OrderDto orderDto, Model model){
+
+        ValidationResult validationResult = dataValidator.validate(orderDto);
+
+        if (validationResult.isError()) {
+            model.addAttribute("error", validationResult.getErrorMessage());
+            model.addAttribute("order", orderDto);
+            return "order/create";
+        }
+
         orderService.create(mapper.toEntity(orderDto));
         emailService.sendMessage(orderDto.getUserEmail(),"", EmailMessageType.USER_MESSAGE);
         emailService.sendMessage(adminEmail,"", EmailMessageType.ADMIN_MESSAGE);
         model.addAttribute("success", true);
         return "order/create";
+//        orderService.create(mapper.toEntity(orderDto));
+//        emailService.sendMessage(orderDto.getUserEmail(),"", EmailMessageType.USER_MESSAGE);
+//        emailService.sendMessage(adminEmail,"", EmailMessageType.ADMIN_MESSAGE);
+//        model.addAttribute("success", true);
+//        return "order/create";
     }
 
     @PostMapping("/{orderId}")
-    public OrderDto update(@Validated @RequestBody OrderDto orderDto, @PathVariable Long orderId){
-        orderDto.setId(orderId);
-        return mapper.toDto(orderService.update(mapper.toEntity(orderDto)));
+    public String update(@Validated @RequestBody OrderDto orderDto, @PathVariable Long orderId, Model model){
+        ValidationResult validationResult = dataValidator.validate(orderDto);
+
+        if (validationResult.isError()) {
+            model.addAttribute("error", validationResult.getErrorMessage());
+            model.addAttribute("product", orderDto);
+            return "/create";
+        }
+
+
+        orderService.update(orderService.getById(orderId));
+        return "/list";
     }
 
     @GetMapping("/{orderId}")

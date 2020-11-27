@@ -55,6 +55,7 @@
         height: 30px;
         text-align: center;
         text-decoration: none;
+
     }
 
     .fa:hover {
@@ -62,7 +63,7 @@
     }
 
     .fa-facebook {
-        margin: 5px 2px;
+        margin: 5px 2px 0px 960px;
         /*background: #3B5998;*/
         color: white;
     }
@@ -99,8 +100,8 @@
             </li>
         </ul>
         <!-- Add font awesome icons -->
-        <a href="https://www.facebook.com/dimsirka/" class="fa fa-facebook"></a>
-        <a href="https://www.instagram.com/dim__sirka/?hl=ru" class="fa fa-instagram" ></a>
+        <a href="https://www.facebook.com/dimsirka/" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://www.instagram.com/dim__sirka/?hl=ru" class="fa fa-instagram" target="_blank"></a>
     </div>
 </nav>
 <div class="container">
