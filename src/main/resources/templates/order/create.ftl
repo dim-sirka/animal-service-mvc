@@ -54,9 +54,6 @@
                             Надіслати
                         </button>
                     </fieldset>
-                    <#if order?? && order.id??>
-                        <input type="text" name="id" value="${order.id}" style="visibility: hidden">
-                    </#if>
                 </div>
                 <#if error??>
                     <div>
