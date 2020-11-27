@@ -10,6 +10,12 @@
         <div class="row justify-content-center mt-2">
             <form id="client" action="/api/orders/new" method="post" autocomplete="off">
                 <h3 class="text-center font-italic font-weight-bold font-family">Замовлення</h3>
+                <#if error??>
+                    <div>
+                        <h5 class="text-danger">Errors: </h5>
+                        <pre class="text-danger">${error}</pre>
+                    </div>
+                </#if>
                 <div class="col-11 block pt-5">
                     <table class="table table-hover mb-0">
                         <tbody>
@@ -48,6 +54,9 @@
                             Надіслати
                         </button>
                     </fieldset>
+                    <#if order?? && order.id??>
+                        <input type="text" name="id" value="${order.id}" style="visibility: hidden">
+                    </#if>
                 </div>
                 <#if error??>
                     <div>
