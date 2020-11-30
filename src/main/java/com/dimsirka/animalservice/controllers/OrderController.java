@@ -13,12 +13,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @PropertySource("classpath:application.yaml")
@@ -41,13 +43,13 @@ public class OrderController {
         this.dataValidator = dataValidator;
     }
 
-    @GetMapping("/new/{id}")
+    @GetMapping("/api/orders/new/{id}")
     public String getCreateForm(@PathVariable String id, Model model){
         model.addAttribute("id", id);
         return "order/create";
     }
 
-    @PostMapping("/new")
+    @PostMapping("/api/orders/new")
     public String create(@ModelAttribute OrderDto orderDto, Model model){
 
         ValidationResult validationResult = dataValidator.validate(orderDto);
@@ -108,10 +110,31 @@ public class OrderController {
 
     @GetMapping("/list/orders")
     @ResponseStatus(HttpStatus.OK)
-    public String getByOrderStatus(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
+    public String getByPendingStatus(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
                                    ModelMap model) {
-        OrderStatus orderStatus = OrderStatus.PENDING;
-        Page<Order> ordersPage = orderService.getAllByOrderStatus(pageNumber, orderStatus);
+        Page<Order> ordersPage = orderService.getAllByOrderStatus(pageNumber, OrderStatus.PENDING);
+        PageDto orders = this.mapper.toOrdersPage(ordersPage);
+        model.addAttribute("orders", orders);
+        return "order/list_order";
+    }
+
+    @GetMapping("/list/archive_orders")
+    @ResponseStatus(HttpStatus.OK)
+    public String getByConfirmedAndCanceledStatus(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
+                                     ModelMap model) {
+        List<OrderStatus> orderStatuses = new ArrayList<>();
+        orderStatuses.add(OrderStatus.CONFIRMED);
+        orderStatuses.add(OrderStatus.CANCELED);
+        Page<Order> ordersPage = orderService.getByConfirmedAndCanceledStatus(pageNumber, orderStatuses);
+        PageDto orders = this.mapper.toOrdersPage(ordersPage);
+        model.addAttribute("orders", orders);
+        return "order/list_order";
+    }
+
+    @GetMapping("/order/find")
+    public String findAllByName( @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
+                                 @ModelAttribute("name") String nameQuery, Model model) {
+        Page<Order> ordersPage = orderService.findAllByName(pageNumber, nameQuery);
         PageDto orders = this.mapper.toOrdersPage(ordersPage);
         model.addAttribute("orders", orders);
         return "order/list_order";
