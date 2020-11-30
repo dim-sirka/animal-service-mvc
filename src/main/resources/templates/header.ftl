@@ -63,7 +63,7 @@
     }
 
     .fa-facebook {
-        margin: 5px 2px 0px 960px;
+        margin: 5px 2px 0px 850px;
         /*background: #3B5998;*/
         color: white;
     }
@@ -97,6 +97,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-item-color" href="/api/animals?animalStatus=ARCHIVE" title="">Архів</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-item-color" href="/list/orders" title="">Замовлення</a>
             </li>
         </ul>
         <!-- Add font awesome icons -->

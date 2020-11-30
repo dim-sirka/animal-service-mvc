@@ -68,7 +68,7 @@
                             </div>
                     </div>
                     <#if animal.animalStatus == "FREE">
-                        <a href="api/orders/new/${animal.id}" class="row justify-content-center">
+                        <a href="/api/orders/new/${animal.id}" class="row justify-content-center">
                             <button class="col-8 btn btn-primary text-center" type="submit">Створити замовлення</button>
                         </a>
                     <#elseif animal.animalStatus == "TREATMENT">

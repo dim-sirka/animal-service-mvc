@@ -1,4 +1,4 @@
-package com.dimsirka.animalservice.dtoes.animal;
+package com.dimsirka.animalservice.dtoes;
 
 import lombok.*;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @ToString
-public class AnimalsPage {
+public class PageDto<T> {
 
-    private List<AnimalDto> content;
+    private List<T> content;
 
     private int currentPageNumber;
 

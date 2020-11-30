@@ -6,10 +6,15 @@ import com.dimsirka.animalservice.entities.Order;
 import com.dimsirka.animalservice.entities.OrderStatus;
 import com.dimsirka.animalservice.exceptions.AnimalNotFoundException;
 import com.dimsirka.animalservice.exceptions.OrderNotFoundException;
+import com.dimsirka.animalservice.exceptions.ServiceException;
 import com.dimsirka.animalservice.repositories.OrderRepository;
 import com.dimsirka.animalservice.services.AnimalService;
 import com.dimsirka.animalservice.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +23,10 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
     private OrderRepository orderRepository;
     private AnimalService animalService;
+
+    private static final int PAGE_SIZE = 15;
+
+    private static final Sort SORT = Sort.by("updatedDate").descending();
 
     @Autowired
     public OrderServiceImpl(OrderRepository orderRepository,
@@ -59,6 +68,12 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public Page<Order> getAllByOrderStatus(int pageNumber, OrderStatus orderStatus) {
+        Pageable pageable = createPageable(pageNumber);
+        return orderRepository.findAllByOrderStatus(orderStatus, pageable);
+    }
+
+    @Override
     public void cancelOrConfirm(Long id, OrderStatus orderStatus) {
         Order persistentOrder = getByIdOrThrowException(id);
         persistentOrder.setOrderStatus(orderStatus);
@@ -75,6 +90,15 @@ public class OrderServiceImpl implements OrderService {
     private Order getByIdOrThrowException(Long id){
         return orderRepository.findById(id).
                 orElseThrow(()-> new OrderNotFoundException("Order with a specified id isn't found!"));
+    }
+
+    private Pageable createPageable(int pageNumber) {
+
+        if (pageNumber < 1) {
+            throw new ServiceException("Incorrect page number!");
+        }
+
+        return PageRequest.of(pageNumber - 1, PAGE_SIZE, SORT);
     }
 }
 
