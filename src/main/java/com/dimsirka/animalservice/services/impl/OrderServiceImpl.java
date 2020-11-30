@@ -87,6 +87,20 @@ public class OrderServiceImpl implements OrderService {
         animalService.updateStatus(persistentOrder.getAnimal().getId(), animalStatus);
     }
 
+    @Override
+    public Page<Order> findAllByName(int pageNumber, String nameQuery){
+       Pageable pageable = createPageable(pageNumber);
+       return orderRepository.findAllByAnimalName(nameQuery, pageable);
+    }
+
+    @Override
+    public Page<Order> getByConfirmedAndCanceledStatus(int pageNumber, List<OrderStatus> orderStatuses
+    ){
+        Pageable pageable = createPageable(pageNumber);
+        return orderRepository.findAllByOrderStatusIn(orderStatuses, pageable);
+    }
+
+
     private Order getByIdOrThrowException(Long id){
         return orderRepository.findById(id).
                 orElseThrow(()-> new OrderNotFoundException("Order with a specified id isn't found!"));

@@ -1,5 +1,20 @@
 <#include "../header.ftl">
 <h1 class="text-center font-italic font-weight-bold font-family">Список замовлень!</h1>
+<div class="row">
+    <div class="input-group col text-center">
+        <form action="/order/find" class="form-inline mx-auto">
+            <#if name??>
+                <a href="/list/orders" class="btn btn-secondary m-1">Reset</a>
+            </#if>
+            <input name="name" type="text" class="form-control" placeholder="Animal name"
+                   <#if orders.name??>value="${orders.name}"</#if>
+                   aria-label="Animal name" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
 <div>
     <table border="2" class="table <#if orders??>table-dark <#else> table-striped </#if>">
         <thead class="<#if orders??>thead-light <#else> thead-dark </#if>">
