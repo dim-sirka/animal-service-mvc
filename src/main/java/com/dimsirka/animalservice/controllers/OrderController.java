@@ -84,7 +84,6 @@ public class OrderController {
             return "/create";
         }
 
-
         orderService.update(orderService.getById(orderId));
         return "/list";
     }
