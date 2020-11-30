@@ -72,7 +72,7 @@
                             <button class="col-8 btn btn-primary text-center" type="submit">Створити замовлення</button>
                         </a>
                     <#elseif animal.animalStatus == "TREATMENT">
-                    <#--                                        Make payment by means of googlePay-->
+                    <#--Make payment by means of googlePay-->
                         <a href="/" class="row justify-content-center">
                             <button class="col-8 btn btn-primary text-center" type="submit">Пожертвувати</button>
                         </a>
