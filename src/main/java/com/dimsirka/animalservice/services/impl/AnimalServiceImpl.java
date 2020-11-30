@@ -65,6 +65,12 @@ public class AnimalServiceImpl implements AnimalService{
         return getByIdOrThrowException(id);
     }
 
+    @Override
+    public Animal getByAnimalName(String animalName) {
+        return animalRepository.findByName(animalName).
+                 orElseThrow(()-> new AnimalNotFoundException("Animal with a specified name isn't found!"));
+    }
+
 
     @Override
     public Page<Animal> getAllByAnimalStatus(int pageNumber, AnimalStatus animalStatus) {
