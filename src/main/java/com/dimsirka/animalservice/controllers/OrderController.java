@@ -76,7 +76,7 @@ public class OrderController {
         }
 
         orderService.update(orderService.getById(orderId));
-        return "/list";
+        return "animal/list";
     }
 
     @GetMapping("/{orderId}")
