@@ -4,6 +4,8 @@ import com.dimsirka.animalservice.dtoes.AnimalDto;
 import com.dimsirka.animalservice.dtoes.PageDto;
 import com.dimsirka.animalservice.entities.Animal;
 import com.dimsirka.animalservice.entities.AnimalStatus;
+import com.dimsirka.animalservice.entities.Order;
+import com.dimsirka.animalservice.entities.OrderStatus;
 import com.dimsirka.animalservice.exceptions.EntityDuplicateException;
 import com.dimsirka.animalservice.mapper.AnimalDtoMapper;
 import com.dimsirka.animalservice.services.AnimalService;
@@ -71,13 +73,6 @@ public class AnimalController {
         PageDto animals = this.mapper.toAnimalsPage(animalsPage);
         model.addAttribute("animals", animals);
         return "animal/list";
-    }
-
-    @GetMapping("/api/animals/")
-    public String getByAnimalName( @RequestParam("name") String animalName, Model model) {
-        AnimalDto animalDto = mapper.toDto(animalService.getByAnimalName(animalName));
-        model.addAttribute("animal", animalDto);
-        return "animal/info";
     }
 
 }

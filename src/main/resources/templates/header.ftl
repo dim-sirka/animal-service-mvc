@@ -63,7 +63,7 @@
     }
 
     .fa-facebook {
-        margin: 5px 2px 0px 1250px;
+        margin: 5px 2px 0px 850px;
         /*background: #3B5998;*/
         color: white;
     }
@@ -98,14 +98,8 @@
             <li class="nav-item">
                 <a class="nav-link nav-item-color" href="/api/animals?animalStatus=ARCHIVE" title="">Архів</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Замовлення
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/list/orders">Замовлення</a>
-                    <a class="dropdown-item" href="/list/archive_orders">Архів замовлень</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link nav-item-color" href="/list/orders" title="">Замовлення</a>
             </li>
         </ul>
         <!-- Add font awesome icons -->

@@ -1,8 +1,8 @@
 package com.dimsirka.animalservice.controllers;
 
 import com.dimsirka.animalservice.dtoes.OrderDto;
-import com.dimsirka.animalservice.entities.EmailMessageType;
-import com.dimsirka.animalservice.entities.OrderStatus;
+import com.dimsirka.animalservice.dtoes.PageDto;
+import com.dimsirka.animalservice.entities.*;
 import com.dimsirka.animalservice.mapper.OrderDtoMapper;
 import com.dimsirka.animalservice.services.EmailService;
 import com.dimsirka.animalservice.services.OrderService;
@@ -11,19 +11,18 @@ import com.dimsirka.animalservice.validation.ValidationResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @PropertySource("classpath:application.yaml")
 @Controller
-@RequestMapping("api/orders")
 public class OrderController {
 
     @Value("${mail.adminEmail}")
@@ -40,14 +39,6 @@ public class OrderController {
         this.mapper = mapper;
         this.emailService = emailService;
         this.dataValidator = dataValidator;
-    }
-
-    public OrderController(OrderService orderService,
-                           OrderDtoMapper mapper,
-                           EmailService emailService) {
-        this.orderService = orderService;
-        this.mapper = mapper;
-        this.emailService = emailService;
     }
 
     @GetMapping("/new/{id}")
@@ -74,7 +65,7 @@ public class OrderController {
         return "order/create";
     }
 
-    @PostMapping("/{orderId}")
+    @PostMapping("/edit/{orderId}")
     public String update(@Validated @RequestBody OrderDto orderDto, @PathVariable Long orderId, Model model){
         ValidationResult validationResult = dataValidator.validate(orderDto);
 
@@ -99,13 +90,31 @@ public class OrderController {
         return "animal/list";
     }
 
-    @PostMapping("/cancel/{orderId}")
-    public void cancel(@PathVariable Long orderId) {
+    @GetMapping("/cancel/{orderId}")
+    public String cancel(@PathVariable Long orderId, Model model) {
         orderService.cancelOrConfirm(orderId, OrderStatus.CANCELED);
+        List<Order> listOrders = orderService.getAll();
+        model.addAttribute("listOrders", listOrders);
+        return "redirect:/list/orders";
     }
 
-    @PostMapping("/confirm/{orderId}")
-    public void confirm(@PathVariable Long orderId){
+    @GetMapping("/confirm/{orderId}")
+    public String confirm(@PathVariable Long orderId, Model model){
         orderService.cancelOrConfirm(orderId, OrderStatus.CONFIRMED);
+        List<Order> listOrders = orderService.getAll();
+        model.addAttribute("listOrders", listOrders);
+        return "redirect:/list/orders";
     }
+
+    @GetMapping("/list/orders")
+    @ResponseStatus(HttpStatus.OK)
+    public String getByOrderStatus(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
+                                   ModelMap model) {
+        OrderStatus orderStatus = OrderStatus.PENDING;
+        Page<Order> ordersPage = orderService.getAllByOrderStatus(pageNumber, orderStatus);
+        PageDto orders = this.mapper.toOrdersPage(ordersPage);
+        model.addAttribute("orders", orders);
+        return "order/list_order";
+    }
+
 }
