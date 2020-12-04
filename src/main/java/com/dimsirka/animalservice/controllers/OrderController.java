@@ -1,26 +1,30 @@
 package com.dimsirka.animalservice.controllers;
 
 import com.dimsirka.animalservice.dtoes.OrderDto;
-import com.dimsirka.animalservice.entities.EmailMessageType;
-import com.dimsirka.animalservice.entities.OrderStatus;
+import com.dimsirka.animalservice.dtoes.PageDto;
+import com.dimsirka.animalservice.entities.*;
 import com.dimsirka.animalservice.mapper.OrderDtoMapper;
 import com.dimsirka.animalservice.services.EmailService;
 import com.dimsirka.animalservice.services.OrderService;
+import com.dimsirka.animalservice.validation.DataValidator;
+import com.dimsirka.animalservice.validation.ValidationResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @PropertySource("classpath:application.yaml")
 @Controller
-@RequestMapping("api/orders")
 public class OrderController {
 
     @Value("${mail.adminEmail}")
@@ -29,22 +33,33 @@ public class OrderController {
     private OrderDtoMapper mapper;
     private EmailService emailService;
 
-    public OrderController(OrderService orderService,
-                           OrderDtoMapper mapper,
-                           EmailService emailService) {
+    private DataValidator dataValidator;
+
+    @Autowired
+    public OrderController(OrderService orderService, OrderDtoMapper mapper, EmailService emailService, DataValidator dataValidator) {
         this.orderService = orderService;
         this.mapper = mapper;
         this.emailService = emailService;
+        this.dataValidator = dataValidator;
     }
 
-    @GetMapping("/new/{id}")
-    public String getCreateForm(@PathVariable Long id, Model model){
+    @GetMapping("/api/orders/new/{id}")
+    public String getCreateForm(@PathVariable String id, Model model){
         model.addAttribute("id", id);
         return "order/create";
     }
 
-    @PostMapping("/new")
+    @PostMapping("/api/orders/new")
     public String create(@ModelAttribute OrderDto orderDto, Model model){
+
+        ValidationResult validationResult = dataValidator.validate(orderDto);
+
+        if (validationResult.isError()) {
+            model.addAttribute("error", validationResult.getErrorMessage());
+            model.addAttribute("order", orderDto);
+            return "order/create";
+        }
+
         orderService.create(mapper.toEntity(orderDto));
         emailService.sendMessage(orderDto.getUserEmail(),"", EmailMessageType.USER_MESSAGE);
         emailService.sendMessage(adminEmail,"", EmailMessageType.ADMIN_MESSAGE);
@@ -52,10 +67,18 @@ public class OrderController {
         return "order/create";
     }
 
-    @PostMapping("/{orderId}")
-    public OrderDto update(@Validated @RequestBody OrderDto orderDto, @PathVariable Long orderId){
-        orderDto.setId(orderId);
-        return mapper.toDto(orderService.update(mapper.toEntity(orderDto)));
+    @PostMapping("/edit/{orderId}")
+    public String update(@Validated @RequestBody OrderDto orderDto, @PathVariable Long orderId, Model model){
+        ValidationResult validationResult = dataValidator.validate(orderDto);
+
+        if (validationResult.isError()) {
+            model.addAttribute("error", validationResult.getErrorMessage());
+            model.addAttribute("product", orderDto);
+            return "/create";
+        }
+
+        orderService.update(orderService.getById(orderId));
+        return "animal/list";
     }
 
     @GetMapping("/{orderId}")
@@ -69,13 +92,52 @@ public class OrderController {
         return "animal/list";
     }
 
-    @PostMapping("/cancel/{orderId}")
-    public void cancel(@PathVariable Long orderId) {
+    @GetMapping("/cancel/{orderId}")
+    public String cancel(@PathVariable Long orderId, Model model) {
         orderService.cancelOrConfirm(orderId, OrderStatus.CANCELED);
+        List<Order> listOrders = orderService.getAll();
+        model.addAttribute("listOrders", listOrders);
+        return "redirect:/list/orders";
     }
 
-    @PostMapping("/confirm/{orderId}")
-    public void confirm(@PathVariable Long orderId){
+    @GetMapping("/confirm/{orderId}")
+    public String confirm(@PathVariable Long orderId, Model model){
         orderService.cancelOrConfirm(orderId, OrderStatus.CONFIRMED);
+        List<Order> listOrders = orderService.getAll();
+        model.addAttribute("listOrders", listOrders);
+        return "redirect:/list/orders";
     }
+
+    @GetMapping("/list/orders")
+    @ResponseStatus(HttpStatus.OK)
+    public String getByPendingStatus(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
+                                   ModelMap model) {
+        Page<Order> ordersPage = orderService.getAllByOrderStatus(pageNumber, OrderStatus.PENDING);
+        PageDto orders = this.mapper.toOrdersPage(ordersPage);
+        model.addAttribute("orders", orders);
+        return "order/list_order";
+    }
+
+    @GetMapping("/list/archive_orders")
+    @ResponseStatus(HttpStatus.OK)
+    public String getByConfirmedAndCanceledStatus(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
+                                     ModelMap model) {
+        List<OrderStatus> orderStatuses = new ArrayList<>();
+        orderStatuses.add(OrderStatus.CONFIRMED);
+        orderStatuses.add(OrderStatus.CANCELED);
+        Page<Order> ordersPage = orderService.getByConfirmedAndCanceledStatus(pageNumber, orderStatuses);
+        PageDto orders = this.mapper.toOrdersPage(ordersPage);
+        model.addAttribute("orders", orders);
+        return "order/list_order";
+    }
+
+    @GetMapping("/order/find")
+    public String findAllByName( @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
+                                 @ModelAttribute("name") String nameQuery, Model model) {
+        Page<Order> ordersPage = orderService.findAllByName(pageNumber, nameQuery);
+        PageDto orders = this.mapper.toOrdersPage(ordersPage);
+        model.addAttribute("orders", orders);
+        return "order/list_order";
+    }
+
 }

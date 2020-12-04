@@ -46,6 +46,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-mail:2.3.4.RELEASE'
     //for rendering .ftl pages
     implementation 'org.springframework.boot:spring-boot-starter-freemarker:2.3.5.RELEASE'
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
 }
 
 test {

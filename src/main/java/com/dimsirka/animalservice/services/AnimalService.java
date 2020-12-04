@@ -13,5 +13,7 @@ public interface AnimalService {
 
     Animal getById(Long id);
 
+    Animal getByAnimalName(String animalName);
+
     Page<Animal> getAllByAnimalStatus(int pageNumber, AnimalStatus animalStatus);
 }

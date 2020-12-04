@@ -1,7 +1,7 @@
 package com.dimsirka.animalservice.controllers;
 
-import com.dimsirka.animalservice.dtoes.animal.AnimalDto;
-import com.dimsirka.animalservice.dtoes.animal.AnimalsPage;
+import com.dimsirka.animalservice.dtoes.AnimalDto;
+import com.dimsirka.animalservice.dtoes.PageDto;
 import com.dimsirka.animalservice.entities.Animal;
 import com.dimsirka.animalservice.entities.AnimalStatus;
 import com.dimsirka.animalservice.exceptions.EntityDuplicateException;
@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 public class AnimalController {
     private AnimalService animalService;
     private AnimalDtoMapper mapper;
+
 
     @Autowired
     public AnimalController(AnimalService animalService, AnimalDtoMapper mapper) {
@@ -56,7 +57,7 @@ public class AnimalController {
     @GetMapping({"/home", "/"})
     public String getAll(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber, ModelMap model) {
         Page<Animal> animalsPage = animalService.getAllByAnimalStatus(pageNumber, AnimalStatus.FREE);
-        AnimalsPage animals = this.mapper.toAnimalsPage(animalsPage);
+        PageDto animals = this.mapper.toAnimalsPage(animalsPage);
         model.addAttribute("animals", animals);
         return "animal/list";
     }
@@ -67,8 +68,16 @@ public class AnimalController {
                                     @RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
                                     ModelMap model) {
         Page<Animal> animalsPage = animalService.getAllByAnimalStatus(pageNumber, animalStatus);
-        AnimalsPage animals = this.mapper.toAnimalsPage(animalsPage);
+        PageDto animals = this.mapper.toAnimalsPage(animalsPage);
         model.addAttribute("animals", animals);
         return "animal/list";
     }
+
+    @GetMapping("/api/animals/")
+    public String getByAnimalName( @RequestParam("name") String animalName, Model model) {
+        AnimalDto animalDto = mapper.toDto(animalService.getByAnimalName(animalName));
+        model.addAttribute("animal", animalDto);
+        return "animal/info";
+    }
+
 }

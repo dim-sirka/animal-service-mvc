@@ -1,4 +1,4 @@
-package com.dimsirka.animalservice.dtoes.animal;
+package com.dimsirka.animalservice.dtoes;
 
 import com.dimsirka.animalservice.entities.AnimalStatus;
 import com.dimsirka.animalservice.entities.AnimalType;
