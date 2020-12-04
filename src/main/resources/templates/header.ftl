@@ -63,7 +63,7 @@
     }
 
     .fa-facebook {
-        margin: 5px 2px 0px 850px;
+        margin: 5px 2px 0px 1250px;
         /*background: #3B5998;*/
         color: white;
     }
