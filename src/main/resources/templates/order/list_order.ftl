@@ -16,14 +16,18 @@
     </div>
 </div>
 <div>
-    <table border="2" class="table <#if orders??>table-dark <#else> table-striped </#if>">
-        <thead class="<#if orders??>thead-light <#else> thead-dark </#if>">
+    <table border="2" class="table <#if orders??>table <#else> table-dark </#if>">
+        <thead class="<#if orders??>thead-dark <#else> thead </#if>">
         <tr class="d-flex">
             <th scope="col" class="col-1">ID</th>
             <th scope="col" class="col-3">Ім'я тварини</th>
             <th scope="col" class="col-2">Номер телефону</th>
             <th scope="col" class="col-2">Ім'я клієнта</th>
-            <th class="col-4"></th>
+            <#if orders.content[0].orderStatus="PENDING">
+                <th class="col-4">Дії над замовленнями</th>
+            <#else>
+                <th class="col-4">Статус замовлення</th>
+            </#if>
         </tr>
         </thead>
         <tbody>
@@ -33,14 +37,24 @@
                 <td class="col-3"><a href="/api/animals/?name=${order.animal.name}">${order.animal.name}</a></td>
                 <td class="col-2">${order.userPhoneNumber}</td>
                 <td class="col-2">${order.userName}</td>
-                <th class="col-4 text-center">
-                    <a href="/confirm/${order.id}">
-                        <button class="btn btn-warning" type="submit">Підтвердити</button>
-                    </a>
-                    <a href="/cancel/${order.id}">
-                        <button class="btn btn-light" type="submit">Скасувати</button>
-                    </a>
-                </th>
+                <#if order.orderStatus == "PENDING">
+                    <th class="col-4 text-center">
+                        <a href="/confirm/${order.id}">
+                            <button class="btn btn-success" type="submit">Підтвердити</button>
+                        </a>
+                        <a href="/cancel/${order.id}">
+                            <button class="btn btn-danger" type="submit">Скасувати</button>
+                        </a>
+                    </th>
+                <#elseif order.orderStatus == "CONFIRMED">
+                    <th class="col-4 text-center">
+                            <button class="btn btn-success" type="submit" disabled>Підтверджено</button>
+                    </th>
+                <#elseif order.orderStatus == "CANCELED">
+                    <th class="col-4 text-center" >
+                            <button class="btn btn-danger" type="submit" disabled>Скасовано</button>
+                    </th>
+                </#if>
             </tr>
         </#list>
         </tbody>
