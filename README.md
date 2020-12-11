@@ -42,3 +42,6 @@ Web-app for the animal shelter "Dim Sirka".
 
 ## Link to DB ERD diagram
 https://cdn1.savepice.ru/uploads/2020/11/27/ee58dc210dd3c035d6e7448eb1c9e7cf-full.png
+
+## Link to Arhitecture diagram
+https://drive.google.com/file/d/1130uKal0WG4RHCYmSUmd5GWPayJ31Hi6/view?usp=sharing
