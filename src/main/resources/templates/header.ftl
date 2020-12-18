@@ -63,7 +63,7 @@
     }
 
     .fa-facebook {
-        margin: 5px 2px 0px 850px;
+        /*margin: 5px 2px 0px 800px;*/
         /*background: #3B5998;*/
         color: white;
     }
@@ -74,43 +74,61 @@
         color: white;
     }
 
+    .fa-logout{
+        border:1px solid white;
+        background: none;
+        padding: 7px 15px;
+        font-size: 17px;
+        color:blue;
+
+    }
+
 </style>
 <body>
 <nav class="navbar navbar-expand-lg" style="background-color: #581845;">
-
-    <img src="https://cdn1.savepice.ru/uploads/2020/11/20/698671d079af0fa613934c3bca2a8228-full.png"
-         width="70" height="50" aria-hidden="true">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="navbar-nav">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link nav-item-color" href="/" title="About us">Про нас</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav-item-color active" href="/api/animals?animalStatus=FREE" title="">Віддаємо</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav-item-color" href="/api/animals?animalStatus=TREATMENT" title="">Лікування</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav-item-color" href="/api/animals?animalStatus=ARCHIVE" title="">Архів</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Замовлення
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/list/orders">Замовлення</a>
-                    <a class="dropdown-item" href="/list/archive_orders">Архів замовлень</a>
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col-md-auto">
+                <img src="https://cdn1.savepice.ru/uploads/2020/11/20/698671d079af0fa613934c3bca2a8228-full.png"
+                     width="70" height="50" aria-hidden="true">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="col">
+                <div class="navbar-nav">
+                    <ul class="navbar-nav bd-navbar-nav flex-row">
+                        <li class="nav-item">
+                            <a class="nav-link nav-item-color" href="/" title="About us">Про нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-item-color active" href="/api/animals?animalStatus=FREE" title="">Віддаємо</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-item-color" href="/api/animals?animalStatus=TREATMENT" title="">Лікування</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-item-color" href="/api/animals?animalStatus=ARCHIVE" title="">Архів</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color: white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Замовлення
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/list/orders">Замовлення</a>
+                                <a class="dropdown-item" href="/list/archive_orders">Архів замовлень</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Add font awesome icons -->
                 </div>
-            </li>
-        </ul>
-        <!-- Add font awesome icons -->
-        <a href="https://www.facebook.com/dimsirka/" class="fa fa-facebook" target="_blank"></a>
-        <a href="https://www.instagram.com/dim__sirka/?hl=ru" class="fa fa-instagram" target="_blank"></a>
+            </div>
+            <div class="col-4">
+                    <a href="https://www.facebook.com/dimsirka/" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://www.instagram.com/dim__sirka/?hl=ru" class="fa fa-instagram" target="_blank"></a>
+                    <a href='/logout' class="fa-logout">LogOut</a>
+            </div>
+        </div>
     </div>
 </nav>
 <div class="container">
