@@ -30,21 +30,29 @@ public class AnimalController {
         this.mapper = mapper;
     }
 
-    @PostMapping("/admin/animals")
-    @ResponseStatus(HttpStatus.CREATED)
-    public AnimalDto create(@Validated @RequestBody AnimalDto animalDto) {
-        try {
-            return mapper.toDto(animalService.create(mapper.toEntity(animalDto)));
-        } catch (DataIntegrityViolationException e) {
-            throw new EntityDuplicateException("Animal with a specified name exists!");
-        }
+    @GetMapping("/animals/create")
+    public String getCreateget(Model model){
+        return "animal/formCreateAnimal";
     }
 
-    @PostMapping("/admin/animals/{animalId}")
-    @ResponseStatus(HttpStatus.OK)
-    public AnimalDto update(@Validated @RequestBody AnimalDto animalDto, @PathVariable Long animalId) {
-        animalDto.setId(animalId);
-        return mapper.toDto(animalService.update(mapper.toEntity(animalDto)));
+    @PostMapping("/animals/new")
+    public String create(@ModelAttribute AnimalDto animalDto, Model model) {
+        animalService.create(mapper.toEntity(animalDto));
+        return "redirect:/home";
+    }
+
+
+    @GetMapping("/animals/editForm/{animalId}")
+    public String getUpdateForm(@PathVariable Long animalId, Model model) {
+        Animal animalUpdate = animalService.getById(animalId);
+        model.addAttribute("animal", animalUpdate);
+        return "animal/editAnimal";
+    }
+
+    @PostMapping("/animals/update")
+    public String update(@ModelAttribute("Animal") Animal animal) {
+        animalService.update(animal);
+        return String.format("redirect:/animals/%s", animal.getId());
     }
 
     @GetMapping("/animals/{animalId}")
@@ -52,6 +60,16 @@ public class AnimalController {
         AnimalDto animalDto = mapper.toDto(animalService.getById(animalId));
         model.addAttribute("animal", animalDto);
         return "animal/info";
+    }
+
+    @GetMapping({"/animals/type"})
+    public String getAllAnimalType(@RequestParam AnimalType animalType,
+                                   @RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
+                                   ModelMap model) {
+        Page<Animal> animalsPage = animalService.getAllByAnimalStatusAndAnimalType(pageNumber, AnimalStatus.FREE, animalType);
+        PageDto animals = this.mapper.toAnimalsPage(animalsPage);
+        model.addAttribute("animals", animals);
+        return "animal/list";
     }
 
     @GetMapping({"/home", "/"})

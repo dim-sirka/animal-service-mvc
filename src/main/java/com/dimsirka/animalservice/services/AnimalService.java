@@ -2,6 +2,7 @@ package com.dimsirka.animalservice.services;
 
 import com.dimsirka.animalservice.entities.Animal;
 import com.dimsirka.animalservice.entities.AnimalStatus;
+import com.dimsirka.animalservice.entities.AnimalType;
 import org.springframework.data.domain.Page;
 
 public interface AnimalService {
@@ -16,4 +17,6 @@ public interface AnimalService {
     Animal getByAnimalName(String animalName);
 
     Page<Animal> getAllByAnimalStatus(int pageNumber, AnimalStatus animalStatus);
+
+    Page<Animal> getAllByAnimalStatusAndAnimalType(int pageNumber, AnimalStatus animalStatus, AnimalType animalType);
 }

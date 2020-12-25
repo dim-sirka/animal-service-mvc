@@ -2,6 +2,7 @@ package com.dimsirka.animalservice.services.impl;
 
 import com.dimsirka.animalservice.entities.Animal;
 import com.dimsirka.animalservice.entities.AnimalStatus;
+import com.dimsirka.animalservice.entities.AnimalType;
 import com.dimsirka.animalservice.exceptions.AnimalNotFoundException;
 import com.dimsirka.animalservice.exceptions.EntityDuplicateException;
 import com.dimsirka.animalservice.exceptions.ServiceException;
@@ -44,9 +45,9 @@ public class AnimalServiceImpl implements AnimalService{
         try{
             Animal persistentAnimal = getByIdOrThrowException(animal.getId());
             persistentAnimal.setName(animal.getName());
-            persistentAnimal.setAnimalStatus(animal.getAnimalStatus());
             persistentAnimal.setAnimalType(animal.getAnimalType());
             persistentAnimal.setDescription(animal.getDescription());
+            persistentAnimal.setMediaLinks(animal.getMediaLinks());
             return animalRepository.save(persistentAnimal);
         }catch (DataIntegrityViolationException e){
             throw new EntityDuplicateException("Animal with a specified name exists!");
@@ -76,6 +77,12 @@ public class AnimalServiceImpl implements AnimalService{
     public Page<Animal> getAllByAnimalStatus(int pageNumber, AnimalStatus animalStatus) {
         Pageable pageable = createPageable(pageNumber);
         return animalRepository.findAllByAnimalStatus(animalStatus, pageable);
+    }
+
+    @Override
+    public Page<Animal> getAllByAnimalStatusAndAnimalType(int pageNumber, AnimalStatus animalStatus, AnimalType animalType) {
+        Pageable pageable = createPageable(pageNumber);
+        return animalRepository.findAllByAnimalStatusAndAnimalType(animalStatus, animalType, pageable);
     }
 
     private Animal getByIdOrThrowException(Long id){

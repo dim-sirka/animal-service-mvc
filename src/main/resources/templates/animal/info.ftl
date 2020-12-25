@@ -11,6 +11,9 @@
                     <a href="/animals?animalStatus=${animal.animalStatus}" class="row ml-1">
                         <button class="btn btn-secondary text-center" type="submit">Назад</button>
                     </a>
+                    <a href="/api/animals/editForm/${animal.id}" class="row ml-1">
+                        <button class="btn btn-secondary text-center" type="submit">Редагувати тварину</button>
+                    </a>
                     <div class="row justify-content-center mt-2">
                             <div class="col-6 block">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" ondbclick="zoomPhoto()">

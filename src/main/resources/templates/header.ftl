@@ -9,6 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -110,7 +111,7 @@
     <form class="form-inline my-5 my-lg-0">
         <a href="https://www.facebook.com/dimsirka/" class="fa fa-facebook" target="_blank" style="margin: 5px 2px;"></a>
         <a href="https://www.instagram.com/dim__sirka/?hl=ru" class="fa fa-instagram" target="_blank" style="margin: 5px 2px;"></a>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 15px 10px;">LogOut</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 15px 10px;">Вихід</button>
     </form>
 </nav>
 <div class="container">

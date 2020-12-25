@@ -10,19 +10,25 @@
 
     <#if animals.totalPageNumber != 0 >
         <div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="animalType" value="DOG" onclick="handleAnimalTypeCheckBoxes()">
-                    <label class="form-check-label" for="inlineCheckbox1">Собаки</label>
+                <div class="">
+                    <input type="radio" id="animalType"
+                           name="contact" value="DOG" onclick="handleAnimalTypeCheckBoxes()">
+                    <label for="contactChoice1">Собаки</label>
+
+                    <input type="radio" id="animalType"
+                           name="contact" value="CAT" onclick="handleAnimalTypeCheckBoxes()">
+                    <label for="contactChoice2">Коти</label>
+
+                    <input type="radio" href="/api/animals/type?animalType=OTHER"
+                           name="contact" onclick="handleAnimalTypeCheckBoxes()">
+                    <label for="contactChoice3">Інше</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="animalType" value="CAT" onclick="handleAnimalTypeCheckBoxes()">
-                    <label class="form-check-label" for="inlineCheckbox2">Коти</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="animalType" value="OTHER" onclick="handleAnimalTypeCheckBoxes()">
-                    <label class="form-check-label" for="inlineCheckbox3">Інше</label>
+
+                <div class="btn btn-outline-success my-2 my-sm-0" style="margin: 15px 25px;">
+                    <a href="/api/animals/create" type="submit" >Додати тварину</a>
                 </div>
         </div>
+
         <div class="row justify-content-center" id="animalList">
             <#list animals.content as animal>
                 <div class="col-4 clearfix d-none d-md-block mt-5">
