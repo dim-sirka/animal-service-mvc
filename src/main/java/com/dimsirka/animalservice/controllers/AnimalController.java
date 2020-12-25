@@ -30,7 +30,7 @@ public class AnimalController {
         this.mapper = mapper;
     }
 
-    @PostMapping("/api/animals")
+    @PostMapping("/admin/animals")
     @ResponseStatus(HttpStatus.CREATED)
     public AnimalDto create(@Validated @RequestBody AnimalDto animalDto) {
         try {
@@ -40,14 +40,14 @@ public class AnimalController {
         }
     }
 
-    @PostMapping("/api/animals/{animalId}")
+    @PostMapping("/admin/animals/{animalId}")
     @ResponseStatus(HttpStatus.OK)
     public AnimalDto update(@Validated @RequestBody AnimalDto animalDto, @PathVariable Long animalId) {
         animalDto.setId(animalId);
         return mapper.toDto(animalService.update(mapper.toEntity(animalDto)));
     }
 
-    @GetMapping("/api/animals/{animalId}")
+    @GetMapping("/animals/{animalId}")
     public String getById(@PathVariable Long animalId, Model model) {
         AnimalDto animalDto = mapper.toDto(animalService.getById(animalId));
         model.addAttribute("animal", animalDto);
@@ -62,7 +62,7 @@ public class AnimalController {
         return "animal/list";
     }
 
-    @GetMapping("/api/animals")
+    @GetMapping("/animals")
     @ResponseStatus(HttpStatus.OK)
     public String getByAnimalStatus(@RequestParam AnimalStatus animalStatus,
                                     @RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
@@ -73,7 +73,7 @@ public class AnimalController {
         return "animal/list";
     }
 
-    @GetMapping("/api/animals/")
+    @GetMapping("/animals/")
     public String getByAnimalName( @RequestParam("name") String animalName, Model model) {
         AnimalDto animalDto = mapper.toDto(animalService.getByAnimalName(animalName));
         model.addAttribute("animal", animalDto);

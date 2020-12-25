@@ -1,3 +1,5 @@
+<#assign sec=JspTaglibs["http://www.springframework.org/security/tags"]/>
+
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -54,8 +56,8 @@
 <body>
 <nav class="navbar navbar-expand-lg" style="background-color: #581845;">
 
-    <img src="https://cdn1.savepice.ru/uploads/2020/11/20/698671d079af0fa613934c3bca2a8228-full.png"
-         width="70" height="50" aria-hidden="true">
+    <img src="https://i.ibb.co/5v4Sb84/dim-sirka.png"
+         width="70" height="60" aria-hidden="true">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -66,13 +68,13 @@
                 <a class="nav-link nav-item-color" href="/" title="About us">Про нас</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-item-color active" href="/api/animals?animalStatus=FREE" title="">Віддаємо</a>
+                <a class="nav-link nav-item-color active" href="/animals?animalStatus=FREE" title="">Віддаємо</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-item-color" href="/api/animals?animalStatus=TREATMENT" title="">Лікування</a>
+                <a class="nav-link nav-item-color" href="/animals?animalStatus=TREATMENT" title="">Лікування</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-item-color" href="/api/animals?animalStatus=ARCHIVE" title="">Архів</a>
+                <a class="nav-link nav-item-color" href="/animals?animalStatus=ARCHIVE" title="">Архів</a>
             </li>
         </ul>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -92,10 +94,21 @@
                     <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"></path><path d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z" fill="currentColor"></path></svg>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/list/orders">Замовлення</a>
-                    <a class="dropdown-item" href="/list/archive_orders">Архів замовлень</a>
+                    <a class="dropdown-item" href="/admin/list/orders">Замовлення</a>
+                    <a class="dropdown-item" href="/admin/list/archive-orders">Архів замовлень</a>
                 </div>
             </li>
+            <@sec.authorize access="isAuthenticated()">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Замовлення
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/admin/list/orders">Замовлення</a>
+                        <a class="dropdown-item" href="/admin/list/archive-orders">Архів замовлень</a>
+                    </div>
+                </li>
+            </@sec.authorize>
         </ul>
         <!-- Add font awesome icons -->
         <a href="https://www.facebook.com/dimsirka/" class="fa fa-facebook" target="_blank"></a>

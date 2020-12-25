@@ -8,7 +8,7 @@
     </#if>
     <div class="card mb-2">
         <div class="row justify-content-center mt-2">
-            <form id="client" action="/api/orders/new" method="post" autocomplete="off">
+            <form id="client" action="/orders/new" method="post" autocomplete="off">
                 <h3 class="text-center font-italic font-weight-bold font-family">Замовлення</h3>
                 <div class="col-11 block pt-5">
                     <table class="table table-hover mb-0">
@@ -55,6 +55,7 @@
                         <pre class="text-danger">${error}</pre>
                     </div>
                 </#if>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
             </form>
         </div>
     </div>

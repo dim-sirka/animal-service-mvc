@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -43,13 +42,13 @@ public class OrderController {
         this.dataValidator = dataValidator;
     }
 
-    @GetMapping("/api/orders/new/{id}")
+    @GetMapping("/orders/new/{id}")
     public String getCreateForm(@PathVariable String id, Model model){
         model.addAttribute("id", id);
         return "order/create";
     }
 
-    @PostMapping("/api/orders/new")
+    @PostMapping("/orders/new")
     public String create(@ModelAttribute OrderDto orderDto, Model model){
 
         ValidationResult validationResult = dataValidator.validate(orderDto);
@@ -67,21 +66,21 @@ public class OrderController {
         return "order/create";
     }
 
-    @PostMapping("/edit/{orderId}")
+    @PostMapping("/admin/orders/edit/{orderId}")
     public String update(@Validated @RequestBody OrderDto orderDto, @PathVariable Long orderId, Model model){
         ValidationResult validationResult = dataValidator.validate(orderDto);
 
         if (validationResult.isError()) {
             model.addAttribute("error", validationResult.getErrorMessage());
             model.addAttribute("product", orderDto);
-            return "/create";
+            return "order/create";
         }
 
         orderService.update(orderService.getById(orderId));
         return "animal/list";
     }
 
-    @GetMapping("/{orderId}")
+    @GetMapping("/admin/orders/{orderId}")
     public OrderDto getById(@PathVariable Long orderId){
         return mapper.toDto(orderService.getById(orderId));
     }
@@ -92,23 +91,23 @@ public class OrderController {
         return "animal/list";
     }
 
-    @GetMapping("/cancel/{orderId}")
+    @GetMapping("/admin/orders/cancel/{orderId}")
     public String cancel(@PathVariable Long orderId, Model model) {
         orderService.cancelOrConfirm(orderId, OrderStatus.CANCELED);
         List<Order> listOrders = orderService.getAll();
         model.addAttribute("listOrders", listOrders);
-        return "redirect:/list/orders";
+        return "redirect:/admin/list/orders";
     }
 
-    @GetMapping("/confirm/{orderId}")
+    @GetMapping("/admin/orders/confirm/{orderId}")
     public String confirm(@PathVariable Long orderId, Model model){
         orderService.cancelOrConfirm(orderId, OrderStatus.CONFIRMED);
         List<Order> listOrders = orderService.getAll();
         model.addAttribute("listOrders", listOrders);
-        return "redirect:/list/orders";
+        return "redirect:/admin/list/orders";
     }
 
-    @GetMapping("/list/orders")
+    @GetMapping("/admin/list/orders")
     @ResponseStatus(HttpStatus.OK)
     public String getByPendingStatus(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
                                    ModelMap model) {
@@ -118,7 +117,7 @@ public class OrderController {
         return "order/list_order";
     }
 
-    @GetMapping("/list/archive_orders")
+    @GetMapping("/admin/list/archive-orders")
     @ResponseStatus(HttpStatus.OK)
     public String getByConfirmedAndCanceledStatus(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
                                      ModelMap model) {
@@ -131,7 +130,7 @@ public class OrderController {
         return "order/list_order";
     }
 
-    @GetMapping("/order/find")
+    @GetMapping("/admin/orders/find")
     public String findAllByName( @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
                                  @ModelAttribute("name") String nameQuery, Model model) {
         Page<Order> ordersPage = orderService.findAllByName(pageNumber, nameQuery);
