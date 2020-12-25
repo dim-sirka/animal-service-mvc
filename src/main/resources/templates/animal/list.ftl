@@ -19,14 +19,16 @@
                            name="contact" value="CAT" onclick="handleAnimalTypeCheckBoxes()">
                     <label for="contactChoice2">Коти</label>
 
-                    <input type="radio" href="/api/animals/type?animalType=OTHER"
+                    <input type="radio" href="/animals/type?animalType=OTHER"
                            name="contact" onclick="handleAnimalTypeCheckBoxes()">
                     <label for="contactChoice3">Інше</label>
                 </div>
 
-                <div class="btn btn-outline-success my-2 my-sm-0" style="margin: 15px 25px;">
-                    <a href="/api/animals/create" type="submit" >Додати тварину</a>
-                </div>
+                <@sec.authorize access="isAuthenticated()">
+                    <div class="btn btn-outline-success my-2 my-sm-0" style="margin: 15px 25px;">
+                        <a href="/admin/animals/create" type="submit" >Додати тварину</a>
+                    </div>
+                </@sec.authorize>
         </div>
 
         <div class="row justify-content-center" id="animalList">

@@ -80,7 +80,7 @@
 <nav class="navbar justify-content-between" style="background-color: #581845;">
 
     <img src="https://i.ibb.co/5v4Sb84/dim-sirka.png"
-         width="70" height="50" aria-hidden="true">
+         width="70" height="70" aria-hidden="true">
 
         <ul class="navbar-nav bd-navbar-nav flex-row" style="margin: 15px 30px;">
             <li class="nav-item" >
@@ -108,10 +108,12 @@
             </@sec.authorize>
         </ul>
 
-    <form class="form-inline my-5 my-lg-0">
+    <form class="form-inline my-5 my-lg-0" action="/logout" method="get">
         <a href="https://www.facebook.com/dimsirka/" class="fa fa-facebook" target="_blank" style="margin: 5px 2px;"></a>
         <a href="https://www.instagram.com/dim__sirka/?hl=ru" class="fa fa-instagram" target="_blank" style="margin: 5px 2px;"></a>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 15px 10px;">Вихід</button>
+        <@sec.authorize access="isAuthenticated()">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 15px 10px;">Вихід</button>
+        </@sec.authorize>
     </form>
 </nav>
 <div class="container">

@@ -4,17 +4,15 @@ import com.dimsirka.animalservice.dtoes.AnimalDto;
 import com.dimsirka.animalservice.dtoes.PageDto;
 import com.dimsirka.animalservice.entities.Animal;
 import com.dimsirka.animalservice.entities.AnimalStatus;
-import com.dimsirka.animalservice.exceptions.EntityDuplicateException;
+import com.dimsirka.animalservice.entities.AnimalType;
 import com.dimsirka.animalservice.mapper.AnimalDtoMapper;
 import com.dimsirka.animalservice.services.AnimalService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -30,26 +28,25 @@ public class AnimalController {
         this.mapper = mapper;
     }
 
-    @GetMapping("/animals/create")
-    public String getCreateget(Model model){
+    @GetMapping("/admin/animals/create")
+    public String getCreateget() {
         return "animal/formCreateAnimal";
     }
 
-    @PostMapping("/animals/new")
-    public String create(@ModelAttribute AnimalDto animalDto, Model model) {
+    @GetMapping("/admin/animals/new")
+    public String create(@ModelAttribute AnimalDto animalDto) {
         animalService.create(mapper.toEntity(animalDto));
         return "redirect:/home";
     }
 
-
-    @GetMapping("/animals/editForm/{animalId}")
+    @GetMapping("/admin/animals/editForm/{animalId}")
     public String getUpdateForm(@PathVariable Long animalId, Model model) {
         Animal animalUpdate = animalService.getById(animalId);
         model.addAttribute("animal", animalUpdate);
         return "animal/editAnimal";
     }
 
-    @PostMapping("/animals/update")
+    @PostMapping("/admin/animals/update")
     public String update(@ModelAttribute("Animal") Animal animal) {
         animalService.update(animal);
         return String.format("redirect:/animals/%s", animal.getId());
@@ -92,7 +89,7 @@ public class AnimalController {
     }
 
     @GetMapping("/animals/")
-    public String getByAnimalName( @RequestParam("name") String animalName, Model model) {
+    public String getByAnimalName(@RequestParam("name") String animalName, Model model) {
         AnimalDto animalDto = mapper.toDto(animalService.getByAnimalName(animalName));
         model.addAttribute("animal", animalDto);
         return "animal/info";
