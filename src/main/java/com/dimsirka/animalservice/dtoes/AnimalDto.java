@@ -24,14 +24,15 @@ public class AnimalDto {
     private Long id;
     @NotBlank(message = "Animal name should be specified")
     private String name;
+    @NotBlank(message = "Animal name should be specified")
+    private String age;
     @NotNull(message = "Animal type should be specified")
     private AnimalType animalType;
     @NotBlank(message = "Description should be specified")
     private String description;
-    @NotNull(message = "Animal status should be specified")
+//    @NotNull(message = "Animal status should be specified")
     private AnimalStatus animalStatus;
     private Set<String> mediaLinks;
-    private String age;
     private Timestamp createdDate;
     private Timestamp updatedDate;
 }

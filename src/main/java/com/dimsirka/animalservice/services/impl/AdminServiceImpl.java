@@ -45,7 +45,7 @@ public class AdminServiceImpl implements AdminService{
 
     @Override
     public Admin getByEmail(String email) {
-        return adminRepository.findAdminByEmail(email)
+        return adminRepository.getByEmail(email)
                 .orElseThrow(()->new AdminNotFoundException("Admin with a specified username isn't found!"));
     }
 

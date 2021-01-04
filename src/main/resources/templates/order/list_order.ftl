@@ -2,9 +2,9 @@
 <h1 class="text-center font-italic font-weight-bold font-family">Список замовлень!</h1>
 <div class="row">
     <div class="input-group col text-center">
-        <form action="/order/find" class="form-inline mx-auto">
+        <form action="/admin/orders/find" class="form-inline mx-auto">
             <#if name??>
-                <a href="/list/orders" class="btn btn-secondary m-1">Reset</a>
+                <a href="/admin/list/orders" class="btn btn-secondary m-1">Reset</a>
             </#if>
             <input name="name" type="text" class="form-control" placeholder="Animal name"
                    <#if orders.name??>value="${orders.name}"</#if>
@@ -34,7 +34,7 @@
         <#list orders.content as order>
             <tr class="d-flex">
                 <th scope="row" class="col-1">${order.id}</th>
-                <td class="col-3"><a href="/api/animals/?name=${order.animal.name}">${order.animal.name}</a></td>
+                <td class="col-3"><a href="/animals/?name=${order.animal.name}">${order.animal.name}</a></td>
                 <td class="col-2">${order.userPhoneNumber}</td>
                 <td class="col-2">${order.userName}</td>
                 <#if order.orderStatus == "PENDING">
