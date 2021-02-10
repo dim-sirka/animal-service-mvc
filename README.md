@@ -39,3 +39,9 @@ Web-app for the animal shelter "Dim Sirka".
 ## Running multi-container Instructions
 * docker-compose up -- run animal-service app and animal-db containers
 * docker-compose down -- stop animal-service app and animal-db containers
+
+## Link to DB ERD diagram
+https://ibb.co/QKjx9Cb
+
+## Link to Arhitecture diagram
+https://drive.google.com/file/d/1130uKal0WG4RHCYmSUmd5GWPayJ31Hi6/view?usp=sharing

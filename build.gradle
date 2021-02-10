@@ -44,7 +44,13 @@ dependencies {
     implementation 'org.apache.httpcomponents:httpclient:4.5.13'
     //for sending messages to user and admin regarding the new order
     implementation 'org.springframework.boot:spring-boot-starter-mail:2.3.4.RELEASE'
+    //for rendering .ftl pages
+    implementation 'org.springframework.boot:spring-boot-starter-freemarker:2.3.5.RELEASE'
 
+    implementation 'org.apache.commons:commons-lang3:3.10'
+
+    implementation 'org.springframework.security:spring-security-taglibs:5.4.2'
+    implementation 'javax.servlet.jsp:jsp-api:2.0'
 }
 
 test {
@@ -54,7 +60,7 @@ test {
 //sonarqube configurations
 sonarqube {
     properties {
-        property "sonar.projectKey", "dim-sirka_animal-service"
+        property "sonar.projectKey", "dim-sirka_animal-service-mvc"
         property "sonar.sourceEncoding", "UTF-8"
         property "sonar.host.url", "https://sonarcloud.io"
     }

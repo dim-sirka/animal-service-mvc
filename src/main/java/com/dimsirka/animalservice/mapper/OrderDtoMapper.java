@@ -1,8 +1,10 @@
 package com.dimsirka.animalservice.mapper;
 
 import com.dimsirka.animalservice.dtoes.OrderDto;
+import com.dimsirka.animalservice.dtoes.PageDto;
 import com.dimsirka.animalservice.entities.Animal;
 import com.dimsirka.animalservice.entities.Order;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -32,6 +34,20 @@ public class OrderDtoMapper {
                 .orderStatus(order.getOrderStatus())
                 .animal(Animal.builder().id(order.getAnimalId()).build())
                 .build();
+    }
+
+    public PageDto toOrdersPage(Page<Order> ordersPage) {
+        return PageDto.builder()
+                .content(
+                        ordersPage.getContent().stream()
+                                .collect(Collectors.toList())
+                )
+                .currentPageNumber(ordersPage.getNumber() + 1)
+                .totalPageNumber(ordersPage.getTotalPages())
+                .hasNextPage(ordersPage.hasNext())
+                .hasPreviousPage(ordersPage.hasPrevious())
+                .build();
+
     }
 
     public List<OrderDto> toDtoList(List<Order> orders){

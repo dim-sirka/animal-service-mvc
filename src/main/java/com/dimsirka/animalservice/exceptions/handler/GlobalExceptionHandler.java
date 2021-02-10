@@ -6,6 +6,7 @@ import com.dimsirka.animalservice.exceptions.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -35,13 +36,10 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler({EntityNotFoundException.class})
-    public ResponseEntity<Map<String, String>> handleEntityNotFoundException(Exception e) {
+    public String handleEntityNotFoundException(Model model, Exception e) {
         log.warn(e.getMessage(), e);
-        Map<String, String> errors = new HashMap<>();
-        errors.put(ERROR, e.getLocalizedMessage());
-        return ResponseEntity
-                .status(HttpStatus.NOT_FOUND)
-                .body(errors);
+        model.addAttribute("error-message", "Entity isn't found!");
+        return "error-page";
     }
 
     @ExceptionHandler({EntityDuplicateException.class, IllegalArgumentException.class})

@@ -1,0 +1,14 @@
+.nav-item-color{
+    color: #ffffff;
+}
+
+html {
+    font: 100%/1.5 Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+}
+
+body {
+    margin-top: 15%;
+    background-image: linear-gradient(#c5c7cb, #f8f9fa);
+}
