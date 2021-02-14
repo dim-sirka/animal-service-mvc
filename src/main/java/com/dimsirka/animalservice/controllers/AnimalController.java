@@ -33,7 +33,7 @@ public class AnimalController {
         return "animal/formCreateAnimal";
     }
 
-    @GetMapping("/admin/animals/new")
+    @PostMapping("/admin/animals/new")
     public String create(@ModelAttribute AnimalDto animalDto) {
         animalService.create(mapper.toEntity(animalDto));
         return "redirect:/home";
