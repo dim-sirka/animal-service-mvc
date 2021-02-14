@@ -102,12 +102,11 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/admin/list/orders">Замовлення</a>
-                        <a class="dropdown-item" href="/admin/list/archive-orders">Архів замовлень</a>
+                        <a class="dropdown-item" href="/admin/list/archive_orders">Архів замовлень</a>
                     </div>
                 </li>
             </@sec.authorize>
         </ul>
-
     <form class="form-inline my-5 my-lg-0" action="/logout" method="get">
         <a href="https://www.facebook.com/dimsirka/" class="fa fa-facebook" target="_blank" style="margin: 5px 2px;"></a>
         <a href="https://www.instagram.com/dim__sirka/?hl=ru" class="fa fa-instagram" target="_blank" style="margin: 5px 2px;"></a>
