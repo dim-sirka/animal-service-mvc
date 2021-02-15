@@ -11,7 +11,8 @@ before_install:
   - chmod +x gradlew
 
 script:
-  - ./gradlew sonarqube --stacktrace
+  - ./gradlew build --stacktrace
+#  - ./gradlew sonarqube --stacktrace
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
