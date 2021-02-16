@@ -117,7 +117,7 @@ public class OrderController {
         return "order/list_order";
     }
 
-    @GetMapping("/admin/list/archive-orders")
+    @GetMapping("/admin/list/archive_orders")
     @ResponseStatus(HttpStatus.OK)
     public String getByConfirmedAndCanceledStatus(@RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
                                      ModelMap model) {
@@ -131,10 +131,11 @@ public class OrderController {
     }
 
     @GetMapping("/admin/orders/find")
-    public String getAllByName( @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
-                                 @ModelAttribute("name") String nameQuery, Model model) {
-        Page<Order> ordersPage = orderService.findAllByName(pageNumber, nameQuery);
+    public String findAllByName( @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
+                                 @RequestParam String name, Model model) {
+        Page<Order> ordersPage = orderService.findAllByName(pageNumber, name);
         PageDto orders = this.mapper.toOrdersPage(ordersPage);
+        model.addAttribute("name", name);
         model.addAttribute("orders", orders);
         return "order/list_order";
     }
