@@ -101,8 +101,8 @@
                         Замовлення
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/list/orders">Замовлення</a>
-                        <a class="dropdown-item" href="/list/archive_orders">Архів замовлень</a>
+                        <a class="dropdown-item" href="/admin/list/orders">Замовлення</a>
+                        <a class="dropdown-item" href="/admin/list/archive-orders">Архів замовлень</a>
                     </div>
                 </li>
             </@sec.authorize>

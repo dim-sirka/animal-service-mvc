@@ -131,7 +131,7 @@ public class OrderController {
     }
 
     @GetMapping("/admin/orders/find")
-    public String findAllByName( @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
+    public String getAllByName( @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
                                  @ModelAttribute("name") String nameQuery, Model model) {
         Page<Order> ordersPage = orderService.findAllByName(pageNumber, nameQuery);
         PageDto orders = this.mapper.toOrdersPage(ordersPage);

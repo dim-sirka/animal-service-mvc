@@ -2,7 +2,7 @@
 <div class="container">
     <div class="card mb-2">
         <div class="row justify-content-center mt-2">
-            <form action="/admin/animals/new" method="get" autocomplete="off">
+            <form action="/admin/animals/new" method="post" autocomplete="off">
                 <h3 class="text-center font-italic font-weight-bold font-family">Реєстрація тварини!</h3>
                 <div class="col-11 block pt-5">
                     <table class="table table-hover mb-0">
@@ -54,6 +54,7 @@
                         </button>
                     </fieldset>
                 </div>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
             </form>
         </div>
     </div>
