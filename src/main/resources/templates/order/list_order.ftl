@@ -1,4 +1,5 @@
 <#include "../header.ftl">
+<#assign pageSubmissionUrl = name???then('&name=${name}','') >
 <h1 class="text-center font-italic font-weight-bold font-family">Список замовлень!</h1>
 <#if orders.totalPageNumber != 0 >
     <div class="row">
@@ -40,10 +41,10 @@
                     <td class="col-2">${order.userName}</td>
                     <#if order.orderStatus == "PENDING">
                         <th class="col-4 text-center">
-                            <a href="/confirm/${order.id}">
+                            <a href="/admin/orders/confirm/${order.id}">
                                 <button class="btn btn-success" type="submit">Підтвердити</button>
                             </a>
-                            <a href="/cancel/${order.id}">
+                            <a href="/admin/orders/cancel/${order.id}">
                                 <button class="btn btn-danger" type="submit">Скасувати</button>
                             </a>
                         </th>
@@ -64,15 +65,15 @@
     <div class="row justify-content-center">
         <ul class="pagination">
             <li class="page-item  <#if !orders.hasPreviousPage >disabled</#if>">
-                <a class="page-link" href="?page=${orders.currentPageNumber - 1}" tabindex="-1">Previous</a>
+                <a class="page-link" href="?page=${orders.currentPageNumber - 1}${pageSubmissionUrl}" tabindex="-1">Previous</a>
             </li>
             <#list 1..orders.totalPageNumber as pageNumber>
                 <li class="page-item <#if orders.currentPageNumber == pageNumber>active</#if>">
-                    <a class="page-link" href="?page=${pageNumber}">${pageNumber}</a>
+                    <a class="page-link" href="?page=${pageNumber}${pageSubmissionUrl}">${pageNumber}</a>
                 </li>
             </#list>
             <li class="page-item <#if !orders.hasNextPage >disabled</#if>">
-                <a class="page-link" href="?page=${orders.currentPageNumber + 1}" tabindex="-1">Next</a>
+                <a class="page-link" href="?page=${orders.currentPageNumber + 1}${pageSubmissionUrl}" tabindex="-1">Next</a>
             </li>
         </ul>
     </div>
