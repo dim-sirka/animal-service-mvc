@@ -84,6 +84,7 @@ public class AnimalController {
                                     ModelMap model) {
         Page<Animal> animalsPage = animalService.getAllByAnimalStatus(pageNumber, animalStatus);
         PageDto animals = this.mapper.toAnimalsPage(animalsPage);
+        model.addAttribute("animalStatus", animalStatus);
         model.addAttribute("animals", animals);
         return "animal/list";
     }
