@@ -142,7 +142,7 @@
     </style>
     <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
     <style type="text/css" data-type="vc_shortcodes-custom-css">
-        .vc_custom_1472631590873{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/image.jpg?id=22) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
+        .vc_custom_1472631590873{background-image: url(https://scontent-otp1-1.xx.fbcdn.net/v/t1.6435-9/77252146_428056894527601_444502387554516992_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=973b4a&_nc_ohc=1h4tKlW-fpkAX-BQX0g&_nc_ht=scontent-otp1-1.xx&oh=c158619bb990c66aeb73e7a17bbfbe37&oe=60953FF9) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
     </style>
     <meta name="generator"
           content="Powered by Slider Revolution 5.2.6 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
@@ -228,7 +228,7 @@
                                     <ul id="menu-main-menu" class="">
                                         <li id="nav-menu-item-34"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active narrow">
-                                            <a href="/" class=" current "><i
+                                            <a href="/about" class=" current "><i
                                                         class="menu_icon blank fa"></i><span>Про нас</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-164"
@@ -275,23 +275,23 @@
                                         </li>
                                         <li id="mobile-menu-item-164"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/about-our-shelter/" class=""><span>About</span></a><span
+                                                    href="/about" class=""><span>Про нас</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
                                         <li id="mobile-menu-item-161"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/why-adopt/" class=""><span>Why Adopt?</span></a><span
+                                                    href="/animals?animalStatus=FREE" class=""><span>Віддаємо</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
                                         <li id="mobile-menu-item-162"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/pets/"
-                                                    class=""><span>Pets</span></a><span class="mobile_arrow"><i
+                                                    href="/animals?animalStatus=TREATMENT"
+                                                    class=""><span>Лікування</span></a><span class="mobile_arrow"><i
                                                         class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
                                         </li>
                                         <li id="mobile-menu-item-163"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/contact-us/" class=""><span>Contact</span></a><span
+                                                    href="/animals?animalStatus=ARCHIVE" class=""><span>Архів</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
                                     </ul>

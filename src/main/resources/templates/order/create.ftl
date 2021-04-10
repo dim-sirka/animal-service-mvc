@@ -142,7 +142,7 @@
     </style>
     <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
     <style type="text/css" data-type="vc_shortcodes-custom-css">
-        .vc_custom_1472631590873{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/image.jpg?id=22) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
+        .vc_custom_1472631590873{background-image: url(https://scontent-otp1-1.xx.fbcdn.net/v/t1.6435-9/77252146_428056894527601_444502387554516992_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=973b4a&_nc_ohc=1h4tKlW-fpkAX-BQX0g&_nc_ht=scontent-otp1-1.xx&oh=c158619bb990c66aeb73e7a17bbfbe37&oe=60953FF9) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://scontent-otp1-1.xx.fbcdn.net/v/t1.6435-9/77252146_428056894527601_444502387554516992_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=973b4a&_nc_ohc=1h4tKlW-fpkAX-BQX0g&_nc_ht=scontent-otp1-1.xx&oh=c158619bb990c66aeb73e7a17bbfbe37&oe=60953FF9) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
     </style>
     <meta name="generator"
           content="Powered by Slider Revolution 5.2.6 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
@@ -275,23 +275,23 @@
                                         </li>
                                         <li id="mobile-menu-item-164"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/about-our-shelter/" class=""><span>About</span></a><span
+                                                    href="/about" class=""><span>Про нас</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
                                         <li id="mobile-menu-item-161"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/why-adopt/" class=""><span>Why Adopt?</span></a><span
+                                                    href="/animals?animalStatus=FREE" class=""><span>Віддаємо</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
                                         <li id="mobile-menu-item-162"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/pets/"
-                                                    class=""><span>Pets</span></a><span class="mobile_arrow"><i
+                                                    href="/animals?animalStatus=TREATMENT"
+                                                    class=""><span>Лікування</span></a><span class="mobile_arrow"><i
                                                         class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
                                         </li>
                                         <li id="mobile-menu-item-163"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/contact-us/" class=""><span>Contact</span></a><span
+                                                    href="/animals?animalStatus=ARCHIVE" class=""><span>Архів</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
                                     </ul>
@@ -318,7 +318,7 @@
             </div>
             <div class="content_inner  ">
                 <style type="text/css" data-type="vc_shortcodes-custom-css-5">
-                    .vc_custom_1472631590873{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/image.jpg?id=22) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
+                    .vc_custom_1472631590873{background-image: url(https://scontent-otp1-1.xx.fbcdn.net/v/t1.6435-9/77252146_428056894527601_444502387554516992_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=973b4a&_nc_ohc=1h4tKlW-fpkAX-BQX0g&_nc_ht=scontent-otp1-1.xx&oh=c158619bb990c66aeb73e7a17bbfbe37&oe=60953FF9) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://scontent-otp1-1.xx.fbcdn.net/v/t1.6435-9/77252146_428056894527601_444502387554516992_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=973b4a&_nc_ohc=1h4tKlW-fpkAX-BQX0g&_nc_ht=scontent-otp1-1.xx&oh=c158619bb990c66aeb73e7a17bbfbe37&oe=60953FF9) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
                 </style>
                 <script>
                     var page_scroll_amount_for_sticky = 900;
@@ -378,7 +378,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="align-middle" scope="row">Ваше номер телефону:</th>
+                            <th class="align-middle" scope="row">Ваш номер телефону:</th>
                             <td class="td-padding">
                                 <input name="userPhoneNumber" placeholder="" value=""
                                        type="text" tabindex="3" />
@@ -553,71 +553,6 @@
     </div>
 </div>
 <div class="qode-demos-toolbar" data-demo="bridge82.qodeinteractive.com">
-    <section class="qode-demos-toolbar-section">
-        <div class="qode-demos-toolbar-list-holder">
-            <div class="qode-demos-toolbar-header">
-                <div class="qode-demos-toolbar-header-inner">
-                    <div class="qode-demos-toolbar-header-text-holder">
-                        <p>Get the entire collection of 530+ website demos for $59!</p>
-                    </div>
-
-                    <div class="qode-demos-toolbar-header-button-holder">
-                        <a href="https://bridgelanding.qodeinteractive.com/#demos-section" target="_blank"
-                           class="qode-demos-toolbar-header-button">View all 530 demos</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qode-demos-toolbar-content">
-                <div class="qode-demos-toolbar-content-intro">
-                    <div class="qode-toolbar-content-intro-image">
-                        <img src="https://toolbar.qodeinteractive.com/_qode_toolbar/assets/img/qode-dt-intro-image.png"
-                             alt="Intro image">
-                    </div>
-
-                    <div class="qode-toolbar-content-intro-text">
-                        <p>Can't decide on one demo? Features from different demos can be combined! Start creating your
-                            website</p>
-                    </div>
-                </div>
-
-                <div class="qode-demos-toolbar-content-list">
-                    <div class="qode-demos-toolbar-content-list-inner">
-                        <div class="qode-demos-toolbar-content-list-space">
-                            
-
-                <div class="qode-demos-toolbar-content-outro">
-                    <div class="qode-demos-toolbar-content-outro-inner">
-                        <div class="qode-demos-toolbar-content-outro-button-holder">
-                            <a href="https://bridgelanding.qodeinteractive.com/#demos-section" target="_blank"
-                               class="qode-demos-toolbar-content-outro-button">View all 530+ demos
-                                <svg class="qode-dt-arrow" width="32" height="32" viewBox="0 0 32 32"
-                                     style="fill: #fff;height: 18px;">
-                                    <path d="M 4,15C 4,15.552, 4.448,16, 5,16l 19.586,0 l-4.292,4.292c-0.39,0.39-0.39,1.024,0,1.414 c 0.39,0.39, 1.024,0.39, 1.414,0l 6-6c 0.092-0.092, 0.166-0.202, 0.216-0.324C 27.972,15.26, 28,15.132, 28,15.004c0-0.002,0-0.002,0-0.004 l0,0c0-0.13-0.026-0.26-0.078-0.382c-0.050-0.122-0.124-0.232-0.216-0.324l-6-6c-0.39-0.39-1.024-0.39-1.414,0 c-0.39,0.39-0.39,1.024,0,1.414L 24.586,14L 5,14 C 4.448,14, 4,14.448, 4,15z"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qode-demos-toolbar-footer">
-                <div class="qode-demos-toolbar-footer-inner">
-                    <div class="qode-demos-toolbar-footer-icon-holder">
-                        <svg x="0px" y="0px" viewBox="0 0 87 87" style="fill: #ee2852; height: 16px;">
-                            <path d="M55.4,81.5c6.1-11.1,5.2-16.1-4.3-24.3c6.1-3.5,9.5-8.5,9.1-15.7c-0.5-8.2-7.7-14.7-16.3-14.6
-                                        c-8.5,0.1-15.6,6.7-15.9,15c-0.3,8.5,5.9,15.8,14.3,16.6c1.4,0.1,2.8,0.2,4.2,0.5c5.9,1.2,10.2,6.7,9.8,12.6
-                                        c-0.4,6.4-5.5,11.4-11.8,11.7C24.9,84.2,5.9,68.5,3.2,49.3C-0.1,26.9,14.4,6.8,36.4,2.8c22.3-4,43.4,10,48.1,32
-                                        c4.3,20-8.6,41.2-28.4,46.7C55.9,81.5,55.6,81.5,55.4,81.5z"></path>
-                        </svg>
-                    </div>
-                    <div class="qode-demos-toolbar-footer-text-holder">
-                        <p>Powered by students IPZ-41</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 

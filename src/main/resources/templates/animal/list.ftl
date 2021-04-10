@@ -275,23 +275,23 @@
                                         </li>
                                         <li id="mobile-menu-item-164"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/about-our-shelter/" class=""><span>About</span></a><span
+                                                    href="/about" class=""><span>Про нас</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
                                         <li id="mobile-menu-item-161"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/why-adopt/" class=""><span>Why Adopt?</span></a><span
+                                                    href="/animals?animalStatus=FREE" class=""><span>Віддаємо</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
                                         <li id="mobile-menu-item-162"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/pets/"
-                                                    class=""><span>Pets</span></a><span class="mobile_arrow"><i
+                                                    href="/animals?animalStatus=TREATMENT"
+                                                    class=""><span>Лікування</span></a><span class="mobile_arrow"><i
                                                         class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
                                         </li>
                                         <li id="mobile-menu-item-163"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="https://bridge82.qodeinteractive.com/contact-us/" class=""><span>Contact</span></a><span
+                                                    href="/animals?animalStatus=ARCHIVE" class=""><span>Архів</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
                                     </ul>
@@ -804,41 +804,6 @@
     </div>
 </div>
 <div class="qode-demos-toolbar" data-demo="bridge82.qodeinteractive.com">
-    <section class="qode-demos-toolbar-section">
-        <div class="qode-demos-toolbar-list-holder">
-            <div class="qode-demos-toolbar-header">
-                <div class="qode-demos-toolbar-header-inner">
-                    <div class="qode-demos-toolbar-header-text-holder">
-                        <p>Get the entire collection of 530+ website demos for $59!</p>
-                    </div>
-
-                    <div class="qode-demos-toolbar-header-button-holder">
-                        <a href="https://bridgelanding.qodeinteractive.com/#demos-section" target="_blank"
-                           class="qode-demos-toolbar-header-button">View all 530 demos</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="qode-demos-toolbar-footer">
-                <div class="qode-demos-toolbar-footer-inner">
-                    <div class="qode-demos-toolbar-footer-icon-holder">
-                        <svg x="0px" y="0px" viewBox="0 0 87 87" style="fill: #ee2852; height: 16px;">
-                            <path d="M55.4,81.5c6.1-11.1,5.2-16.1-4.3-24.3c6.1-3.5,9.5-8.5,9.1-15.7c-0.5-8.2-7.7-14.7-16.3-14.6
-										c-8.5,0.1-15.6,6.7-15.9,15c-0.3,8.5,5.9,15.8,14.3,16.6c1.4,0.1,2.8,0.2,4.2,0.5c5.9,1.2,10.2,6.7,9.8,12.6
-										c-0.4,6.4-5.5,11.4-11.8,11.7C24.9,84.2,5.9,68.5,3.2,49.3C-0.1,26.9,14.4,6.8,36.4,2.8c22.3-4,43.4,10,48.1,32
-										c4.3,20-8.6,41.2-28.4,46.7C55.9,81.5,55.6,81.5,55.4,81.5z"></path>
-                        </svg>
-                    </div>
-                    <div class="qode-demos-toolbar-footer-text-holder">
-                        <p>Powered by students IPZ-41</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 
 
