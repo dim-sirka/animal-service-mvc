@@ -228,7 +228,7 @@
                                     <ul id="menu-main-menu" class="">
                                         <li id="nav-menu-item-34"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active narrow">
-                                            <a href="/about" class=" current "><i
+                                            <a href="/" class=" current "><i
                                                         class="menu_icon blank fa"></i><span>Про нас</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-164"
@@ -357,7 +357,6 @@
                                                                                 class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
                                                                     <a itemprop="url"
                                                                        href="/about"
-                                                                       target="_self" class="qbutton  white default"
                                                                        style="margin: 0 6px 6px 0; ">Більше</a><a
                                                                             itemprop="url"
                                                                             href="/animals?animalStatus=TREATMENT"
@@ -380,305 +379,199 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>                
                         </div>
-                        
+                        </div>
+
+                    </div>
+
+                </div>
+                <style>
+
+body {
+    font-family: 'Roboto';font-size: 16px;
+}
+
+.aboutus-section {
+    padding: 90px 0;
+}
+.aboutus-title {
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin: 0 0 39px;
+    padding: 0 0 11px;
+    position: relative;
+    text-transform: uppercase;
+    color: #000;
+}
+.aboutus-title::after {
+    background: #fdb801 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 54px;
+}
+.aboutus-text {
+    color: #606060;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0 0 35px;
+}
+
+a:hover, a:active {
+    color: #ffb901;
+    text-decoration: none;
+    outline: 0;
+}
+.aboutus-more {
+    border: 1px solid #fdb801;
+    border-radius: 25px;
+    color: #fdb801;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 7px 20px;
+    text-transform: uppercase;
+}
+.feature .feature-box .iconset {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    position: relative;
+    width: 18%;
+}
+.feature .feature-box .iconset::after {
+    background: #fdb801 none repeat scroll 0 0;
+    content: "";
+    height: 150%;
+    left: 43%;
+    position: absolute;
+    top: 100%;
+    width: 1px;
+}
+
+.feature .feature-box .feature-content h4 {
+    color: #0f0f0f;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0 0 5px;
+}
 
 
+.feature .feature-box .feature-content {
+    float: left;
+    padding-left: 28px;
+    width: 78%;
+}
+.feature .feature-box .feature-content h4 {
+    color: #0f0f0f;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0 0 5px;
+}
+.feature .feature-box .feature-content p {
+    color: #606060;
+    font-size: 13px;
+    line-height: 22px;
+}
+.icon {
+    color : #f4b841;
+    padding:0px;
+    font-size:40px;
+    border: 1px solid #fdb801;
+    border-radius: 100px;
+    color: #fdb801;
+    font-size: 28px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 70px;
+}
+}
+</style>
 
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-                        <div class="vc_row wpb_row section vc_row-fluid  vc_custom_1474273042405 grid_section"
-                             style=" text-align:center;">
-                            <div class=" section_inner clearfix">
-                                <div class="section_inner_margin clearfix">
-                                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                                        <div class="vc_column-inner">
-                                            <div class="wpb_wrapper">
-                                                <div class="wpb_text_column wpb_content_element ">
-                                                    <div class="wpb_wrapper">
-                                                        <h2>Наші тварини</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="vc_empty_space" style="height: 19px"><span
-                                                            class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
-                                                <div class="wpb_text_column wpb_content_element ">
-                                                    <div class="wpb_wrapper">
-                                                        <h3></h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+<div class="aboutus-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="aboutus">
+                        <h2 class="aboutus-title">Про нас</h2>
+                        <p class="aboutus-text"> Дім Сірка SOS - загальнодоступна група, що об'єднує волонтерів БО "Дім Сірка", власників тварин, небайдужих громадян, які розділяють наше уявлення про цінність кожного життя.
+                        <p class="aboutus-text">    
+                        🟩Наша місія - порятунок бездомних собак і котів, що опинилися в біді (автотравма, хвороба, жорстоке поводження тощо), пошук тимчасовго прихистку (перетримки) для тварин і їхня адопція (прилаштування).
+                        🟥Наша філософія - кожне життя важливе.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="aboutus-banner">
+                        <img src="http://themeinnovation.com/demo2/html/build-up/img/home1/about1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-6 col-xs-12">
+                    <div class="feature">
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                    <span class="glyphicon glyphicon-cog icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Автодопомога 🚗</h4>
+                                    <p>Перевозка тварин до клініки, на перетримку, в новий дім тощо.</p>
                                 </div>
                             </div>
                         </div>
-                        
-                       
-
-                       <div class="container">
-    <div class="wpb_wrapper">
-        <div class="col"></div>
-        <div class="col-12">
-
-
-
-            <#assign pageSubmissionUrl = animalStatus???then('&animalStatus=${animalStatus}','') >
-            <div class="container">
-
-
-                <#if animals.content[0].animalStatus == "FREE">
-                <#elseif animals.content[0].animalStatus == "TREATMENT">
-            </#if>
-
-            <#if animals.totalPageNumber != 0 >
-            <div>
-                <div class="">
-                    <input type="radio" id="animalType"
-                           name="contact" value="DOG" onclick="handleAnimalTypeCheckBoxes()">
-                    <label for="contactChoice1">Собаки</label>
-
-                    <input type="radio" id="animalType"
-                           name="contact" value="CAT" onclick="handleAnimalTypeCheckBoxes()">
-                    <label for="contactChoice2">Коти</label>
-
-                    <input type="radio" href="/animals/type?animalType=OTHER"
-                           name="contact" onclick="handleAnimalTypeCheckBoxes()">
-                    <label for="contactChoice3">Інше</label>
-                </div>
-
-                <@sec.authorize access="isAuthenticated()">
-                <div class="btn btn-outline-success my-2 my-sm-0" style="margin: 15px 25px;">
-                    <a href="/admin/animals/create" type="submit" >Додати тварину</a>
-                </div>
-            </@sec.authorize>
-        </div>
-
-        <div class="row justify-content-center" id="animalList">
-            <#list animals.content as animal>
-            <div class="col-4 clearfix d-none d-md-block mt-5">
-                <div class="vc_column-inner vc_custom_1492524801071">
-                    <div class="wpb_wrapper">
-		            	<div class="q_elements_holder two_columns responsive_mode_from_768">
-							<div class="q_elements_item" data-animation="no"style="vertical-align:middle;">
-				            	<div class="q_elements_item_inner">
-					            	<div class="q_elements_item_content q_elements_holder_custom_772594">
-						                <div class="qode-specification-list">
-						                    <a href="/animals/${animal.id}">
-						                        <#if animal.mediaLinks??>
-						                        <div class="qode-info-card-image"> </div>
-						                        <img src="${animal.mediaLinks[0]}"alt="">
-						                        <#else>
-						                        <div class="qode-info-card-image">
-						                        <img src="https://pixy.org/src/120/1206832.jpg"alt=""> </div>
-
-						                    </#if>
-						                    </a>
-						                    <div class="qode-specification-list-text-holder">
-						                        <h4 class="qode-specification-list-title">${animal.name}</h4>
-						                            <div class="qode-specification-list-items">
-						                       			<!--<div class="qode-specification-list-item">
-						                       				<span class="qode-specification-list-item-label">Опис</span>
-						                       					<span class="qode-specification-list-item-value">${animal.description}</span>
-						                       			</div> -->
-
-						                       			<div class="qode-specification-list-item">
-						                       				<span class="qode-specification-list-item-label">Вік</span>
-						                       					<span class="qode-specification-list-item-value">${animal.age}</span>
-						                       			</div>
-						                       			<div class="qode-specification-list-item">
-						                       				<span class="qode-specification-list-item-label">Дата додавання</span>
-						                       					<span class="qode-specification-list-item-value">${animal.createdDate}</span>
-						                       			</div>
-
-						                       		</div>
-
-
-						                        		<#if animal.animalStatus == "FREE">
-						                        <div class="qode-specification-list-holder">
-                                                        <a itemprop="url"
-                                                           class="qode-qbutton-main-color qode-qbutton-full-width qode-qbutton-square"
-                                                           href="/orders/new/${animal.id}"
-                                                           target="_self"
-                                                           style="background-color:#9aa0b0;height:84px;line-height:84px"><span>ВЗЯТИ</span>
-						                        </a>
-						                    	</div>
-						                        <#elseif animal.animalStatus == "TREATMENT">
-						                        <#--Make payment by means of googlePay-->
-						                        <a itemprop="url"
-						                            class="qode-qbutton-main-color qode-qbutton-full-width qode-qbutton-square"
-						                            href="/"
-						                            target="_self"
-						                            style="background-color:#c5aba5;height:75px;line-height:75px">
-						                            <span>Пожертвувати</span>
-						                        </a>
-						                    </#if>
-						                </div>
-						            </div>
-				            	</div>
-				            </div>
-				        </div>
-				    </div>
-				</div>
-            </div>
-        </div>
-    </#list>
-</div>
-
-
-<div class="row justify-content-center">
-    <ul class="pagination">
-        <li class="page-item  <#if !animals.hasPreviousPage >disabled</#if>">
-            <a class="page-link" href="?page=${animals.currentPageNumber - 1}${pageSubmissionUrl}" tabindex="-1">Previous</a>
-        </li>
-        <#list 1..animals.totalPageNumber as pageNumber>
-        <li class="page-item <#if animals.currentPageNumber == pageNumber>active</#if>">
-            <a class="page-link" href="?page=${pageNumber}${pageSubmissionUrl}">${pageNumber}</a>
-        </li>
-    </#list>
-    <li class="page-item <#if ! animals.hasNextPage >disabled</#if>">
-        <a class="page-link"  href="?page=${animals.currentPageNumber + 1}${pageSubmissionUrl}" tabindex="-1">Next</a>
-    </li>
-    </ul>
-</div>
-</#if>
-
-
-
-</div>
-</div>
-<div class="col">
-</div>
-</div>
-</div> 
-                        
-                        <div class="vc_row wpb_row section vc_row-fluid  qode-lower-section-z-index vc_custom_1481541074234"
-                             style=" text-align:center;">
-                            <div class=" full_section_inner clearfix">
-                                <div class="wpb_column vc_column_container vc_col-sm-12">
-                                    <div class="vc_column-inner vc_custom_1481540011171">
-                                        <div class="wpb_wrapper">
-                                            <div class="vc_empty_space" style="height: 78px"><span
-                                                        class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
-                                            <div class="wpb_text_column wpb_content_element ">
-                                                <div class="wpb_wrapper">
-                                                    <h2><span style="color: #ffffff;">Як взяти тварину?</span>
-                                                    </h2>
-                                                </div>
-                                            </div>
-                                            <div class="vc_empty_space" style="height: 19px"><span
-                                                        class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
-                                            <div class="wpb_text_column wpb_content_element ">
-                                                <div class="wpb_wrapper">
-                                                    <h3><span style="color: #ffffff;"></span>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="vc_empty_space" style="height: 70px"><span
-                                                        class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
-                                            <div class="vc_row wpb_row section vc_row-fluid vc_inner  grid_section"
-                                                 style=" text-align:center;">
-                                                <div class=" section_inner clearfix">
-                                                    <div class="section_inner_margin clearfix">
-                                                        <div class="wpb_column vc_column_container vc_col-sm-12">
-                                                            <div class="vc_column-inner">
-                                                                <div class="wpb_wrapper">
-                                                                    <div class="qode-numbered-process-holder qode-numbered-process-holder-items-four qodef-np-padding-large qode-np-line-solid qode-np-line-skin-light">
-                                                                        <div class="qode-numbered-process-inner">
-                                                                            <div class="qode-np-item">
-                                                                                <div class="qode-np-item-image-holder">
-                                                                                    <div class="qode-np-item-image-inner"
-                                                                                         style="border-color: #ffffff; border-width: 2px">
-                                                                                        <div class="qode-np-item-image-table">
-                                                                                            <div class="qode-np-item-image-table-cell">
-                                                                                                <img src="https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/process-1.jpg"
-                                                                                                     alt="qode-np-item">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <span class="qode-np-item-number"
-                                                                                              style="color: #414141; background-color: #ffffff">1</span>
-                                                                                    </div>
-                                                                                    <span class="qode-np-line"></span>
-                                                                                </div>
-                                                                                <h4 class="qode-np-title"
-                                                                                    style="color: #ffffff">
-                                                                                    Обери тварину </h4>
-                                                                            </div>
-                                                                            <div class="qode-np-item">
-                                                                                <div class="qode-np-item-image-holder">
-                                                                                    <div class="qode-np-item-image-inner"
-                                                                                         style="border-color: #ffffff; border-width: 2px">
-                                                                                        <div class="qode-np-item-image-table">
-                                                                                            <div class="qode-np-item-image-table-cell">
-                                                                                                <img src="https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/process-2.jpg"
-                                                                                                     alt="qode-np-item">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <span class="qode-np-item-number"
-                                                                                              style="color: #414141; background-color: #ffffff">2</span>
-                                                                                    </div>
-                                                                                    <span class="qode-np-line"></span>
-                                                                                </div>
-                                                                                <h4 class="qode-np-title"
-                                                                                    style="color: #ffffff">
-                                                                                    Надішли форму нам. </h4>
-                                                                            </div>
-                                                                            <div class="qode-np-item">
-                                                                                <div class="qode-np-item-image-holder">
-                                                                                    <div class="qode-np-item-image-inner"
-                                                                                         style="border-color: #ffffff; border-width: 2px">
-                                                                                        <div class="qode-np-item-image-table">
-                                                                                            <div class="qode-np-item-image-table-cell">
-                                                                                                <img src="https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/process-3.jpg"
-                                                                                                     alt="qode-np-item">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <span class="qode-np-item-number"
-                                                                                              style="color: #414141; background-color: #ffffff">3</span>
-                                                                                    </div>
-                                                                                    <span class="qode-np-line"></span>
-                                                                                </div>
-                                                                                <h4 class="qode-np-title"
-                                                                                    style="color: #ffffff">
-                                                                                    Зачекайте, ми з вами зв'яжемось! </h4>
-                                                                            </div>
-                                                                            <div class="qode-np-item">
-                                                                                <div class="qode-np-item-image-holder">
-                                                                                    <div class="qode-np-item-image-inner"
-                                                                                         style="border-color: #ffffff; border-width: 2px">
-                                                                                        <div class="qode-np-item-image-table">
-                                                                                            <div class="qode-np-item-image-table-cell">
-                                                                                                <img src="https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/process-4.jpg"
-                                                                                                     alt="qode-np-item">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <span class="qode-np-item-number"
-                                                                                              style="color: #414141; background-color: #ffffff">4</span>
-                                                                                    </div>
-                                                                                    <span class="qode-np-line"></span>
-                                                                                </div>
-                                                                                <h4 class="qode-np-title"
-                                                                                    style="color: #ffffff">
-                                                                                    Забери улюбленця у домовленому місці</h4>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                    <span class="glyphicon glyphicon-cog icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Перетримка 🏠</h4>
+                                    <p>Тимчасове розміщення тварини на час її лікування, соціалізації, пошуку дому.</p>
                                 </div>
                             </div>
                         </div>
-
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                    <span class="glyphicon glyphicon-cog icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Матеріальна допомога 🐶🐱</h4>
+                                    <p>Їжа (сухий і вологий корм), пеленки, непотрібні речі, посуд, ковдри тощо.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
         <footer>
             <div class="footer_inner clearfix">
                 <div class="footer_top_holder">
@@ -820,15 +713,14 @@
             </div>
 
 
-
             <div class="qode-demos-toolbar-footer">
                 <div class="qode-demos-toolbar-footer-inner">
                     <div class="qode-demos-toolbar-footer-icon-holder">
                         <svg x="0px" y="0px" viewBox="0 0 87 87" style="fill: #ee2852; height: 16px;">
                             <path d="M55.4,81.5c6.1-11.1,5.2-16.1-4.3-24.3c6.1-3.5,9.5-8.5,9.1-15.7c-0.5-8.2-7.7-14.7-16.3-14.6
-										c-8.5,0.1-15.6,6.7-15.9,15c-0.3,8.5,5.9,15.8,14.3,16.6c1.4,0.1,2.8,0.2,4.2,0.5c5.9,1.2,10.2,6.7,9.8,12.6
-										c-0.4,6.4-5.5,11.4-11.8,11.7C24.9,84.2,5.9,68.5,3.2,49.3C-0.1,26.9,14.4,6.8,36.4,2.8c22.3-4,43.4,10,48.1,32
-										c4.3,20-8.6,41.2-28.4,46.7C55.9,81.5,55.6,81.5,55.4,81.5z"></path>
+                                        c-8.5,0.1-15.6,6.7-15.9,15c-0.3,8.5,5.9,15.8,14.3,16.6c1.4,0.1,2.8,0.2,4.2,0.5c5.9,1.2,10.2,6.7,9.8,12.6
+                                        c-0.4,6.4-5.5,11.4-11.8,11.7C24.9,84.2,5.9,68.5,3.2,49.3C-0.1,26.9,14.4,6.8,36.4,2.8c22.3-4,43.4,10,48.1,32
+                                        c4.3,20-8.6,41.2-28.4,46.7C55.9,81.5,55.6,81.5,55.4,81.5z"></path>
                         </svg>
                     </div>
                     <div class="qode-demos-toolbar-footer-text-holder">
@@ -904,5 +796,3 @@
          aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div>
 </body>
 </html>
-
-
