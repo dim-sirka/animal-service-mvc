@@ -142,7 +142,7 @@
     </style>
     <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
     <style type="text/css" data-type="vc_shortcodes-custom-css">
-        .vc_custom_1472631590873{background-image: url(https://scontent-otp1-1.xx.fbcdn.net/v/t1.6435-9/77252146_428056894527601_444502387554516992_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=973b4a&_nc_ohc=1h4tKlW-fpkAX-BQX0g&_nc_ht=scontent-otp1-1.xx&oh=c158619bb990c66aeb73e7a17bbfbe37&oe=60953FF9) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
+        .vc_custom_1472631590873{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/image.jpg?id=22) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
     </style>
     <meta name="generator"
           content="Powered by Slider Revolution 5.2.6 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
@@ -185,9 +185,9 @@
                             <div class="container_inner clearfix">
                                 <div class="header_inner_left">
                                     <div class="mobile_menu_button">
-                                    	<span>
-                                    		<i class="qode_icon_font_awesome fa fa-bars "></i> 
-                                    	</span>
+                                        <span>
+                                            <i class="qode_icon_font_awesome fa fa-bars "></i> 
+                                        </span>
                                     </div>
                                     <div class="logo_wrapper">
                                         <div class="q_logo">
@@ -318,7 +318,7 @@
             </div>
             <div class="content_inner  ">
                 <style type="text/css" data-type="vc_shortcodes-custom-css-5">
-                    .vc_custom_1472631590873{background-image: url(https://scontent-otp1-1.xx.fbcdn.net/v/t1.6435-9/77252146_428056894527601_444502387554516992_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=973b4a&_nc_ohc=1h4tKlW-fpkAX-BQX0g&_nc_ht=scontent-otp1-1.xx&oh=c158619bb990c66aeb73e7a17bbfbe37&oe=60953FF9) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
+                    .vc_custom_1472631590873{background-image: url(https://i.ibb.co/2hdjQnZ/friends-1149841-1920dark.jpg) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472637221526{padding-top: 58px !important;}.vc_custom_1474273042405{padding-top: 52px !important;}.vc_custom_1491918499778{margin-bottom: -79px !important;padding-top: 72px !important;}.vc_custom_1481541074234{background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1472639134641{padding-top: 102px !important;padding-bottom: 38px !important;}.vc_custom_1472634047354{padding-top: 30px !important;padding-bottom: 30px !important;background-color: #70949d !important;}.vc_custom_1492610180771{padding-top: 20% !important;padding-bottom: 20% !important;}.vc_custom_1481124718179{margin-top: -12.2% !important;}.vc_custom_1492524794936{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1492524801071{padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1481540011171{padding-top: 67px !important;padding-bottom: 106px !important;}
                 </style>
                 <script>
                     var page_scroll_amount_for_sticky = 900;
@@ -356,10 +356,11 @@
                                                                          style="height: 39px"><span
                                                                                 class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
                                                                     <a itemprop="url"
-                                                                       href="/about"
+                                                                       href="/animals?animalStatus=FREE"
+                                                                       target="_self" class="qbutton  white default"
                                                                        style="margin: 0 6px 6px 0; ">Більше</a><a
                                                                             itemprop="url"
-                                                                            href="/animals?animalStatus=TREATMENT"
+                                                                            href="/animals?animalStatus=FREE"
                                                                             target="_self"
                                                                             data-hover-background-color="#fafafa"
                                                                             data-hover-border-color="rgba(255,255,255,0.1)"
@@ -379,14 +380,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>                
+                            </div>
                         </div>
-                        </div>
+                        
 
-                    </div>
 
-                </div>
-                <style>
+<style>
 
 body {
     font-family: 'Roboto';font-size: 16px;
@@ -571,7 +570,134 @@ a:hover, a:active {
 
 
 
+                        
+                        <div class="vc_row wpb_row section vc_row-fluid  qode-lower-section-z-index vc_custom_1481541074234"
+                             style=" text-align:center;">
+                            <div class=" full_section_inner clearfix">
+                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                    <div class="vc_column-inner vc_custom_1481540011171">
+                                        <div class="wpb_wrapper">
+                                            <div class="vc_empty_space" style="height: 78px"><span
+                                                        class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
+                                            <div class="wpb_text_column wpb_content_element ">
+                                                <div class="wpb_wrapper">
+                                                    <h2><span style="color: #ffffff;">Як взяти тварину?</span>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="vc_empty_space" style="height: 19px"><span
+                                                        class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
+                                            <div class="wpb_text_column wpb_content_element ">
+                                                <div class="wpb_wrapper">
+                                                    <h3><span style="color: #ffffff;"></span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="vc_empty_space" style="height: 70px"><span
+                                                        class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
+                                            <div class="vc_row wpb_row section vc_row-fluid vc_inner  grid_section"
+                                                 style=" text-align:center;">
+                                                <div class=" section_inner clearfix">
+                                                    <div class="section_inner_margin clearfix">
+                                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                            <div class="vc_column-inner">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="qode-numbered-process-holder qode-numbered-process-holder-items-four qodef-np-padding-large qode-np-line-solid qode-np-line-skin-light">
+                                                                        <div class="qode-numbered-process-inner">
+                                                                            <div class="qode-np-item">
+                                                                                <div class="qode-np-item-image-holder">
+                                                                                    <div class="qode-np-item-image-inner"
+                                                                                         style="border-color: #ffffff; border-width: 2px">
+                                                                                        <div class="qode-np-item-image-table">
+                                                                                            <div class="qode-np-item-image-table-cell">
+                                                                                                <img src="https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/process-1.jpg"
+                                                                                                     alt="qode-np-item">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <span class="qode-np-item-number"
+                                                                                              style="color: #414141; background-color: #ffffff">1</span>
+                                                                                    </div>
+                                                                                    <span class="qode-np-line"></span>
+                                                                                </div>
+                                                                                <h4 class="qode-np-title"
+                                                                                    style="color: #ffffff">
+                                                                                    Обери тварину </h4>
+                                                                            </div>
+                                                                            <div class="qode-np-item">
+                                                                                <div class="qode-np-item-image-holder">
+                                                                                    <div class="qode-np-item-image-inner"
+                                                                                         style="border-color: #ffffff; border-width: 2px">
+                                                                                        <div class="qode-np-item-image-table">
+                                                                                            <div class="qode-np-item-image-table-cell">
+                                                                                                <img src="https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/process-2.jpg"
+                                                                                                     alt="qode-np-item">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <span class="qode-np-item-number"
+                                                                                              style="color: #414141; background-color: #ffffff">2</span>
+                                                                                    </div>
+                                                                                    <span class="qode-np-line"></span>
+                                                                                </div>
+                                                                                <h4 class="qode-np-title"
+                                                                                    style="color: #ffffff">
+                                                                                    Надішли форму нам. </h4>
+                                                                            </div>
+                                                                            <div class="qode-np-item">
+                                                                                <div class="qode-np-item-image-holder">
+                                                                                    <div class="qode-np-item-image-inner"
+                                                                                         style="border-color: #ffffff; border-width: 2px">
+                                                                                        <div class="qode-np-item-image-table">
+                                                                                            <div class="qode-np-item-image-table-cell">
+                                                                                                <img src="https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/process-3.jpg"
+                                                                                                     alt="qode-np-item">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <span class="qode-np-item-number"
+                                                                                              style="color: #414141; background-color: #ffffff">3</span>
+                                                                                    </div>
+                                                                                    <span class="qode-np-line"></span>
+                                                                                </div>
+                                                                                <h4 class="qode-np-title"
+                                                                                    style="color: #ffffff">
+                                                                                    Зачекайте, ми з вами зв'яжемось! </h4>
+                                                                            </div>
+                                                                            <div class="qode-np-item">
+                                                                                <div class="qode-np-item-image-holder">
+                                                                                    <div class="qode-np-item-image-inner"
+                                                                                         style="border-color: #ffffff; border-width: 2px">
+                                                                                        <div class="qode-np-item-image-table">
+                                                                                            <div class="qode-np-item-image-table-cell">
+                                                                                                <img src="https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/process-4.jpg"
+                                                                                                     alt="qode-np-item">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <span class="qode-np-item-number"
+                                                                                              style="color: #414141; background-color: #ffffff">4</span>
+                                                                                    </div>
+                                                                                    <span class="qode-np-line"></span>
+                                                                                </div>
+                                                                                <h4 class="qode-np-title"
+                                                                                    style="color: #ffffff">
+                                                                                    Забери улюбленця у домовленому місці</h4>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer>
             <div class="footer_inner clearfix">
                 <div class="footer_top_holder">
@@ -697,40 +823,6 @@ a:hover, a:active {
     </div>
 </div>
 <div class="qode-demos-toolbar" data-demo="bridge82.qodeinteractive.com">
-    <section class="qode-demos-toolbar-section">
-        <div class="qode-demos-toolbar-list-holder">
-            <div class="qode-demos-toolbar-header">
-                <div class="qode-demos-toolbar-header-inner">
-                    <div class="qode-demos-toolbar-header-text-holder">
-                        <p>Get the entire collection of 530+ website demos for $59!</p>
-                    </div>
-
-                    <div class="qode-demos-toolbar-header-button-holder">
-                        <a href="https://bridgelanding.qodeinteractive.com/#demos-section" target="_blank"
-                           class="qode-demos-toolbar-header-button">View all 530 demos</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="qode-demos-toolbar-footer">
-                <div class="qode-demos-toolbar-footer-inner">
-                    <div class="qode-demos-toolbar-footer-icon-holder">
-                        <svg x="0px" y="0px" viewBox="0 0 87 87" style="fill: #ee2852; height: 16px;">
-                            <path d="M55.4,81.5c6.1-11.1,5.2-16.1-4.3-24.3c6.1-3.5,9.5-8.5,9.1-15.7c-0.5-8.2-7.7-14.7-16.3-14.6
-                                        c-8.5,0.1-15.6,6.7-15.9,15c-0.3,8.5,5.9,15.8,14.3,16.6c1.4,0.1,2.8,0.2,4.2,0.5c5.9,1.2,10.2,6.7,9.8,12.6
-                                        c-0.4,6.4-5.5,11.4-11.8,11.7C24.9,84.2,5.9,68.5,3.2,49.3C-0.1,26.9,14.4,6.8,36.4,2.8c22.3-4,43.4,10,48.1,32
-                                        c4.3,20-8.6,41.2-28.4,46.7C55.9,81.5,55.6,81.5,55.4,81.5z"></path>
-                        </svg>
-                    </div>
-                    <div class="qode-demos-toolbar-footer-text-holder">
-                        <p>Powered by students IPZ-41</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 
 
@@ -796,3 +888,5 @@ a:hover, a:active {
          aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div>
 </body>
 </html>
+
+
