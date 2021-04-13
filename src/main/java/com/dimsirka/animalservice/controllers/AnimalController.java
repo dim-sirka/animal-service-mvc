@@ -33,6 +33,7 @@ public class AnimalController {
         return "animal/formCreateAnimal";
     }
 
+
     @PostMapping("/admin/animals/new")
     public String create(@ModelAttribute AnimalDto animalDto) {
         animalService.create(mapper.toEntity(animalDto));
@@ -76,6 +77,7 @@ public class AnimalController {
         model.addAttribute("animals", animals);
         return "animal/list";
     }
+
 
     @GetMapping("/animals")
     @ResponseStatus(HttpStatus.OK)
