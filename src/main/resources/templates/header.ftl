@@ -84,7 +84,7 @@
 
         <ul class="navbar-nav bd-navbar-nav flex-row" style="margin: 15px 30px;">
             <li class="nav-item" >
-                <a class="nav-link nav-item-color" href="/" title="About us" style="margin: 0 20px;">Про нас</a>
+                <a class="nav-link nav-item-color" href="/about" title="About us" style="margin: 0 20px;">Про нас</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-item-color active" href="/animals?animalStatus=FREE" style="margin: 0 20px;">Віддаємо</a>

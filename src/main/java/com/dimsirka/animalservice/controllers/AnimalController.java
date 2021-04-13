@@ -78,10 +78,6 @@ public class AnimalController {
         return "animal/list";
     }
 
-    @GetMapping({"/about"})
-    public String getAll() {
-        return "animal/about";
-    }
 
     @GetMapping("/animals")
     @ResponseStatus(HttpStatus.OK)
