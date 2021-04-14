@@ -4,107 +4,29 @@
       class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths js_active  vc_desktop  vc_transform  vc_transform "
       style="height: auto; overflow: auto;">
 <head>
-    <link type="text/css" rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700">
+    <link type="text/css" rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700">
     <meta charset="UTF-8">
     <title>Dim Sirka</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="pingback" href="https://bridge82.qodeinteractive.com/xmlrpc.php">
-    <link rel="shortcut icon" type="image/x-icon"
-          href="https://cdn1.savepice.ru/uploads/2020/11/20/698671d079af0fa613934c3bca2a8228-full.png">
-    <link rel="apple-touch-icon"
-          href="https://cdn1.savepice.ru/uploads/2020/11/20/698671d079af0fa613934c3bca2a8228-full.png">
-    <link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900,300italic,400italic|Arvo:100,200,300,400,500,600,700,800,900,300italic,400italic|Josefin+Sans:100,200,300,400,500,600,700,800,900,300italic,400italic|Open+Sans:100,200,300,400,500,600,700,800,900,300italic,400italic&amp;subset=latin,latin-ext"
-          rel="stylesheet" type="text/css">
-
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn1.savepice.ru/uploads/2020/11/20/698671d079af0fa613934c3bca2a8228-full.png">
+    <link rel="apple-touch-icon" href="https://cdn1.savepice.ru/uploads/2020/11/20/698671d079af0fa613934c3bca2a8228-full.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-    <div class="fit-vids-style" id="fit-vids-style" style="display: none;">­
-    </div>
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-WCC77WV"></script>
-    <script type="application/javascript">
-        var QodeAjaxUrl = "https://bridge82.qodeinteractive.com/wp-admin/admin-ajax.php"
-    </script>
-
-    <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">//<![CDATA[
-        var gtm4wp_datalayer_name = "dataLayer";
-        var dataLayer = dataLayer || [];
-        //]]>
-
-    </script>
-    <link rel="dns-prefetch" href="//toolbar.qodeinteractive.com">
-    <link rel="dns-prefetch" href="//maps.googleapis.com">
-    <link rel="dns-prefetch" href="//s.w.org">
-    <link rel="alternate" type="application/rss+xml" title="Bridge » Feed"
-          href="https://bridge82.qodeinteractive.com/feed/">
-    <link rel="alternate" type="application/rss+xml" title="Bridge » Comments Feed"
-          href="https://bridge82.qodeinteractive.com/comments/feed/">
-    <script src="https://bridge82.qodeinteractive.com/wp-includes/js/wp-emoji-release.min.js?ver=5.3"
-            type="text/javascript" defer=""></script>
-
+    <script src="https://bridge82.qodeinteractive.com/wp-includes/js/wp-emoji-release.min.js?ver=5.3" type="text/javascript" defer=""></script>
     <link rel="stylesheet" href="https://bridge82.qodeinteractive.com/wp-content/cache/minify/7de6a.css" media="all">
-    <link rel="stylesheet" id="qode_demos_css-css"
-          href="https://toolbar.qodeinteractive.com/_qode_toolbar/assets/css/qode-demos-modules.css?ver=5.3"
-          type="text/css" media="all">
-    <link rel="stylesheet" id="qode_demos_swiper_css-css"
-          href="https://toolbar.qodeinteractive.com/_qode_toolbar/assets/css/swiper.css?ver=5.3" type="text/css"
-          media="all">
+    <link rel="stylesheet" id="qode_demos_css-css" href="https://toolbar.qodeinteractive.com/_qode_toolbar/assets/css/qode-demos-modules.css?ver=5.3" type="text/css" media="all">
+    <link rel="stylesheet" id="qode_demos_swiper_css-css"  href="https://toolbar.qodeinteractive.com/_qode_toolbar/assets/css/swiper.css?ver=5.3" type="text/css"  media="all">
     <link rel="stylesheet" href="https://bridge82.qodeinteractive.com/wp-content/cache/minify/c138f.css" media="all">
     <link rel="stylesheet" href="https://bridge82.qodeinteractive.com/wp-content/cache/minify/2bf8a.css" media="all">
     <script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/129fc.js"></script>
-    <link rel="https://api.w.org/" href="https://bridge82.qodeinteractive.com/wp-json/">
-    <link rel="EditURI" type="application/rsd+xml" title="RSD"
-          href="https://bridge82.qodeinteractive.com/xmlrpc.php?rsd">
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
-          href="https://bridge82.qodeinteractive.com/wp-includes/wlwmanifest.xml">
-    <meta name="generator" content="WordPress 5.3">
-    <link rel="canonical" href="https://bridge82.qodeinteractive.com/">
-    <link rel="shortlink" href="https://bridge82.qodeinteractive.com/">
-    <link rel="alternate" type="application/json+oembed"
-          href="https://bridge82.qodeinteractive.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbridge82.qodeinteractive.com%2F">
-    <link rel="alternate" type="text/xml+oembed"
-          href="https://bridge82.qodeinteractive.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbridge82.qodeinteractive.com%2F&amp;format=xml">
-
-    <noscript>
-        <style> .wpb_animate_when_almost_visible {
-                opacity: 1;
-            }</style>
-    </noscript>
-    <script type="text/javascript" charset="UTF-8"
-            src="https://maps.googleapis.com/maps-api-v3/api/js/43/1a/common.js"></script>
-    <script type="text/javascript" charset="UTF-8"
-            src="https://maps.googleapis.com/maps-api-v3/api/js/43/1a/util.js"></script>
-    <script type="text/javascript" charset="UTF-8"
-            src="https://maps.googleapis.com/maps-api-v3/api/js/43/1a/geocoder.js"></script>
-    <script type="text/javascript" charset="UTF-8"
-            src="https://maps.googleapis.com/maps-api-v3/api/js/43/1a/map.js"></script>
-    <script type="text/javascript" charset="UTF-8"
-            src="https://maps.googleapis.com/maps-api-v3/api/js/43/1a/infowindow.js"></script>
-    <script type="text/javascript" charset="UTF-8"
-            src="https://maps.googleapis.com/maps-api-v3/api/js/43/1a/onion.js"></script>
-    <script type="text/javascript" charset="UTF-8"
-            src="https://maps.googleapis.com/maps-api-v3/api/js/43/1a/marker.js"></script>
-    <script type="text/javascript" charset="UTF-8"
-            src="https://maps.googleapis.com/maps-api-v3/api/js/43/1a/controls.js"></script>
 </head>
 <body class="home page-template page-template-full_width page-template-full_width-php page page-id-5 ajax_fade page_not_loaded  qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-11.0 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
       itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow: auto;">
-<div class="ajax_loader">
-    <div class="ajax_loader_1">
-        <div class="pulse"></div>
-    </div>
-</div>
 <div class="wrapper">
     <div class="wrapper_inner">
         <header class="scroll_header_top_area  stick transparent scrolled_not_transparent with_border ajax_header_animation page_header">
@@ -240,14 +162,6 @@
 </span>
         </a>
         <div class="content " style="padding-top: 0px; min-height: 1644px;">
-            <div class="meta">
-                <div class="seo_title">Bridge | Demo Site for Pet Sanctuary</div>
-                <span id="qode_page_id">5</span>
-                <div class="body_classes">
-                    home,page-template,page-template-full_width,page-template-full_width-php,page,page-id-5,ajax_fade,page_not_loaded,,qode-title-hidden,qode_grid_1300,footer_responsive_adv,qode-theme-ver-11.0,wpb-js-composer
-                    js-comp-ver-6.0.5,vc_responsive
-                </div>
-            </div>
             <div class="content_inner  ">
                 <script>
                     var page_scroll_amount_for_sticky = 900;
@@ -315,8 +229,7 @@
                                 </div>
                             </div>
                         </div>
-                        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"
-                              id="bootstrap-css">
+                        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
                         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
                         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
                         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
@@ -330,11 +243,11 @@
                                                 волонтерів БО "Дім Сірка", власників тварин, небайдужих громадян, які
                                                 розділяють наше уявлення про цінність кожного життя.</p>
                                             <p class="aboutus-text">
-                                                🟩Наша місія - порятунок бездомних собак і котів, що опинилися в біді
+                                                Наша місія - порятунок бездомних собак і котів, що опинилися в біді
                                                 (автотравма, хвороба, жорстоке поводження тощо), пошук тимчасовго
                                                 прихистку (перетримки) для тварин і їхня адопція (прилаштування).
                                             <p class="aboutus-text">
-                                                🟥Наша філософія - кожне життя важливе.</p>
+                                                Наша філософія - кожне життя важливе.</p>
                                         </div>
                                     </div>
                                     <div class="col-md-3 col-sm-6 col-xs-12">
