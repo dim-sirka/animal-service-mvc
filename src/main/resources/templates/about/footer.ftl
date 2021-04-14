@@ -1,4 +1,144 @@
 <#assign sec=JspTaglibs["http://www.springframework.org/security/tags"]/>
+<footer>
+    <div class="footer_inner clearfix">
+        <div class="footer_top_holder">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="container_inner">
+                        <div class="three_columns clearfix">
+                            <div class="column1 footer_col1">
+                                <div class="column_inner">
+                                    <div id="text-2" class="widget widget_text">
+                                        <div class="textwidget">
+                                            <img
+                                                    src="https://i.ibb.co/QvVyg75/dim-sirka-Texture.png"
+                                                    alt="logo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column2 footer_col2">
+                                <div class="column_inner">
+                                    <div id="text-3" class="widget widget_text">
+                                        <h5>Як взяти тварину у нас?</h5>
+                                    </div>
+                                    <div id="nav_menu-2" class="widget widget_nav_menu">
+                                        <div class="menu-footer-menu-container">
+                                            <ul id="menu-footer-menu" class="menu">
+                                                <li id="menu-item-45"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45">
+                                                    <a href="#">Як взяти тварину?</a></li>
+                                                <li id="menu-item-46"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46">
+                                                    <a href="#">Які умови?</a></li>
+                                                <li id="menu-item-47"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47">
+                                                    <a href="#">Реквізити оплати</a></li>
+                                                <li id="menu-item-47"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47">
+                                                    <a href="#">Пошук</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column3 footer_col3">
+                                <div class="column_inner">
+                                    <div id="text-4" class="widget widget_text"><h5>Розташування притулку</h5>
+                                        <div class="textwidget">
+                                            <div class="card card-cascade narrower">
+                                                <div class="card-body card-body-cascade text-center">
+                                                    <div id="map-container-google-9"
+                                                         class="z-depth-1-half map-container-5" style="height: 300px">
+                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10492.428344708474!2d24.7648442!3d48.8942963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6a789a2223e12e2d!2z0JHQniDQlNGW0Lwg0KHRltGA0LrQsCAuINCf0YDQuNGC0YPQu9C-0Lo!5e0!3m2!1suk!2sua!4v1618412934686!5m2!1suk!2sua"
+                                                                width="600" height="450" style="border:0;"
+                                                                allowfullscreen="" loading="lazy"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="https://www.google.com/maps/place/%D0%91%D0%9E+%D0%94%D1%96%D0%BC+%D0%A1%D1%96%D1%80%D0%BA%D0%B0+.+%D0%9F%D1%80%D0%B8%D1%82%D1%83%D0%BB%D0%BE%D0%BA/@48.8942963,24.7626555,17z/data=!3m1!4b1!4m5!3m4!1s0x4730c391910041fd:0x6a789a2223e12e2d!8m2!3d48.8942963!4d24.7648442">
+                                                Івано-Франківська міськрада
+                                                Івано-Франківська область, c. Микитинці</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column2 footer_col2">
+                                <div class="column_inner">
+                                    <div id="text-3" class="widget widget_text"><h5>Контакти притулку</h5>
+                                    </div>
+                                    <div id="nav_menu-2" class="widget widget_nav_menu">
+                                        <div class="menu-footer-menu-container">
+                                            <ul id="menu-footer-menu" class="menu">
+                                                <li id="menu-item-45"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45">
+                                                    <a href="#">Номер телефону: +380 98 557 7962</a></li>
+                                                <li id="menu-item-45"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45">
+                                                    <a href="#">Електронна адреса: dimsirka_forum@ukr.net</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom_holder">
+            <div class="container">
+                <div class="container_inner">
+                    <div class="two_columns_50_50 footer_bottom_columns clearfix">
+                        <div class="column1 footer_bottom_column">
+                            <div class="column_inner">
+                                <div class="footer_bottom">
+                                    <div class="textwidget">© Created by students IPZ-41
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column2 footer_bottom_column">
+                            <div class="column_inner">
+                                <div class="footer_bottom">
+                                    <div class="menu-main-menu-container">
+                                        <ul id="menu-main-menu-2" class="menu">
+                                            <li id="menu-item-164"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164">
+                                                <a href="/about">Про Нас</a>
+                                            </li>
+                                            <li id="menu-item-161"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
+                                                <a href="/animals?animalStatus=FREE">Віддаємо</a></li>
+                                            <li id="menu-item-162"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
+                                                <a href="/animals?animalStatus=TREATMENT">Лікування</a>
+                                            </li>
+                                            <li id="menu-item-163"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163">
+                                                <a href="/animals?animalStatus=ARCHIVE">Архів</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+<div class="qode-demos-toolbar" data-demo="bridge82.qodeinteractive.com">
+    <script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/3f0fa.js"></script>
+    <script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/5f16d.js"></script>
+    <script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/00530.js"></script>
+    <script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/9d9d4.js"></script>
+    <script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/e5338.js"></script>
+</body>
+</html>
 <style>
     .gm-control-active > img {
         box-sizing: content-box;
