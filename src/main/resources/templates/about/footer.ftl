@@ -139,8 +139,138 @@
     <script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/e5338.js"></script>
 </body>
 </html>
-<style>
-    .gm-control-active > img {
+<style type="text/css" data-type="vc_shortcodes-custom-css-5">
+    .vc_custom_1472631590873 {
+        background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/image.jpg?id=22) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+
+    .vc_custom_1472637221526 {
+        padding-top: 58px !important;
+    }
+
+    .vc_custom_1474273042405 {
+        padding-top: 52px !important;
+    }
+
+    .vc_custom_1491918499778 {
+        margin-bottom: -79px !important;
+        padding-top: 72px !important;
+    }
+
+    .vc_custom_1481541074234 {
+        background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+
+    .vc_custom_1472639134641 {
+        padding-top: 102px !important;
+        padding-bottom: 38px !important;
+    }
+
+    .vc_custom_1472634047354 {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        background-color: #70949d !important;
+    }
+
+    .vc_custom_1492610180771 {
+        padding-top: 20% !important;
+        padding-bottom: 20% !important;
+    }
+
+    .vc_custom_1481124718179 {
+        margin-top: -12.2% !important;
+    }
+
+    .vc_custom_1492524794936 {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .vc_custom_1492524801071 {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .vc_custom_1481540011171 {
+        padding-top: 67px !important;
+        padding-bottom: 106px !important;
+    }
+    .vc_custom_1472631590873 {
+        background-image: url(https://i.ibb.co/2hdjQnZ/friends-1149841-1920dark.jpg) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+
+    .vc_custom_1472637221526 {
+        padding-top: 58px !important;
+    }
+
+    .vc_custom_1474273042405 {
+        padding-top: 52px !important;
+    }
+
+    .vc_custom_1491918499778 {
+        margin-bottom: -79px !important;
+        padding-top: 72px !important;
+    }
+
+    .vc_custom_1481541074234 {
+        background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+
+    .vc_custom_1472639134641 {
+        padding-top: 102px !important;
+        padding-bottom: 38px !important;
+    }
+
+    .vc_custom_1472634047354 {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        background-color: #70949d !important;
+    }
+
+    .vc_custom_1492610180771 {
+        padding-top: 20% !important;
+        padding-bottom: 20% !important;
+    }
+
+    .vc_custom_1481124718179 {
+        margin-top: -12.2% !important;
+    }
+
+    .vc_custom_1492524794936 {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .vc_custom_1492524801071 {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .vc_custom_1481540011171 {
+        padding-top: 67px !important;
+        padding-bottom: 106px !important;
+    }
+
+     .recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+
+     .gm-control-active > img {
         box-sizing: content-box;
         display: none;
         left: 50%;
@@ -241,147 +371,21 @@
         background: none !important;
         padding: 0 !important;
     }
-
-</style>
-<style id="rs-plugin-settings-inline-css" type="text/css">
-    #rs-demo-id {
+    .map-container-5 {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
     }
 
-</style>
-<style type="text/css">
-    .recentcomments a {
-        display: inline !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-</style>
-<style type="text/css" data-type="vc_shortcodes-custom-css">
-    .vc_custom_1472631590873 {
-        background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/image.jpg?id=22) !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
+    .map-container-5 iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
     }
 
-    .vc_custom_1472637221526 {
-        padding-top: 58px !important;
-    }
-
-    .vc_custom_1474273042405 {
-        padding-top: 52px !important;
-    }
-
-    .vc_custom_1491918499778 {
-        margin-bottom: -79px !important;
-        padding-top: 72px !important;
-    }
-
-    .vc_custom_1481541074234 {
-        background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-    }
-
-    .vc_custom_1472639134641 {
-        padding-top: 102px !important;
-        padding-bottom: 38px !important;
-    }
-
-    .vc_custom_1472634047354 {
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-        background-color: #70949d !important;
-    }
-
-    .vc_custom_1492610180771 {
-        padding-top: 20% !important;
-        padding-bottom: 20% !important;
-    }
-
-    .vc_custom_1481124718179 {
-        margin-top: -12.2% !important;
-    }
-
-    .vc_custom_1492524794936 {
-        padding-right: 0px !important;
-        padding-left: 0px !important;
-    }
-
-    .vc_custom_1492524801071 {
-        padding-right: 0px !important;
-        padding-left: 0px !important;
-    }
-
-    .vc_custom_1481540011171 {
-        padding-top: 67px !important;
-        padding-bottom: 106px !important;
-    }
-</style>
-<style type="text/css" data-type="vc_shortcodes-custom-css-5">
-    .vc_custom_1472631590873 {
-        background-image: url(https://i.ibb.co/2hdjQnZ/friends-1149841-1920dark.jpg) !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-    }
-
-    .vc_custom_1472637221526 {
-        padding-top: 58px !important;
-    }
-
-    .vc_custom_1474273042405 {
-        padding-top: 52px !important;
-    }
-
-    .vc_custom_1491918499778 {
-        margin-bottom: -79px !important;
-        padding-top: 72px !important;
-    }
-
-    .vc_custom_1481541074234 {
-        background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-    }
-
-    .vc_custom_1472639134641 {
-        padding-top: 102px !important;
-        padding-bottom: 38px !important;
-    }
-
-    .vc_custom_1472634047354 {
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-        background-color: #70949d !important;
-    }
-
-    .vc_custom_1492610180771 {
-        padding-top: 20% !important;
-        padding-bottom: 20% !important;
-    }
-
-    .vc_custom_1481124718179 {
-        margin-top: -12.2% !important;
-    }
-
-    .vc_custom_1492524794936 {
-        padding-right: 0px !important;
-        padding-left: 0px !important;
-    }
-
-    .vc_custom_1492524801071 {
-        padding-right: 0px !important;
-        padding-left: 0px !important;
-    }
-
-    .vc_custom_1481540011171 {
-        padding-top: 67px !important;
-        padding-bottom: 106px !important;
-    }
-</style>
-<style>
 
     body {
         font-family: 'Roboto';
@@ -500,20 +504,5 @@
 
     }
 </style>
-<style type="text/css">
-    .map-container-5 {
-        overflow: hidden;
-        padding-bottom: 56.25%;
-        position: relative;
-        height: 0;
-    }
 
-    .map-container-5 iframe {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-    }
-</style>
 
