@@ -18,8 +18,9 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class AnimalController {
-    private AnimalService animalService;
-    private AnimalDtoMapper mapper;
+
+    private final AnimalService animalService;
+    private final AnimalDtoMapper mapper;
 
 
     @Autowired
@@ -29,7 +30,7 @@ public class AnimalController {
     }
 
     @GetMapping("/admin/animals/create")
-    public String getCreateget() {
+    public String getCreatePage() {
         return "animal/formCreateAnimal";
     }
 
@@ -61,7 +62,7 @@ public class AnimalController {
     }
 
     @GetMapping({"/animals/type"})
-    public String getAllAnimalType(@RequestParam AnimalType animalType,
+    public String getAllByType(@RequestParam AnimalType animalType,
                                    @RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
                                    ModelMap model) {
         Page<Animal> animalsPage = animalService.getAllByAnimalStatusAndAnimalType(pageNumber, AnimalStatus.FREE, animalType);
@@ -81,7 +82,7 @@ public class AnimalController {
 
     @GetMapping("/animals")
     @ResponseStatus(HttpStatus.OK)
-    public String getByAnimalStatus(@RequestParam AnimalStatus animalStatus,
+    public String getAllByAnimalStatus(@RequestParam AnimalStatus animalStatus,
                                     @RequestParam(name = "page", required = false, defaultValue = "1") int pageNumber,
                                     ModelMap model) {
         Page<Animal> animalsPage = animalService.getAllByAnimalStatus(pageNumber, animalStatus);
@@ -92,7 +93,7 @@ public class AnimalController {
     }
 
     @GetMapping("/animals/")
-    public String getByAnimalName(@RequestParam("name") String animalName, Model model) {
+    public String getAllByAnimalName(@RequestParam("name") String animalName, Model model) {
         AnimalDto animalDto = mapper.toDto(animalService.getByAnimalName(animalName));
         model.addAttribute("animal", animalDto);
         return "animal/info";
