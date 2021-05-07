@@ -30,6 +30,7 @@ public class AnimalDto {
     private AnimalType animalType;
     @NotBlank(message = "Description should be specified")
     private String description;
+    private Integer visitCounter;
 //    @NotNull(message = "Animal status should be specified")
     private AnimalStatus animalStatus;
     private Set<String> mediaLinks;

@@ -40,4 +40,7 @@ public class Order{
     private Timestamp updatedDate;
     @ManyToOne
     private Animal animal;
+    private String previousExperience;
+    private String offeredAccommodation;
+    private String address;
 }

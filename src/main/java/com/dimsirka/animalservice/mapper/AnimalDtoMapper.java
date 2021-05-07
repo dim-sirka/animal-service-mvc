@@ -24,6 +24,7 @@ public class AnimalDtoMapper implements EntityDtoMapper<Animal, AnimalDto> {
                 .createdDate(animal.getCreatedDate())
                 .updatedDate(animal.getUpdatedDate())
                 .description(animal.getDescription())
+                .visitCounter(animal.getVisitCounter())
                 .age(animal.getAge())
                 .mediaLinks(toMediaSet(animal.getMediaLinks()))
                 .animalType(animal.getAnimalType()).build();
@@ -34,7 +35,6 @@ public class AnimalDtoMapper implements EntityDtoMapper<Animal, AnimalDto> {
                 .id(animal.getId())
                 .name(animal.getName())
                 .animalStatus(animal.getAnimalStatus())
-                .description(animal.getDescription())
                 .age(animal.getAge())
                 .mediaLinks(toMediaString(animal.getMediaLinks()))
                 .animalType(animal.getAnimalType()).build();

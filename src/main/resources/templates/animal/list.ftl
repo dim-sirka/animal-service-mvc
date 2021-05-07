@@ -114,7 +114,7 @@
     <div class="row justify-content-center">
         <ul class="pagination justify-content-center">
             <li class="page-item  <#if !animals.hasPreviousPage >disabled</#if>">
-                <a class="page-link" 
+                <a class="page-link"
                    href="?page=${animals.currentPageNumber - 1}${pageSubmissionUrl}"
                    tabindex="-1">Previous</a>
             </li>
