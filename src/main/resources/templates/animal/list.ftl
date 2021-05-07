@@ -1,93 +1,90 @@
-<#include "../header.ftl">
-<#assign pageSubmissionUrl = animalStatus???then('&animalStatus=${animalStatus}','') >
-<#if animals.content[0].animalStatus == "FREE">
-    <h1 class="text-center font-italic font-weight-bold font-family">Не
-        купуй - візьми!</h1>
-<#elseif animals.content[0].animalStatus == "TREATMENT">
-    <h1 class="text-center font-italic font-weight-bold font-family">Нам
-        потрібна ваша підтримка!</h1>
-</#if>
-<#if animals.totalPageNumber != 0 >
-    <div>
-        <div class="">
-            <input type="radio" id="animalType"
-                   name="contact" value="DOG"
-                   onclick="handleAnimalTypeCheckBoxes()">
-            <label for="contactChoice1">Собаки</label>
+<#include "header.ftl">
 
-            <input type="radio" id="animalType"
-                   name="contact" value="CAT"
-                   onclick="handleAnimalTypeCheckBoxes()">
-            <label for="contactChoice2">Коти</label>
 
-            <input type="radio" href="/animals/type?animalType=OTHER"
-                   name="contact" onclick="handleAnimalTypeCheckBoxes()">
-            <label for="contactChoice3">Інше</label>
-        </div>
+<div class="full_width">
+    <div class="full_width_inner">
+        <div class="vc_row wpb_row section vc_row-fluid  vc_custom_1478095417449 grid_section"
+             style=" text-align:left;">
+            <div class=" section_inner clearfix">
+                <div class="section_inner_margin clearfix">
+                    <#list animals.content as animal>
+                        <div class="wpb_column vc_column_container vc_col-sm-10 vc_col-lg-offset-0 vc_col-lg-4 vc_col-md-offset-0 vc_col-md-4 vc_col-sm-offset-1">
+                            <div class="vc_column-inner">
+                                <div class="wpb_wrapper">
+                                    <div class="qode-specification-list">
+                                        <div class="qode-specification-list-image">
+                                            <a href="/animals/${animal.id}">
+                                                <#if animal.mediaLinks??>
+                                                    <img class="card-img-top card-item-img"
+                                                         src="${animal.mediaLinks[0]}">
+                                                <#else>
+                                                    <img class="card-img-top card-item-img"
+                                                         src="https://pixy.org/src/120/1206832.jpg">
+                                                </#if>
+                                            </a>
+                                        </div>
+                                        <div class="qode-specification-list-text-holder">
+                                            <h4 class="qode-specification-list-title">
+                                                ${animal.name} </h4>
+                                            <div class="qode-specification-list-items">
+                                                <div class="qode-specification-list-item">
+                                                <span class="qode-specification-list-item-label">
+                                                Тип </span>
+                                                    <span class="qode-specification-list-item-value">
+                                                    ${animal.animalType} </span>
+                                                </div>
+                                                <div class="qode-specification-list-item">
+                                                <span class="qode-specification-list-item-label">
+                                                Стать </span>
+                                                    <span class="qode-specification-list-item-value">
+                                                    Female </span>
+                                                </div>
+                                                <div class="qode-specification-list-item">
+                                                <span class="qode-specification-list-item-label">
+                                                Вік </span>
+                                                    <span class="qode-specification-list-item-value">
+                                                    ${animal.age} </span>
+                                                </div>
+                                                <div class="qode-specification-list-item">
+                                                <span class="qode-specification-list-item-label">
+                                                Стерилізована </span>
+                                                    <span class="qode-specification-list-item-value">
+                                                    Yes </span>
+                                                </div>
 
-        <@sec.authorize access="isAuthenticated()">
-            <div class="btn btn-outline-success my-2 my-sm-0"
-                 style="margin: 15px 25px;">
-                <a href="/admin/animals/create" type="submit">Додати
-                    тварину</a>
-            </div>
-        </@sec.authorize>
-    </div>
-    <div class="row justify-content-center" id="animalList">
-        <#list animals.content as animal>
-            <div class="col-4 clearfix d-none d-md-block mt-5">
-                <div class="card mb-2 zoom">
-                    <a href="/animals/${animal.id}">
-                        <#if animal.mediaLinks??>
-                            <img class="card-img-top card-item-img"
-                                 src="${animal.mediaLinks[0]}">
-                        <#else>
-                            <img class="card-img-top card-item-img"
-                                 src="https://pixy.org/src/120/1206832.jpg">
-                        </#if>
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">${animal.name}</h4>
-                        <p class="card-text">${animal.description}</p>
-                        <#if animal.animalStatus == "FREE">
-                            <a href="/orders/new/${animal.id}"
-                               class="row justify-content-center">
-                                <button class="col-8 btn btn-primary text-center"
-                                        type="submit">Створити замовлення
-                                </button>
-                            </a>
-                        <#elseif animal.animalStatus == "TREATMENT">
-                        <#--Make payment by means of googlePay-->
-                            <a href="/" class="row justify-content-center">
-                                <button class="col-8 btn btn-primary text-center"
-                                        type="submit">Пожертвувати
-                                </button>
-                            </a>
-                        </#if>
-                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="qode-specification-list-holder">
+                                            <#if animal.animalStatus == "FREE">
+                                                <a itemprop="url"
+                                                   class="qode-qbutton-main-color qode-qbutton-full-width qode-qbutton-square"
+                                                   href="/orders/new/${animal.id}"
+                                                   target="_self"
+                                                   style="background-color:#9aa0b0;height:84px;line-height:84px"><span>Створити замовлення</span></a>
+                                            <#elseif animal.animalStatus == "TREATMENT">
+                                                <a itemprop="url"
+                                                   class="qode-qbutton-main-color qode-qbutton-full-width qode-qbutton-square"
+                                                   href="/"
+                                                   target="_self"
+                                                   style="background-color:#9aa0b0;height:84px;line-height:84px"><span>Пожертвувати</span></a>
+                                            </#if>
+                                        </div>
+                                    </div>
+                                    <div class="vc_empty_space" style="height: 37px"><span
+                                                class="vc_empty_space_inner">
+                                                <span class="empty_space_image"></span>
+                                                </span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </#list>
+
+
                 </div>
             </div>
-        </#list>
+        </div>
     </div>
-    <div class="row justify-content-center">
-        <ul class="pagination">
-            <li class="page-item  <#if !animals.hasPreviousPage >disabled</#if>">
-                <a class="page-link"
-                   href="?page=${animals.currentPageNumber - 1}${pageSubmissionUrl}"
-                   tabindex="-1">Previous</a>
-            </li>
-            <#list 1..animals.totalPageNumber as pageNumber>
-                <li class="page-item <#if animals.currentPageNumber == pageNumber>active</#if>">
-                    <a class="page-link"
-                       href="?page=${pageNumber}${pageSubmissionUrl}">${pageNumber}</a>
-                </li>
-            </#list>
-            <li class="page-item <#if ! animals.hasNextPage >disabled</#if>">
-                <a class="page-link"
-                   href="?page=${animals.currentPageNumber + 1}${pageSubmissionUrl}"
-                   tabindex="-1">Next</a>
-            </li>
-        </ul>
-    </div>
-</#if>
-<#include "../footer.ftl">
+</div>
+
+
+<#include "footer.ftl">
