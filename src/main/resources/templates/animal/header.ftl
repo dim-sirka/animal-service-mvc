@@ -14,7 +14,8 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet" id="bootstrap-css">
 </head>
 <body class="home page-template page-template-full_width page-template-full_width-php page page-id-5 ajax_fade page_not_loaded  qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-11.0 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
       itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow: auto;">
@@ -147,18 +148,55 @@
                 </div>
             </div>
         </header>
-        <a id="back_to_top" href="#" class="off">
+        <a id="back_to_top" href="https://bridge82.qodeinteractive.com/pets/#" class="off">
         <span class="fa-stack">
             <i class="fa fa-arrow-up" style=""></i>
         </span>
         </a>
-        <div class="content " style="padding-top: 0px;">
-            <div class="content_inner  ">
-                <script>
-                    var page_scroll_amount_for_sticky = 900;
-                </script>
+        <div class="content" style="min-height: 69px; padding-top: 0px;">
+            <div class="content_inner  " style="position: relative; visibility: visible; display: block; opacity: 1;">
+                <style type="text/css" data-type="vc_shortcodes-custom-css-134">.vc_custom_1478095417449 {
+                        padding-top: 116px !important;
+                    }
+
+                    .vc_custom_1478095540471 {
+                        padding-bottom: 113px !important;
+                    }
+
+                    .vc_custom_1472634047354 {
+                        padding-top: 30px !important;
+                        padding-bottom: 30px !important;
+                        background-color: #70949d !important;
+                    }</style>
+                <div class="title_outer title_without_animation" data-height="373">
+                    <div class="title title_size_medium  position_center  has_fixed_background "
+                         style="background-size: 1920px; background-image: url(&quot;https://i.ibb.co/x5S06rs/friends-1149841-1920dark-Blured.jpg&quot;); height: 373px; background-position: center -75.1968px;">
+                        <div class="image not_responsive"><img itemprop="image"
+                                                               src="./Bridge _ Choose your next pet_files/title-image.jpg"
+                                                               alt=" "></div>
+                        <div class="title_holder" style="padding-top:85px;height:288px;">
+                            <div class="container">
+                                <div class="container_inner clearfix">
+                                    <div class="title_subtitle_holder">
+                                        <div class="title_subtitle_holder_inner">
+                                            <h1><span>Choose your next pet</span></h1>
+                                            <span class="subtitle">World’s largest no-kill rescue and adoption</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="full_width_inner">
                     <div class="vc_row wpb_row section vc_row-fluid  vc_custom_1472631590873 grid_section"
                          style=" text-align:left;">
                         <div class=" section_inner clearfix">
                             <div class="wpb_column vc_column_container vc_col-sm-12">
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>

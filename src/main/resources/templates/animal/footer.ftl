@@ -1,4 +1,6 @@
 <#assign sec=JspTaglibs["http://www.springframework.org/security/tags"]/>
+    </div>
+</div>
 <footer>
     <div class="footer_inner clearfix">
         <div class="footer_top_holder">
