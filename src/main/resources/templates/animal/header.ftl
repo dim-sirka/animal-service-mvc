@@ -38,7 +38,7 @@
                                             <a itemprop="url" href="https://bridge82.qodeinteractive.com/"
                                                style="height: 74px; visibility: visible;">
                                                 <img itemprop="image" class="normal"
-                                                     src="https://i.ibb.co/QvVyg75/dim-sirka-Texture.png"
+                                                     src="https://cdn1.savepice.ru/uploads/2021/5/7/f4f472152e859d515b6ff803ea78c58c-full.png"
                                                      alt="Logo" style="height: 100%;">
                                             </a>
                                         </div>
@@ -155,25 +155,9 @@
         </a>
         <div class="content" style="min-height: 69px; padding-top: 0px;">
             <div class="content_inner  " style="position: relative; visibility: visible; display: block; opacity: 1;">
-                <style type="text/css" data-type="vc_shortcodes-custom-css-134">.vc_custom_1478095417449 {
-                        padding-top: 116px !important;
-                    }
-
-                    .vc_custom_1478095540471 {
-                        padding-bottom: 113px !important;
-                    }
-
-                    .vc_custom_1472634047354 {
-                        padding-top: 30px !important;
-                        padding-bottom: 30px !important;
-                        background-color: #70949d !important;
-                    }</style>
                 <div class="title_outer title_without_animation" data-height="373">
-                    <div class="title title_size_medium  position_center  has_fixed_background "
-                         style="background-size: 1920px; background-image: url(&quot;https://i.ibb.co/x5S06rs/friends-1149841-1920dark-Blured.jpg&quot;); height: 373px; background-position: center -75.1968px;">
-                        <div class="image not_responsive"><img itemprop="image"
-                                                               src="./Bridge _ Choose your next pet_files/title-image.jpg"
-                                                               alt=" "></div>
+                    <div class="title title_size_medium  position_center "
+                         style="background-size: 1920px; background-image: url(&quot;http://i.piccy.info/i9/d51e5163edafc54bdc11e474fcedf41a/1620396750/59417/1428203/friends_1149841_1920darkBlured.jpg&quot;); height: 373px; background-position: center -75.1968px;">
                         <div class="title_holder" style="padding-top:85px;height:288px;">
                             <div class="container">
                                 <div class="container_inner clearfix">
@@ -181,26 +165,15 @@
                                         <div class="title_subtitle_holder_inner">
                                             <#assign pageSubmissionUrl = animalStatus???then('&animalStatus=${animalStatus}','') >
                                             <#if animals.content[0].animalStatus == "FREE">
-                                            <h1><span>Не купуй - візьми!</span></h1>
-                                            <span class="subtitle">Адже це дуже важливо.</span>
+                                                <h1><span>Не купуй - візьми!</span></h1>
+                                                <span class="subtitle">Адже це дуже важливо.</span>
                                             <#elseif animals.content[0].animalStatus == "TREATMENT">
-                                            <h1><span>Нам потрібна ваша підтримка!</span></h1>
-                                            <span class="subtitle">Не залишайся байдужим.</span>
+                                                <h1><span>Нам потрібна ваша підтримка!</span></h1>
+                                                <span class="subtitle">Не залишайся байдужим.</span>
                                             </#if>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="full_width_inner">
-                    <div class="vc_row wpb_row section vc_row-fluid  vc_custom_1472631590873 grid_section"
-                         style=" text-align:left;">
-                        <div class=" section_inner clearfix">
-                            <div class="wpb_column vc_column_container vc_col-sm-12">
-
-
                             </div>
                         </div>
                     </div>

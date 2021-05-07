@@ -37,7 +37,7 @@
                                             <a itemprop="url" href="https://bridge82.qodeinteractive.com/"
                                                style="height: 74px; visibility: visible;">
                                                 <img itemprop="image" class="normal"
-                                                     src="https://i.ibb.co/QvVyg75/dim-sirka-Texture.png"
+                                                     src="https://cdn1.savepice.ru/uploads/2021/5/7/f4f472152e859d515b6ff803ea78c58c-full.png"
                                                      alt="Logo" style="height: 100%;">
                                             </a>
                                         </div>
