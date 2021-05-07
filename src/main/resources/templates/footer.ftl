@@ -168,7 +168,7 @@
     }
 
     .vc_custom_1481541074234 {
-        background-image: url(https://bridge82.qodeinteractive.com/wp-content/uploads/2016/08/background.jpg?id=207) !important;
+        background-image: url() !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;

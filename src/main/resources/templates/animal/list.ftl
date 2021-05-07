@@ -36,16 +36,18 @@
                                 <div class="vc_column-inner">
                                     <div class="wpb_wrapper">
                                         <div class="qode-specification-list">
-                                            <div class="qode-specification-list-image">
+                                            <div class="qode-specification-list-image" >
                                                 <a href="/animals/${animal.id}">
                                                     <#if animal.mediaLinks??>
                                                         <img class="card-img-top card-item-img"
-                                                             style="height: 200px; visibility: visible;"
-                                                             src="${animal.mediaLinks[0]}">
+                                                             style="height:220px; visibility: visible;"
+                                                             src="${animal.mediaLinks[0]}"
+                                                             >
                                                     <#else>
                                                         <img class="card-img-top card-item-img"
-                                                             style="height: 200px; visibility: visible;"
-                                                             src="https://pixy.org/src/120/1206832.jpg">
+                                                             style="height:220px; visibility: visible;"
+                                                             src="https://pixy.org/src/120/1206832.jpg"
+                                                            ">
                                                     </#if>
                                                 </a>
                                             </div>

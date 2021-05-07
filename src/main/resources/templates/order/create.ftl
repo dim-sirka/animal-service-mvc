@@ -55,7 +55,7 @@
                         <pre class="text-danger">${error}</pre>
                     </div>
                 </#if>
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+<#--                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> -->
             </form>
         </div>
     </div>
