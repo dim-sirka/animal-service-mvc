@@ -1,1 +1,0 @@
-package com.dimsirka.animalservice.dtoes;
