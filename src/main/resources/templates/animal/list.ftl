@@ -1,6 +1,34 @@
 <#include "header.ftl">
 
 
+<#if animals.totalPageNumber != 0 >
+    <div>
+        <div class="">
+            <input type="radio" id="animalType"
+                   name="contact" value="DOG"
+                   onclick="handleAnimalTypeCheckBoxes()">
+            <label for="contactChoice1">Собаки</label>
+
+            <input type="radio" id="animalType"
+                   name="contact" value="CAT"
+                   onclick="handleAnimalTypeCheckBoxes()">
+            <label for="contactChoice2">Коти</label>
+
+            <input type="radio" href="/animals/type?animalType=OTHER"
+                   name="contact" onclick="handleAnimalTypeCheckBoxes()">
+            <label for="contactChoice3">Інше</label>
+        </div>
+
+        <@sec.authorize access="isAuthenticated()">
+            <div class="btn btn-outline-success my-2 my-sm-0"
+                 style="margin: 15px 25px;">
+                <a href="/admin/animals/create" type="submit">Додати
+                    тварину</a>
+            </div>
+        </@sec.authorize>
+    </div>
+
+
 <div class="full_width">
     <div class="full_width_inner">
         <div class="vc_row wpb_row section vc_row-fluid  vc_custom_1478095417449 grid_section"
@@ -85,6 +113,28 @@
         </div>
     </div>
 </div>
+
+    <div class="row justify-content-center">
+        <ul class="pagination">
+            <li class="page-item  <#if !animals.hasPreviousPage >disabled</#if>">
+                <a class="page-link"
+                   href="?page=${animals.currentPageNumber - 1}${pageSubmissionUrl}"
+                   tabindex="-1">Previous</a>
+            </li>
+            <#list 1..animals.totalPageNumber as pageNumber>
+                <li class="page-item <#if animals.currentPageNumber == pageNumber>active</#if>">
+                    <a class="page-link"
+                       href="?page=${pageNumber}${pageSubmissionUrl}">${pageNumber}</a>
+                </li>
+            </#list>
+            <li class="page-item <#if ! animals.hasNextPage >disabled</#if>">
+                <a class="page-link"
+                   href="?page=${animals.currentPageNumber + 1}${pageSubmissionUrl}"
+                   tabindex="-1">Next</a>
+            </li>
+        </ul>
+    </div>
+</#if>
 
 
 <#include "footer.ftl">
