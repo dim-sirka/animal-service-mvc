@@ -1,4 +1,6 @@
 <#assign sec=JspTaglibs["http://www.springframework.org/security/tags"]/>
+    </div>
+</div>
 <footer>
     <div class="footer_inner clearfix">
         <div class="footer_top_holder">
@@ -11,7 +13,7 @@
                                     <div id="text-2" class="widget widget_text">
                                         <div class="textwidget">
                                             <img
-                                                    src="https://i.ibb.co/QvVyg75/dim-sirka-Texture.png"
+                                                    src="https://cdn1.savepice.ru/uploads/2021/5/7/f4f472152e859d515b6ff803ea78c58c-full.png"
                                                     alt="logo">
                                         </div>
                                     </div>
