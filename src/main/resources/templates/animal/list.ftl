@@ -1,4 +1,16 @@
 <#include "header.ftl">
+<#assign pageSubmissionUrl = animalStatus???then('&animalStatus=${animalStatus}','') >
+<style>
+    #visitCounter{
+        background-color: #000000;
+        opacity: 0.8;
+        font-size:18px;
+        width: 43px;
+        height: 34px;
+        color: #ffffff;
+        margin-top: -34px
+    }
+</style>
 <#if animals.totalPageNumber != 0 >
     <div>
         <div class="">
@@ -49,6 +61,9 @@
                                                              src="https://pixy.org/src/120/1206832.jpg"
                                                             ">
                                                     </#if>
+                                                    <p id="visitCounter">
+                                                        <i class="fa fa-eye" style="font-size: 18px; color: #f8f9fa"></i> ${animal.visitCounter}
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="qode-specification-list-text-holder">
@@ -114,7 +129,7 @@
     <div class="row justify-content-center">
         <ul class="pagination justify-content-center">
             <li class="page-item  <#if !animals.hasPreviousPage >disabled</#if>">
-                <a class="page-link" 
+                <a class="page-link"
                    href="?page=${animals.currentPageNumber - 1}${pageSubmissionUrl}"
                    tabindex="-1">Previous</a>
             </li>

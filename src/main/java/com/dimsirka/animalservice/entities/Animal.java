@@ -3,6 +3,7 @@ package com.dimsirka.animalservice.entities;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.id.factory.IdentifierGeneratorFactory;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -30,6 +31,8 @@ public class Animal {
     private AnimalStatus animalStatus;
     @Column(columnDefinition="text")
     private String mediaLinks;
+    @Column(columnDefinition = "int default 0")
+    private Integer visitCounter;
     @CreationTimestamp
     private Timestamp createdDate;
     @UpdateTimestamp
@@ -37,4 +40,9 @@ public class Animal {
     @ToString.Exclude
     @OneToMany(mappedBy = "animal")
     private List<Order> orders;
+
+    private String size;
+    private String sex;
+    private Boolean sterilized;
+    private String features;
 }

@@ -18,7 +18,7 @@
                     </@sec.authorize>
                     <div class="row justify-content-center mt-2">
                             <div class="col-6 block">
-                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" ondbclick="zoomPhoto()">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
                                     <ol class="carousel-indicators">
                                         <#list animal.mediaLinks as link>
                                             <li data-target="#carouselExampleIndicators" data-slide-to="${link_index}"

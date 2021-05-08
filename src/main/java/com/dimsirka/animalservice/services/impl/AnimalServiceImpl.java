@@ -63,7 +63,7 @@ public class AnimalServiceImpl implements AnimalService{
 
     @Override
     public Animal getById(Long id) {
-        return getByIdOrThrowException(id);
+        return incrementVisitCounter(getByIdOrThrowException(id));
     }
 
     @Override
@@ -97,5 +97,11 @@ public class AnimalServiceImpl implements AnimalService{
         }
 
         return PageRequest.of(pageNumber - 1, PAGE_SIZE, SORT);
+    }
+
+    private Animal incrementVisitCounter(Animal animal){
+        int visitCounter = animal.getVisitCounter() + 1;
+        animal.setVisitCounter(visitCounter);
+        return animalRepository.save(animal);
     }
 }
