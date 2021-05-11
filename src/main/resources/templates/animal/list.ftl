@@ -14,10 +14,20 @@
         background-color: #d38960;
         opacity: 0.8;
         font-size:18px;
-        width: 150px;
+        width: 170px;
         height: 34px;
         color: #ffffff;
         margin-top: -220px
+    }
+
+    .list-item-id-unique {
+        position: absolute;
+        bottom: 367px;
+        right: 15px;
+        background-color: #4a4a4a;
+        color: #fff;
+        padding: 3px 10px;
+        font-size: 13px;
     }
 </style>
 <#if animals.totalPageNumber != 0 >
@@ -86,15 +96,18 @@
                                                             <img class="card-img-top card-item-img"
                                                                  style="height:220px; visibility: visible;"
                                                                  src="https://pixy.org/src/120/1206832.jpg"
-                                                            ">
+                                                            >
                                                         </#if>
-                                                        <p id="labelForImg">
-                                                            Не влаштовано
-                                                        </p>
+<#--                                                        <p id="labelForImg" style=" background-color: #d38960;">Не влаштовано</p>-->
+                                                        <p id="labelForImg" style=" background-color: #ff0000">Потребує допомоги</p>
+<#--                                                        <p id="labelForImg" style=" background-color: #6096d3;">Влаштовано</p>-->
                                                         <p id="visitCounter">
                                                             <i class="fa fa-eye" style="font-size: 18px; color: #f8f9fa">32</i>
                                                         </p>
                                                     </a>
+                                                </div>
+                                                <div class="list-item-id-unique">
+                                                    ID 9278
                                                 </div>
                                                 <div class="qode-specification-list-text-holder">
                                                     <h4 class="qode-specification-list-title">
