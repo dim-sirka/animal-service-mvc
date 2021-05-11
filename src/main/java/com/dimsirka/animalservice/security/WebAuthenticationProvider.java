@@ -36,13 +36,13 @@ public class WebAuthenticationProvider implements AuthenticationProvider {
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
         if (userDetails != null){
-            if (passwordEncoder.matches(password, userDetails.getPassword())) {
-                return new UsernamePasswordAuthenticationToken(
-                        userDetails.getUsername(),
-                        userDetails.getPassword(),
-                        userDetails.getAuthorities()
-                );
-            }
+//            if (passwordEncoder.matches(password, userDetails.getPassword())) {
+//                return new UsernamePasswordAuthenticationToken(
+//                        userDetails.getUsername(),
+//                        userDetails.getPassword(),
+//                        userDetails.getAuthorities()
+//                );
+//            }
         }
 
         return null;
