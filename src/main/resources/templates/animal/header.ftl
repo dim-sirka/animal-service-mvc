@@ -76,13 +76,13 @@
                                 <nav class="main_menu drop_down right">
                                     <ul id="menu-main-menu" class="">
                                         <li id="nav-menu-item-34"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active narrow">
+                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
                                             <a href="/about" class=" current "><i
                                                         class="menu_icon blank fa"></i><span>Про нас</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-164"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=FREE" class=""><i
+                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
+                                            <a href="/animals?animalStatus=FREE" class="" id="id-item-32"><i
                                                         class="menu_icon blank fa"></i><span>Віддаємо</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-161"

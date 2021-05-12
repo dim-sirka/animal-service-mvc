@@ -14,7 +14,8 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet" id="bootstrap-css">
 </head>
 <body class="home page-template page-template-full_width page-template-full_width-php page page-id-5 ajax_fade page_not_loaded  qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-11.0 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
       itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow: auto;">
@@ -72,33 +73,33 @@
                                         </div>
                                     </div>
                                 </div>
-                                <nav class="main_menu drop_down right">
+                                <nav class="main_menu drop_down right" id="menu-act">
                                     <ul id="menu-main-menu" class="">
                                         <li id="nav-menu-item-34"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active narrow">
+                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
                                             <a href="/about" class=" current "><i
                                                         class="menu_icon blank fa"></i><span>Про нас</span><span
-                                                        class="plus"></span></a></li>
+                                                        class="plus" id="menu-id"></span></a></li>
                                         <li id="nav-menu-item-164"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
                                                     href="/animals?animalStatus=FREE" class=""><i
                                                         class="menu_icon blank fa"></i><span>Віддаємо</span><span
-                                                        class="plus"></span></a></li>
+                                                        class="plus" id="menu-id"></span></a></li>
                                         <li id="nav-menu-item-161"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
                                                     href="/animals?animalStatus=TREATMENT" class=""><i
                                                         class="menu_icon blank fa"></i><span>Лікування</span><span
-                                                        class="plus"></span></a></li>
+                                                        class="plus" id="menu-id"></span></a></li>
                                         <li id="nav-menu-item-162"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
                                                     href="/animals?animalStatus=ARCHIVE" class=""><i
                                                         class="menu_icon blank fa"></i><span>Архів</span><span
-                                                        class="plus"></span></a></li>
+                                                        class="plus" id="menu-id"></span></a></li>
                                         <li id="nav-menu-item-163"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
                                                     href="https://bridge82.qodeinteractive.com/contact-us/" class=""><i
                                                         class="menu_icon blank fa"></i><span>Контакти</span><span
-                                                        class="plus"></span></a></li>
+                                                        class="plus" id="menu-id"></span></a></li>
                                         <@sec.authorize access="isAuthenticated()">
 
                                         <li class="nav-item dropdown">
@@ -107,12 +108,14 @@
                                                aria-haspopup="true" aria-expanded="false">
                                                 Замовлення
                                             </a>
+
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="/admin/list/orders">Замовлення</a>
-                                                <a class="dropdown-item" href="/admin/list/archive_orders">Архів
+                                                <a class="dropdown-item" href="/admin/list/orders" style="color:black;">Замовлення</a>
+                                                <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black;">Архів
                                                     замовлень</a>
                                             </div>
-                                            </@sec.authorize>
+                                        </li>
+                                        </@sec.authorize>
                                     </ul>
                                 </nav>
                                 <nav class="mobile_menu">
