@@ -65,11 +65,6 @@
                                                                 style="color: #ffffff;font-size: 15px;"></span></span></a></span>
                                         </div>
                                         <div class="side_menu_button">
-                                            <@sec.authorize access="isAuthenticated()">
-                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
-                                                        style="margin: 15px 10px;">Вихід
-                                                </button>
-                                            </@sec.authorize>
                                         </div>
                                     </div>
                                 </div>
@@ -102,18 +97,21 @@
                                                         class="plus"></span></a></li>
                                         <@sec.authorize access="isAuthenticated()">
 
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" style="color: white; margin: 0 20px;"
-                                               href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                Замовлення
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="/admin/list/orders">Замовлення</a>
-                                                <a class="dropdown-item" href="/admin/list/archive_orders">Архів
-                                                    замовлень</a>
-                                            </div>
-                                            </@sec.authorize>
+                                            <li class="nav-menu-item-163">
+                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white; margin: 0 20px;"
+                                                   href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                   aria-haspopup="true" aria-expanded="false">
+                                                    Адмінка
+                                                </a>
+
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="/admin/list/orders" style="color:black;">Замовлення</a>
+                                                    <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black;">Архів
+                                                        замовлень</a>
+                                                    <a class="dropdown-item" href="/logout" style="color:black;">Вихід</a>
+                                                </div>
+                                            </li>
+                                        </@sec.authorize>
                                     </ul>
                                 </nav>
                                 <nav class="mobile_menu">
