@@ -87,8 +87,10 @@
                                     тварину</a>
                             </div>
                         </@sec.authorize>
+                        <div class="container">
+                        <div class="row">
                             <#list animals.content as animal>
-                                <div class="wpb_column vc_column_container vc_col-sm-10 vc_col-lg-offset-0 vc_col-lg-4 vc_col-md-offset-0 vc_col-md-4 vc_col-sm-offset-1">
+                                <div class="col-md-6">
                                     <div class="vc_column-inner">
                                         <div class="wpb_wrapper">
                                             <div class="qode-specification-list">
@@ -177,6 +179,7 @@
                                 </#if>
                             </#list>
                         </div>
+                            </div>
                         <div class="row justify-content-center">
                             <ul class="pagination justify-content-center">
                                 <li class="page-item  <#if !animals.hasPreviousPage >disabled</#if>">
