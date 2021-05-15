@@ -181,14 +181,14 @@
                                 <div class="container_inner clearfix">
                                     <div class="title_subtitle_holder">
                                         <div class="title_subtitle_holder_inner">
-                                            <#assign pageSubmissionUrl = animalStatus???then('&animalStatus=${animalStatus}','') >
-                                            <#if animals.content[0].animalStatus == "FREE">
-                                                <h1><span>Не купуй - візьми!</span></h1>
-                                                <span class="subtitle">Адже це дуже важливо.</span>
-                                            <#elseif animals.content[0].animalStatus == "TREATMENT">
-                                                <h1><span>Нам потрібна ваша підтримка!</span></h1>
-                                                <span class="subtitle">Не залишайся байдужим.</span>
-                                            </#if>
+<#--                                            <#assign pageSubmissionUrl = animalStatus???then('&animalStatus=${animalStatus}','') >-->
+<#--                                            <#if animals.content[0].animalStatus == "FREE">-->
+<#--                                                <h1><span>Не купуй - візьми!</span></h1>-->
+<#--                                                <span class="subtitle">Адже це дуже важливо.</span>-->
+<#--                                            <#elseif animals.content[0].animalStatus == "TREATMENT">-->
+<#--                                                <h1><span>Нам потрібна ваша підтримка!</span></h1>-->
+<#--                                                <span class="subtitle">Не залишайся байдужим.</span>-->
+<#--                                            </#if>-->
                                         </div>
                                     </div>
                                 </div>
