@@ -20,9 +20,7 @@
                                     <div class='google_map_shortcode_overlay'></div>
                                 </div>
                                 <div class="vc_empty_space" style="height: 37px"><span
-                                            class="vc_empty_space_inner">
-<span class="empty_space_image"></span>
-</span></div>
+                                            class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
                                 <div class="wpb_text_column wpb_content_element ">
                                     <div class="wpb_wrapper">
                                         <p>World’s largest no-kill rescue and adoption organization with
@@ -30,9 +28,7 @@
                                     </div>
                                 </div>
                                 <div class="vc_empty_space" style="height: 60px"><span
-                                            class="vc_empty_space_inner">
-<span class="empty_space_image"></span>
-</span></div>
+                                            class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
                             </div>
                         </div>
                     </div>
@@ -79,9 +75,7 @@
                                     </form>
                                 </div>
                                 <div class="vc_empty_space" style="height: 60px"><span
-                                            class="vc_empty_space_inner">
-<span class="empty_space_image"></span>
-</span></div>
+                                            class="vc_empty_space_inner"><span class="empty_space_image"></span></span></div>
                             </div>
                         </div>
                     </div>
