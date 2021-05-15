@@ -81,105 +81,105 @@
                             </div>
                         </div>
                         <@sec.authorize access="isAuthenticated()">
-                            <div class="btn btn-outline-success my-2 my-sm-0"
-                                 style="margin: 15px 25px;">
-                                <a href="/admin/animals/create" type="submit">Додати
+                            <div class="wpcf7-form-control wpcf7-submit"
+                                 style="margin: 15px 25px; text-align: right;">
+                                <a role="button" class="btn btn-outline-dark" href="/admin/animals/create">Додати
                                     тварину</a>
                             </div>
                         </@sec.authorize>
                         <div class="container">
-                        <div class="row">
-                            <#list animals.content as animal>
-                                <div class="col-md-6">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper">
-                                            <div class="qode-specification-list">
-                                                <div class="qode-specification-list-image">
-                                                    <a href="/animals/${animal.id}">
-                                                        <#if animal.mediaLinks??>
-                                                            <img class="card-img-top card-item-img"
-                                                                 style="height:220px; visibility: visible;"
-                                                                 src="${animal.mediaLinks[0]}"
-                                                            >
-                                                        <#else>
-                                                            <img class="card-img-top card-item-img"
-                                                                 style="height:220px; visibility: visible;"
-                                                                 src="https://pixy.org/src/120/1206832.jpg"
-                                                            >
-                                                        </#if>
-                                                        <#--                                                        <p id="labelForImg" style=" background-color: #d38960;">Не влаштовано</p>-->
-                                                        <p id="labelForImg" style=" background-color: #ff0000">Потребує
-                                                            допомоги</p>
-                                                        <#--                                                        <p id="labelForImg" style=" background-color: #6096d3;">Влаштовано</p>-->
-                                                        <p id="visitCounter">
-                                                            <i class="fa fa-eye"
-                                                               style="font-size: 18px; color: #f8f9fa">32</i>
-                                                        </p>
-                                                    </a>
-                                                </div>
-                                                <div class="list-item-id-unique">
-                                                    ID 9278
-                                                </div>
-                                                <div class="qode-specification-list-text-holder">
-                                                    <h4 class="qode-specification-list-title">
-                                                        ${animal.name} </h4>
-                                                    <div class="qode-specification-list-items">
-                                                        <div class="qode-specification-list-item">
+                            <div class="row">
+                                <#list animals.content as animal>
+                                    <div class="col-md-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="qode-specification-list">
+                                                    <div class="qode-specification-list-image">
+                                                        <a href="/animals/${animal.id}">
+                                                            <#if animal.mediaLinks??>
+                                                                <img class="card-img-top card-item-img"
+                                                                     style="height:220px; visibility: visible;"
+                                                                     src="${animal.mediaLinks[0]}"
+                                                                >
+                                                            <#else>
+                                                                <img class="card-img-top card-item-img"
+                                                                     style="height:220px; visibility: visible;"
+                                                                     src="https://pixy.org/src/120/1206832.jpg"
+                                                                >
+                                                            </#if>
+                                                            <#--                                                        <p id="labelForImg" style=" background-color: #d38960;">Не влаштовано</p>-->
+                                                            <p id="labelForImg" style=" background-color: #ff0000">Потребує
+                                                                допомоги</p>
+                                                            <#--                                                        <p id="labelForImg" style=" background-color: #6096d3;">Влаштовано</p>-->
+                                                            <p id="visitCounter">
+                                                                <i class="fa fa-eye"
+                                                                   style="font-size: 18px; color: #f8f9fa">32</i>
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="list-item-id-unique">
+                                                        ID 9278
+                                                    </div>
+                                                    <div class="qode-specification-list-text-holder">
+                                                        <h4 class="qode-specification-list-title">
+                                                            ${animal.name} </h4>
+                                                        <div class="qode-specification-list-items">
+                                                            <div class="qode-specification-list-item">
                                                 <span class="qode-specification-list-item-label">
                                                 Тип </span>
-                                                            <span class="qode-specification-list-item-value">
+                                                                <span class="qode-specification-list-item-value">
                                                     ${animal.animalType} </span>
-                                                        </div>
-                                                        <div class="qode-specification-list-item">
+                                                            </div>
+                                                            <div class="qode-specification-list-item">
                                                 <span class="qode-specification-list-item-label">
                                                 Стать </span>
-                                                            <span class="qode-specification-list-item-value">
+                                                                <span class="qode-specification-list-item-value">
                                                     Female </span>
-                                                        </div>
-                                                        <div class="qode-specification-list-item">
+                                                            </div>
+                                                            <div class="qode-specification-list-item">
                                                 <span class="qode-specification-list-item-label">
                                                 Вік </span>
-                                                            <span class="qode-specification-list-item-value">
+                                                                <span class="qode-specification-list-item-value">
                                                     ${animal.age} </span>
-                                                        </div>
-                                                        <div class="qode-specification-list-item">
+                                                            </div>
+                                                            <div class="qode-specification-list-item">
                                                 <span class="qode-specification-list-item-label">
                                                 Стерилізована </span>
-                                                            <span class="qode-specification-list-item-value">
+                                                                <span class="qode-specification-list-item-value">
                                                     Yes </span>
-                                                        </div>
+                                                            </div>
 
+                                                        </div>
+                                                    </div>
+                                                    <div class="qode-specification-list-holder">
+                                                        <#if animal.animalStatus == "FREE">
+                                                            <a itemprop="url"
+                                                               class="qode-qbutton-main-color qode-qbutton-full-width qode-qbutton-square"
+                                                               href="/orders/new/${animal.id}"
+                                                               target="_self"
+                                                               style="background-color:#9aa0b0;height:84px;line-height:84px"><span>Створити замовлення</span></a>
+                                                        <#elseif animal.animalStatus == "TREATMENT">
+                                                            <a itemprop="url"
+                                                               class="qode-qbutton-main-color qode-qbutton-full-width qode-qbutton-square"
+                                                               href="/"
+                                                               target="_self"
+                                                               style="background-color:#9aa0b0;height:84px;line-height:84px"><span>Пожертвувати</span></a>
+                                                        </#if>
                                                     </div>
                                                 </div>
-                                                <div class="qode-specification-list-holder">
-                                                    <#if animal.animalStatus == "FREE">
-                                                        <a itemprop="url"
-                                                           class="qode-qbutton-main-color qode-qbutton-full-width qode-qbutton-square"
-                                                           href="/orders/new/${animal.id}"
-                                                           target="_self"
-                                                           style="background-color:#9aa0b0;height:84px;line-height:84px"><span>Створити замовлення</span></a>
-                                                    <#elseif animal.animalStatus == "TREATMENT">
-                                                        <a itemprop="url"
-                                                           class="qode-qbutton-main-color qode-qbutton-full-width qode-qbutton-square"
-                                                           href="/"
-                                                           target="_self"
-                                                           style="background-color:#9aa0b0;height:84px;line-height:84px"><span>Пожертвувати</span></a>
-                                                    </#if>
-                                                </div>
-                                            </div>
-                                            <div class="vc_empty_space" style="height: 37px"><span
-                                                        class="vc_empty_space_inner">
+                                                <div class="vc_empty_space" style="height: 37px"><span
+                                                            class="vc_empty_space_inner">
                                                 <span class="empty_space_image"></span>
                                                 </span></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <#if animal?counter%2 == 0>
-                                    <div class="w-100"></div>
-                                </#if>
-                            </#list>
-                        </div>
+                                    <#if animal?counter%2 == 0>
+                                        <div class="w-100"></div>
+                                    </#if>
+                                </#list>
                             </div>
+                        </div>
                         <div class="row justify-content-center">
                             <ul class="pagination justify-content-center">
                                 <li class="page-item  <#if !animals.hasPreviousPage >disabled</#if>">
