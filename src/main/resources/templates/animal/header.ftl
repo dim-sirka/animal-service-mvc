@@ -92,7 +92,7 @@
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-163"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="https://bridge82.qodeinteractive.com/contact-us/" class=""><i
+                                                    href="/contact" class=""><i
                                                         class="menu_icon blank fa"></i><span>Контакти</span><span
                                                         class="plus"></span></a></li>
                                         <@sec.authorize access="isAuthenticated()">
