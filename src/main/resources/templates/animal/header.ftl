@@ -30,7 +30,7 @@
                                 <div class="header_inner_left">
                                     <div class="mobile_menu_button">
                                         <span>
-                                            <i class="qode_icon_font_awesome fa fa-bars "></i> 
+                                            <i class="qode_icon_font_awesome fa fa-bars "></i>
                                         </span>
                                     </div>
                                     <div class="logo_wrapper">
