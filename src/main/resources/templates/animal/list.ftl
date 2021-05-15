@@ -87,7 +87,6 @@
                                     тварину</a>
                             </div>
                         </@sec.authorize>
-                        <div class="row">
                             <#list animals.content as animal>
                                 <div class="wpb_column vc_column_container vc_col-sm-10 vc_col-lg-offset-0 vc_col-lg-4 vc_col-md-offset-0 vc_col-md-4 vc_col-sm-offset-1">
                                     <div class="vc_column-inner">
@@ -173,7 +172,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <#if animal?counter%2 == 0>
+                                    <div class="w-100"></div>
+                                </#if>
                             </#list>
                         </div>
                         <div class="row justify-content-center">
