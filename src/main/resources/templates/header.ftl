@@ -144,6 +144,26 @@
                                                     href="/animals?animalStatus=ARCHIVE" class=""><span>Архів</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
+
+                                        <@sec.authorize access="isAuthenticated()">
+                                            <li id="mobile-menu-item-164"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                                                        href="/admin/list/orders" class=""><span>Замовлення</span></a><span
+                                                        class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                            class="fa fa-angle-down"></i></span></li>
+
+                                            <li id="mobile-menu-item-165"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                                                        href="/admin/list/archive_orders" class=""><span>Архів адміна</span></a><span
+                                                        class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                            class="fa fa-angle-down"></i></span></li>
+
+                                            <li id="mobile-menu-item-166"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                                                        href="/logout" class=""><span>Вихід</span></a><span
+                                                        class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                            class="fa fa-angle-down"></i></span></li>
+                                        </@sec.authorize>
                                     </ul>
                                 </nav>
                             </div>

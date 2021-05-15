@@ -27,10 +27,16 @@
                                         class="vc_empty_space_inner"><span
                                             class="empty_space_image"></span></span>
                             </div>
-                            <a itemprop="url"
-                               href="/animals?animalStatus=FREE"
-                               target="_self" class="qbutton  white default"
-                               style="margin: 0 6px 6px 0; ">Більше</a><a
+                            <a
+                                    itemprop="url"
+                                    href="/animals?animalStatus=FREE"
+                                    target="_self"
+                                    data-hover-background-color="#fafafa"
+                                    data-hover-border-color="rgba(255,255,255,0.1)"
+                                    data-hover-color="#414141"
+                                    class="qbutton  default"
+                                    style="color: rgb(255, 255, 255); border-color: rgb(250, 250, 250); margin: 0px 0px 6px; background-color: rgba(255, 255, 255, 0.01);">Більше</a>
+                            <a
                                     itemprop="url"
                                     href="/animals?animalStatus=TREATMENT"
                                     target="_self"
