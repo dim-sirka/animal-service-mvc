@@ -37,28 +37,29 @@
                                     <form action="/admin/animals/update" method="post" autocomplete="off"
                                           class="wpcf7-form cf7_custom_style_1">
                                         <input type="hidden" name="id" value="${animal.id}" readonly>
-                                        <p><span class="wpcf7-form-control-wrap your-subject"><input
+                                        <p><span class="wpcf7-form-control-wrap your-subject">Ім'я тварини: <input
                                                         type="text" name="name" value="${animal.name}" size="40"
                                                         class="wpcf7-form-control wpcf7-text"
                                                         aria-invalid="false"
                                                         placeholder="Ім'я тварини:"/></span></p>
-                                        <p><span class="wpcf7-form-control-wrap your-subject"><input
+                                        <p><span class="wpcf7-form-control-wrap your-subject">Вік тварини:<input
                                                         type="text"  name="age" value="${animal.age}" size="40"
                                                         class="wpcf7-form-control wpcf7-text"
                                                         aria-invalid="false"
                                                         placeholder="Вік тварини:"/></span></p>
-                                        <p><span class="wpcf7-form-control-wrap your-subject"><input
+                                        <p><span class="wpcf7-form-control-wrap your-subject">Посилання на фото:<input
                                                         type="text" name="mediaLinks" value=" ${animal.mediaLinks}"
                                                         size="40" class="wpcf7-form-control wpcf7-text"
                                                         aria-invalid="false"
                                                         placeholder="Посилання на фото:"/></span></p>
-                                        <select class="form-select form-select-lg mb-3" name="animalType" required>
+                                        <p><span class="wpcf7-form-control-wrap your-subject">Тип тварини:<select class="form-select form-select-lg mb-3" name="animalType" required>
                                             <option name="animalType" selected>${animal.animalType}</option>
                                             <option>DOG</option>
                                             <option>CAT</option>
                                             <option>OTHER</option>
-                                        </select>
-                                        <p><span class="wpcf7-form-control-wrap your-subject"><input
+                                        </select></span></p>
+
+                                        <p><span class="wpcf7-form-control-wrap your-subject">Опис:<input
                                                         type="text" name="description" value=" ${animal.description}"
                                                         size="40" class="wpcf7-form-control wpcf7-text"
                                                         aria-invalid="false"

@@ -67,7 +67,6 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <body>
                 <div class="row">
                     <div class="column">
                         <img src="https://bridge82.qodeinteractive.com/wp-content/uploads/2016/11/adopt-1.jpg"
@@ -86,7 +85,6 @@
                              class="hover-shadow cursor">
                     </div>
                 </div>
-
                 <div id="myModal" class="modal">
                     <span class="close cursor" onclick="closeModal()">&times;</span>
                     <div class="modal-content">
@@ -117,31 +115,28 @@
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-                        <div class="caption-container">
-                            <p id="caption"></p>
-                        </div>
-                        <div class="column">
-                            <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%"
-                                 onclick="currentSlide(1)" alt="Nature and sunrise">
-                        </div>
-                        <div class="column">
-                            <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%"
-                                 onclick="currentSlide(2)" alt="Snow">
-                        </div>
-                        <div class="column">
-                            <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%"
-                                 onclick="currentSlide(3)" alt="Mountains and fjords">
-                        </div>
-                        <div class="column">
-                            <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%"
-                                 onclick="currentSlide(4)" alt="Northern Lights">
-                        </div>
+                        <#--                        <div class="caption-container">-->
+                        <#--                            <p id="caption"></p>-->
+                        <#--                        </div>-->
+                        <#--                        <div class="column">-->
+                        <#--                            <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%"-->
+                        <#--                                 onclick="currentSlide(1)" alt="Nature and sunrise">-->
+                        <#--                        </div>-->
+                        <#--                        <div class="column">-->
+                        <#--                            <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%"-->
+                        <#--                                 onclick="currentSlide(2)" alt="Snow">-->
+                        <#--                        </div>-->
+                        <#--                        <div class="column">-->
+                        <#--                            <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%"-->
+                        <#--                                 onclick="currentSlide(3)" alt="Mountains and fjords">-->
+                        <#--                        </div>-->
+                        <#--                        <div class="column">-->
+                        <#--                            <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%"-->
+                        <#--                                 onclick="currentSlide(4)" alt="Northern Lights">-->
+                        <#--                        </div>-->
                     </div>
                 </div>
-                </body>
             </div>
-
-
             <div class="details col-md-6">
                 <h3 class="product-title">${animal.name}</h3>
                 <div class="rating">
@@ -198,6 +193,7 @@
         </div>
     </div>
 </div>
+
 
 
 <style>
