@@ -1,9 +1,36 @@
 <#include "header.ftl">
 
+<div class="title title_size_medium  position_center "
+     style="background-size: 1920px; background-image: url(&quot;http://i.piccy.info/i9/d51e5163edafc54bdc11e474fcedf41a/1620396750/59417/1428203/friends_1149841_1920darkBlured.jpg&quot;); height: 373px; background-position: center -75.1968px;">
+    <div class="title_holder" style="padding-top:85px;height:288px;">
+        <div class="container">
+            <div class="container_inner clearfix">
+                <div class="title_subtitle_holder">
+                    <div class="title_subtitle_holder_inner">
+                        <#assign pageSubmissionUrl = animalStatus???then('&animalStatus=${animalStatus}','') >
+                        <#if animals.content[0].animalStatus == "FREE">
+                            <h1><span>Не купуй - візьми!</span></h1>
+                            <span class="subtitle">Адже це дуже важливо.</span>
+                        <#elseif animals.content[0].animalStatus == "TREATMENT">
+                            <h1><span>Нам потрібна ваша підтримка!</span></h1>
+                            <span class="subtitle">Не залишайся байдужим.</span>
+                        </#if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 <#--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 <#--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 
 <style>
@@ -108,17 +135,18 @@
                                                                 >
                                                             </#if>
                                                             <#--                                                        <p id="labelForImg" style=" background-color: #d38960;">Не влаштовано</p>-->
-                                                            <p id="labelForImg" style=" background-color: #ff0000">Потребує
+                                                            <p id="labelForImg" style=" background-color: #ff0000">
+                                                                Потребує
                                                                 допомоги</p>
                                                             <#--                                                        <p id="labelForImg" style=" background-color: #6096d3;">Влаштовано</p>-->
                                                             <p id="visitCounter">
                                                                 <i class="fa fa-eye"
-                                                                   style="font-size: 18px; color: #f8f9fa">32</i>
+                                                                   style="font-size: 18px; color: #f8f9fa">${animal.visitCounter}</i>
                                                             </p>
                                                         </a>
                                                     </div>
                                                     <div class="list-item-id-unique">
-                                                        ID 9278
+                                                        ID ${animal.id}
                                                     </div>
                                                     <div class="qode-specification-list-text-holder">
                                                         <h4 class="qode-specification-list-title">

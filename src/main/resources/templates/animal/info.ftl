@@ -1,95 +1,133 @@
-<#include "../header.ftl">
-        <div class="card mb-2">
-            <div class="row"
-                 style="margin: 15px 25px;">
-                <div class="col md-6">
-                <a href="/animals?animalStatus=${animal.animalStatus}" class="row ml-1">
-                    <button class="btn btn-secondary text-center" type="submit">Назад</button>
-                </a>
-                </div>
-                <div class="col md-6">
-                <@sec.authorize access="isAuthenticated()">
-                    <a href="/admin/animals/editForm/${animal.id}" class="row ml-1" style="text-align: right;">
-                        <button class="btn btn-secondary text-center" type="submit">Редагувати тварину</button>
-                    </a>
-                </@sec.authorize>
+<#include "../animal/header.ftl">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<div class="title title_size_medium  position_center "
+     style="background-size: 1920px; background-image: url(&quot;http://i.piccy.info/i9/d51e5163edafc54bdc11e474fcedf41a/1620396750/59417/1428203/friends_1149841_1920darkBlured.jpg&quot;); height: 373px; background-position: center -75.1968px;">
+    <div class="title_holder" style="padding-top:85px;height:288px;">
+        <div class="container">
+            <div class="container_inner clearfix">
+                <div class="title_subtitle_holder">
+                    <div class="title_subtitle_holder_inner">
+                        <h1><span>Інформація про тварину</span></h1>
+                        <span class="subtitle">Введи інформацію про тварину</span>
+                    </div>
                 </div>
             </div>
-<div class="container-fliud">
-    <div class="wrapper row">
-        <div class="preview col-md-6">
-            <div class="preview-pic tab-content">
-                <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252"/></div>
-                <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252"/></div>
-                <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252"/></div>
-                <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252"/></div>
-                <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252"/></div>
-            </div>
-            <ul class="preview-thumbnail nav nav-tabs">
-                <li class="active"><a data-target="#pic-1" data-toggle="tab"><img
-                                src="http://placekitten.com/200/126"/></a></li>
-                <li><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126"/></a>
-                </li>
-                <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126"/></a>
-                </li>
-                <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126"/></a>
-                </li>
-                <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126"/></a>
-                </li>
-            </ul>
-
         </div>
-        <div class="details col-md-6">
-            <h3 class="product-title">${animal.name}</h3>
-            <div class="rating">
-                <div class="stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
+    </div>
+</div>
+</div>
+
+
+<div class="card mb-2">
+    <div class="row"
+         style="margin: 15px 25px;">
+        <div class="col md-6">
+            <a href="/animals?animalStatus=${animal.animalStatus}" class="row ml-1">
+                <button class="btn btn-secondary text-center" type="submit">Назад</button>
+            </a>
+        </div>
+        <div class="col md-6">
+            <@sec.authorize access="isAuthenticated()">
+                <a href="/admin/animals/editForm/${animal.id}" class="row ml-1" style="text-align: right;">
+                    <button class="btn btn-secondary text-center" type="submit">Редагувати тварину</button>
+                </a>
+            </@sec.authorize>
+        </div>
+    </div>
+
+    <script>
+        function zoomPhoto() {
+            var v = document.getElementById("info-image");
+            v.className += "dblclick-info-image";
+        }
+    </script>
+    <div class="container-fliud">
+        <div class="wrapper row">
+            <div class="preview col-md-6">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <#list animal.mediaLinks as link>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="${link_index}"
+                                class="${(link?counter == 1)?then('active', '')}">
+                                >
+                            </li>
+                        </#list>
+                    </ol>
+                    <div class="carousel-inner">
+                        <#list animal.mediaLinks as link>
+                            <div class="carousel-item ${(link?counter == 1)?then('active', '')}">
+                                <img class="card-img-top card-item-img-info" id="info-image" src="${link}">
+                            </div>
+                        </#list>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <span class="review-no">41 reviews</span>
+
             </div>
+            <div class="details col-md-6">
+                <h3 class="product-title">${animal.name}</h3>
+                <div class="rating">
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <span class="review-no">${animal.visitCounter} переглядів</span>
+                </div>
 
 
-            <p class="product-description">${animal.description}</p>
-                                    <table class="table table-hover mb-0">
-                                        <tbody>
-                                        <tr>
-                                            <th class="align-middle" scope="row">Вік:</th>
-                                            <td class="td-padding">${animal.age}</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="align-middle" scope="row">Вид:</th>
-                                            <td class="td-padding">${animal.animalType}</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="align-middle" scope="row">Дата створення:</th>
-                                            <td class="td-padding">${animal.createdDate}</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="align-middle" scope="row">Статус:</th>
-                                            <td class="td-padding">${animal.animalStatus}</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                <p class="product-description">${animal.description}</p>
+                <table class="table table-hover mb-0">
+                    <tbody>
+                    <tr>
+                        <th class="align-middle" scope="row">Вік:</th>
+                        <td class="td-padding">${animal.age}</td>
+                    </tr>
+                    <tr>
+                        <th class="align-middle" scope="row">Вид:</th>
+                        <td class="td-padding">${animal.animalType}</td>
+                    </tr>
+                    <tr>
+                        <th class="align-middle" scope="row">Дата створення:</th>
+                        <td class="td-padding">${animal.createdDate}</td>
+                    </tr>
+                    <tr>
+                        <th class="align-middle" scope="row">Статус:</th>
+                        <td class="td-padding">${animal.animalStatus}</td>
+                    </tr>
+                    </tbody>
+                </table>
 
-<#--            <h5>Вік:${animal.age}</h5>-->
-<#--            <h5>Вид:${animal.animalType}</h5>-->
-<#--            <h5>Дата додавання:${animal.createdDate}</h5>-->
-<#--            <h5>Статус:${animal.animalStatus}</h5>-->
-            <div class="action">
-                <#if animal.animalStatus == "FREE">
-                    <a href="/orders/new/${animal.id}" class="row justify-content-center">
-                        <button class="add-to-cart btn btn-default" type="button">Створити замовлення</button>
-                    </a>
-                <#elseif animal.animalStatus == "TREATMENT">
-                <#--Make payment by means of googlePay-->
-                    <a href="/" class="row justify-content-center">
-                        <button class="add-to-cart btn btn-default" type="button">Пожертвувати</button>
-                    </a>
-                </#if>
+                <#--            <h5>Вік:${animal.age}</h5>-->
+                <#--            <h5>Вид:${animal.animalType}</h5>-->
+                <#--            <h5>Дата додавання:${animal.createdDate}</h5>-->
+                <#--            <h5>Статус:${animal.animalStatus}</h5>-->
+                <div class="action">
+                    <#if animal.animalStatus == "FREE">
+                        <a href="/orders/new/${animal.id}" class="row justify-content-center">
+                            <button class="add-to-cart btn btn-default" type="button">Створити замовлення</button>
+                        </a>
+                    <#elseif animal.animalStatus == "TREATMENT">
+                    <#--Make payment by means of googlePay-->
+                        <a href="/" class="row justify-content-center">
+                            <button class="add-to-cart btn btn-default" type="button">Пожертвувати</button>
+                        </a>
+                    </#if>
+                </div>
             </div>
         </div>
     </div>
@@ -163,7 +201,6 @@
     }
 
     .card {
-        margin-top: 50px;
         background: #eee;
         padding: 3em;
         line-height: 1.5em;
@@ -296,5 +333,5 @@
         }
     }
 </style>
-<#include "../footer.ftl">
+<#include "../animal/footer.ftl">
 

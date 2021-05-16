@@ -1,4 +1,20 @@
 <#include "../animal/header.ftl">
+<div class="title title_size_medium  position_center "
+     style="background-size: 1920px; background-image: url(&quot;http://i.piccy.info/i9/d51e5163edafc54bdc11e474fcedf41a/1620396750/59417/1428203/friends_1149841_1920darkBlured.jpg&quot;); height: 373px; background-position: center -75.1968px;">
+    <div class="title_holder" style="padding-top:85px;height:288px;">
+        <div class="container">
+            <div class="container_inner clearfix">
+                <div class="title_subtitle_holder">
+                    <div class="title_subtitle_holder_inner">
+                            <h1><span>Зв'яжись з нами</span></h1>
+                            <span class="subtitle">Заповнивши форму</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 <div class="full_width">
     <div class="full_width_inner">
         <div class="vc_row wpb_row section vc_row-fluid  vc_custom_1478091158622 grid_section"
