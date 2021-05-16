@@ -12,8 +12,8 @@
             <div class="container_inner clearfix">
                 <div class="title_subtitle_holder">
                     <div class="title_subtitle_holder_inner">
-                        <h1><span>Інформація про тварину</span></h1>
-                        <span class="subtitle">Введи інформацію про тварину</span>
+                        <h1><span>Повна інформація про тварину</span></h1>
+                        <span class="subtitle"></span>
                     </div>
                 </div>
             </div>
