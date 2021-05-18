@@ -23,8 +23,6 @@
 </div>
 </div>
 
-<#--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-<#--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -32,38 +30,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-
-<style>
-    #visitCounter {
-        background-color: #000000;
-        opacity: 0.8;
-        font-size: 18px;
-        width: 43px;
-        height: 34px;
-        color: #ffffff;
-        margin-top: 152px
-    }
-
-    #labelForImg {
-        background-color: #d38960;
-        opacity: 0.8;
-        font-size: 18px;
-        width: 170px;
-        height: 34px;
-        color: #ffffff;
-        margin-top: -220px
-    }
-
-    .list-item-id-unique {
-        position: absolute;
-        bottom: 367px;
-        right: 15px;
-        background-color: #4a4a4a;
-        color: #fff;
-        padding: 3px 10px;
-        font-size: 13px;
-    }
-</style>
 <#if animals.totalPageNumber != 0 >
     <div style="margin-bottom: 5%">
         <div class="container pt-5">
@@ -90,20 +56,6 @@
                                                 class="fa fa-arrow-left"></span></button>
                                     <button type="button" class="btn btn-lg btn-light"><span
                                                 class="fa fa-arrow-right"></span></button>
-                                </div>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-                                <div class="dropdown float-right">
-                                    <label class="mr-2">Вигляд:</label>
-                                    <a class="btn btn-lg btn-light dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-haspopup="true" aria-expanded="false">6 <span class="caret"></span></a>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
-                                         x-placement="bottom-end"
-                                         style="will-change: transform; position: absolute; transform: translate3d(120px, 48px, 0px); top: 0px; left: 0px;">
-                                        <a class="dropdown-item" href="#">12</a>
-                                        <a class="dropdown-item" href="#">24</a>
-                                        <a class="dropdown-item" href="#">48</a>
-                                        <a class="dropdown-item" href="#">96</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -208,9 +160,6 @@
                                 </#list>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
                 <div class="col-md-4 order-md-1 col-lg-3 sidebar-filter">
@@ -304,23 +253,40 @@
                 </div>
             </div>
         </div>
-        <div class="">
-            <#--            <input type="radio" id="animalType"-->
-            <#--                   name="contact" value="DOG"-->
-            <#--                   onclick="handleAnimalTypeCheckBoxes()">-->
-            <#--            <label for="contactChoice1">Собаки</label>-->
-
-            <#--            <input type="radio" id="animalType"-->
-            <#--                   name="contact" value="CAT"-->
-            <#--                   onclick="handleAnimalTypeCheckBoxes()">-->
-            <#--            <label for="contactChoice2">Коти</label>-->
-
-            <#--            <input type="radio" href="/animals/type?animalType=OTHER"-->
-            <#--                   name="contact" onclick="handleAnimalTypeCheckBoxes()">-->
-            <#--            <label for="contactChoice3">Інше</label>-->
-        </div>
     </div>
 </#if>
 
 
 <#include "footer.ftl">
+
+<style>
+    #visitCounter {
+        background-color: #000000;
+        opacity: 0.8;
+        font-size: 18px;
+        width: 43px;
+        height: 34px;
+        color: #ffffff;
+        margin-top: 152px
+    }
+
+    #labelForImg {
+        background-color: #d38960;
+        opacity: 0.8;
+        font-size: 18px;
+        width: 170px;
+        height: 34px;
+        color: #ffffff;
+        margin-top: -220px
+    }
+
+    .list-item-id-unique {
+        position: absolute;
+        bottom: 367px;
+        right: 15px;
+        background-color: #4a4a4a;
+        color: #fff;
+        padding: 3px 10px;
+        font-size: 13px;
+    }
+</style>

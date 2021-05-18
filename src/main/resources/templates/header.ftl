@@ -103,7 +103,7 @@
                                                 <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white; margin: 0 20px;"
                                                    href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Адмінка
+                                                    Замовлення
                                                 </a>
 
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
