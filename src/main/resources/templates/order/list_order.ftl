@@ -22,7 +22,7 @@
 </div>
 <#assign pageSubmissionUrl = name???then('&name=${name}','') >
 <#if orders.totalPageNumber != 0 >
-    <div class="row">
+    <div class="row" style="margin:3%;">
         <div class="input-group col text-center">
             <form action="/admin/orders/find" class="form-inline mx-auto">
                 <#if name??>
@@ -37,7 +37,7 @@
             </form>
         </div>
     </div>
-    <div>
+    <div style="margin-left: 3%; margin-right: 3%">
         <table border="2" class="table <#if orders??>table <#else> table-dark </#if>">
             <thead class="<#if orders??>thead-dark <#else> thead </#if>">
             <tr class="d-flex">
@@ -82,9 +82,8 @@
             </tbody>
         </table>
     </div>
-    <div class="row justify-content-center">
-        <ul class="pagination">
-            <li class="page-item  <#if !orders.hasPreviousPage >disabled</#if>">
+        <ul class="pagination justify-content-center">
+            <li class="page-item   <#if !orders.hasPreviousPage >disabled</#if>">
                 <a class="page-link" href="?page=${orders.currentPageNumber - 1}${pageSubmissionUrl}" tabindex="-1">Previous</a>
             </li>
             <#list 1..orders.totalPageNumber as pageNumber>
@@ -96,7 +95,6 @@
                 <a class="page-link" href="?page=${orders.currentPageNumber + 1}${pageSubmissionUrl}" tabindex="-1">Next</a>
             </li>
         </ul>
-    </div>
 <#else>
     <#if name??>
         <h1 class="text-center font-italic font-weight-bold font-family text-primary">Замовлення із цим ім'ям немає в

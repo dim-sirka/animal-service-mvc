@@ -39,19 +39,20 @@
     </div>
     <div class="container-fliud">
         <div class="wrapper row">
-            <div class="col-6 block">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+            <div class="col-md-6">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <#list animal.mediaLinks as link>
                             <li data-target="#carouselExampleIndicators" data-slide-to="${link_index}"
                                 class="${(link?counter == 1)?then('active', '')}">
-                                ></li>
+                                >
+                            </li>
                         </#list>
                     </ol>
                     <div class="carousel-inner">
                         <#list animal.mediaLinks as link>
                             <div class="carousel-item ${(link?counter == 1)?then('active', '')}">
-                                <img class="card-img-top card-item-img-info"  id="info-image" src="${link}">
+                                <img class="card-img-top card-item-img-info" id="info-image" src="${link}">
                             </div>
                         </#list>
                     </div>
@@ -65,436 +66,436 @@
                     </a>
                 </div>
             </div>
-                <div class="details col-md-6">
-                    <h3 class="product-title">${animal.name}</h3>
-                    <div class="rating">
-                        <span class="review-no">${animal.visitCounter} переглядів</span>
-                    </div>
-                    <p class="product-description">${animal.description}</p>
-                    <table class="table table-hover mb-0" style="text-align: left">
-                        <tbody>
-                        <tr>
-                            <th class="align-middle" scope="row">Вік:</th>
-                            <td class="td-padding">${animal.age}</td>
-                        </tr>
-                        <tr>
-                            <th class="align-middle" scope="row">Вид:</th>
-                            <td class="td-padding">${animal.animalType}</td>
-                        </tr>
-                        <tr>
-                            <th class="align-middle" scope="row">Дата створення:</th>
-                            <td class="td-padding">${animal.createdDate}</td>
-                        </tr>
-                        <tr>
-                            <th class="align-middle" scope="row">Статус:</th>
-                            <td class="td-padding">${animal.animalStatus}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="action">
-                        <#if animal.animalStatus == "FREE">
-                            <a href="/orders/new/${animal.id}" class="row justify-content-center">
-                                <button class="add-to-cart btn btn-default" type="button">Створити замовлення</button>
-                            </a>
-                        <#elseif animal.animalStatus == "TREATMENT">
-                        <#--Make payment by means of googlePay-->
-                            <a href="/" class="row justify-content-center">
-                                <button class="add-to-cart btn btn-default" type="button">Пожертвувати</button>
-                            </a>
-                        </#if>
-                    </div>
+            <div class="col-md-6">
+                <h3 class="product-title">${animal.name}</h3>
+                <div class="rating">
+                    <span class="review-no">${animal.visitCounter} переглядів</span>
+                </div>
+                <p class="product-description">${animal.description}</p>
+                <table class="table table-hover mb-0" style="text-align: left">
+                    <tbody>
+                    <tr>
+                        <th class="align-middle" scope="row">Вік:</th>
+                        <td class="td-padding">${animal.age}</td>
+                    </tr>
+                    <tr>
+                        <th class="align-middle" scope="row">Вид:</th>
+                        <td class="td-padding">${animal.animalType}</td>
+                    </tr>
+                    <tr>
+                        <th class="align-middle" scope="row">Дата створення:</th>
+                        <td class="td-padding">${animal.createdDate}</td>
+                    </tr>
+                    <tr>
+                        <th class="align-middle" scope="row">Статус:</th>
+                        <td class="td-padding">${animal.animalStatus}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="action">
+                    <#if animal.animalStatus == "FREE">
+                        <a href="/orders/new/${animal.id}" class="row justify-content-center">
+                            <button class="add-to-cart btn btn-default" type="button">Створити замовлення</button>
+                        </a>
+                    <#elseif animal.animalStatus == "TREATMENT">
+                    <#--Make payment by means of googlePay-->
+                        <a href="/" class="row justify-content-center">
+                            <button class="add-to-cart btn btn-default" type="button">Пожертвувати</button>
+                        </a>
+                    </#if>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 
-    <style>
-        img {
-            max-width: 100%;
-        }
+<style>
+    img {
+        max-width: 100%;
+    }
 
+    .preview {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 996px) {
         .preview {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
+            margin-bottom: 20px;
         }
+    }
 
-        @media screen and (max-width: 996px) {
-            .preview {
-                margin-bottom: 20px;
-            }
+    .preview-pic {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+
+    .preview-thumbnail.nav-tabs {
+        border: none;
+        margin-top: 15px;
+    }
+
+    .preview-thumbnail.nav-tabs li {
+        width: 18%;
+        margin-right: 2.5%;
+    }
+
+    .preview-thumbnail.nav-tabs li img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .preview-thumbnail.nav-tabs li a {
+        padding: 0;
+        margin: 0;
+    }
+
+    .preview-thumbnail.nav-tabs li:last-of-type {
+        margin-right: 0;
+    }
+
+    .tab-content {
+        overflow: hidden;
+    }
+
+    .tab-content img {
+        width: 100%;
+        -webkit-animation-name: opacity;
+        animation-name: opacity;
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+    }
+
+    .card {
+        background: #eee;
+        padding: 3em;
+        line-height: 1.5em;
+    }
+
+
+    .details {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .colors {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+
+    .product-title, .price, .sizes, .colors {
+        text-transform: UPPERCASE;
+        font-weight: bold;
+    }
+
+    .checked, .price span {
+        color: #ff9f1a;
+    }
+
+    .product-title, .rating, .product-description, .price, .vote, .sizes {
+        margin-bottom: 15px;
+    }
+
+    .product-title {
+        margin-top: 0;
+    }
+
+    .size {
+        margin-right: 10px;
+    }
+
+    .size:first-of-type {
+        margin-left: 40px;
+    }
+
+    .color {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        height: 2em;
+        width: 2em;
+        border-radius: 2px;
+    }
+
+    .color:first-of-type {
+        margin-left: 20px;
+    }
+
+    .add-to-cart, .like {
+        background: #ff9f1a;
+        padding: 1.2em 1.5em;
+        border: none;
+        text-transform: UPPERCASE;
+        font-weight: bold;
+        color: #fff;
+        -webkit-transition: background .3s ease;
+        transition: background .3s ease;
+    }
+
+    .add-to-cart:hover, .like:hover {
+        background: #b36800;
+        color: #fff;
+    }
+
+    .not-available {
+        text-align: center;
+        line-height: 2em;
+    }
+
+    .not-available:before {
+        font-family: fontawesome;
+        content: "\f00d";
+        color: #fff;
+    }
+
+    .orange {
+        background: #ff9f1a;
+    }
+
+    .green {
+        background: #85ad00;
+    }
+
+    .blue {
+        background: #0076ad;
+    }
+
+    .tooltip-inner {
+        padding: 1.3em;
+    }
+
+    @-webkit-keyframes opacity {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(3);
+            transform: scale(3);
         }
-
-        .preview-pic {
-            -webkit-box-flex: 1;
-            -webkit-flex-grow: 1;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-        }
-
-        .preview-thumbnail.nav-tabs {
-            border: none;
-            margin-top: 15px;
-        }
-
-        .preview-thumbnail.nav-tabs li {
-            width: 18%;
-            margin-right: 2.5%;
-        }
-
-        .preview-thumbnail.nav-tabs li img {
-            max-width: 100%;
-            display: block;
-        }
-
-        .preview-thumbnail.nav-tabs li a {
-            padding: 0;
-            margin: 0;
-        }
-
-        .preview-thumbnail.nav-tabs li:last-of-type {
-            margin-right: 0;
-        }
-
-        .tab-content {
-            overflow: hidden;
-        }
-
-        .tab-content img {
-            width: 100%;
-            -webkit-animation-name: opacity;
-            animation-name: opacity;
-            -webkit-animation-duration: .3s;
-            animation-duration: .3s;
-        }
-
-        .card {
-            background: #eee;
-            padding: 3em;
-            line-height: 1.5em;
-        }
-
-
-        .details {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-        }
-
-        .colors {
-            -webkit-box-flex: 1;
-            -webkit-flex-grow: 1;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-        }
-
-        .product-title, .price, .sizes, .colors {
-            text-transform: UPPERCASE;
-            font-weight: bold;
-        }
-
-        .checked, .price span {
-            color: #ff9f1a;
-        }
-
-        .product-title, .rating, .product-description, .price, .vote, .sizes {
-            margin-bottom: 15px;
-        }
-
-        .product-title {
-            margin-top: 0;
-        }
-
-        .size {
-            margin-right: 10px;
-        }
-
-        .size:first-of-type {
-            margin-left: 40px;
-        }
-
-        .color {
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 10px;
-            height: 2em;
-            width: 2em;
-            border-radius: 2px;
-        }
-
-        .color:first-of-type {
-            margin-left: 20px;
-        }
-
-        .add-to-cart, .like {
-            background: #ff9f1a;
-            padding: 1.2em 1.5em;
-            border: none;
-            text-transform: UPPERCASE;
-            font-weight: bold;
-            color: #fff;
-            -webkit-transition: background .3s ease;
-            transition: background .3s ease;
-        }
-
-        .add-to-cart:hover, .like:hover {
-            background: #b36800;
-            color: #fff;
-        }
-
-        .not-available {
-            text-align: center;
-            line-height: 2em;
-        }
-
-        .not-available:before {
-            font-family: fontawesome;
-            content: "\f00d";
-            color: #fff;
-        }
-
-        .orange {
-            background: #ff9f1a;
-        }
-
-        .green {
-            background: #85ad00;
-        }
-
-        .blue {
-            background: #0076ad;
-        }
-
-        .tooltip-inner {
-            padding: 1.3em;
-        }
-
-        @-webkit-keyframes opacity {
-            0% {
-                opacity: 0;
-                -webkit-transform: scale(3);
-                transform: scale(3);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: scale(1);
-                transform: scale(1);
-            }
-        }
-
-        @keyframes opacity {
-            0% {
-                opacity: 0;
-                -webkit-transform: scale(3);
-                transform: scale(3);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: scale(1);
-                transform: scale(1);
-            }
-        }
-
-        body {
-            font-family: Verdana, sans-serif;
-            margin: 0;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .row > .column {
-            padding: 0 8px;
-        }
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .column {
-            float: left;
-            width: 25%;
-        }
-
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: black;
-        }
-
-        /* Modal Content */
-        .modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            width: 90%;
-            max-width: 1200px;
-        }
-
-        /* The Close Button */
-        .close {
-            color: white;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #999;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .cursor {
-            cursor: pointer;
-        }
-
-        /* Next & previous buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -50px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            -webkit-user-select: none;
-        }
-
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-
-        img {
-            margin-bottom: -4px;
-        }
-
-        .caption-container {
-            text-align: center;
-            background-color: black;
-            padding: 2px 16px;
-            color: white;
-        }
-
-        .demo {
-            opacity: 0.6;
-        }
-
-        .active,
-        .demo:hover {
+        100% {
             opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
         }
+    }
 
-        img.hover-shadow {
-            transition: 0.3s;
+    @keyframes opacity {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(3);
+            transform: scale(3);
         }
-
-        .hover-shadow:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
         }
-    </style>
-    <script>
-<#--        function openModal() {-->
-<#--            document.getElementById("myModal").style.display = "block";-->
-<#--        }-->
+    }
 
-<#--        function closeModal() {-->
-<#--            document.getElementById("myModal").style.display = "none";-->
-<#--        }-->
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+    }
 
-<#--        var slideIndex = 1;-->
-<#--        showSlides(slideIndex);-->
+    * {
+        box-sizing: border-box;
+    }
 
-<#--        function plusSlides(n) {-->
-<#--            showSlides(slideIndex += n);-->
-<#--        }-->
+    .row > .column {
+        padding: 0 8px;
+    }
 
-<#--        function currentSlide(n) {-->
-<#--            showSlides(slideIndex = n);-->
-<#--        }-->
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-<#--        function showSlides(n) {-->
-<#--            var i;-->
-<#--            var slides = document.getElementsByClassName("mySlides");-->
-<#--            var dots = document.getElementsByClassName("demo");-->
-<#--            var captionText = document.getElementById("caption");-->
-<#--            if (n > slides.length) {-->
-<#--                slideIndex = 1-->
-<#--            }-->
-<#--            if (n < 1) {-->
-<#--                slideIndex = slides.length-->
-<#--            }-->
-<#--            for (i = 0; i < slides.length; i++) {-->
-<#--                slides[i].style.display = "none";-->
-<#--            }-->
-<#--            for (i = 0; i < dots.length; i++) {-->
-<#--                dots[i].className = dots[i].className.replace(" active", "");-->
-<#--            }-->
-<#--            slides[slideIndex - 1].style.display = "block";-->
-<#--            dots[slideIndex - 1].className += " active";-->
-<#--            captionText.innerHTML = dots[slideIndex - 1].alt;-->
-<#--        }-->
+    .column {
+        float: left;
+        width: 25%;
+    }
 
-        function zoomPhoto() {
-            var v = document.getElementById("info-image");
-            v.className += "dblclick-info-image";
-        }
-    </script>
-    <#include "../animal/footer.ftl">
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: black;
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    img {
+        margin-bottom: -4px;
+    }
+
+    .caption-container {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+    }
+
+    .demo {
+        opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+    img.hover-shadow {
+        transition: 0.3s;
+    }
+
+    .hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+<script>
+    <#--        function openModal() {-->
+    <#--            document.getElementById("myModal").style.display = "block";-->
+    <#--        }-->
+
+    <#--        function closeModal() {-->
+    <#--            document.getElementById("myModal").style.display = "none";-->
+    <#--        }-->
+
+    <#--        var slideIndex = 1;-->
+    <#--        showSlides(slideIndex);-->
+
+    <#--        function plusSlides(n) {-->
+    <#--            showSlides(slideIndex += n);-->
+    <#--        }-->
+
+    <#--        function currentSlide(n) {-->
+    <#--            showSlides(slideIndex = n);-->
+    <#--        }-->
+
+    <#--        function showSlides(n) {-->
+    <#--            var i;-->
+    <#--            var slides = document.getElementsByClassName("mySlides");-->
+    <#--            var dots = document.getElementsByClassName("demo");-->
+    <#--            var captionText = document.getElementById("caption");-->
+    <#--            if (n > slides.length) {-->
+    <#--                slideIndex = 1-->
+    <#--            }-->
+    <#--            if (n < 1) {-->
+    <#--                slideIndex = slides.length-->
+    <#--            }-->
+    <#--            for (i = 0; i < slides.length; i++) {-->
+    <#--                slides[i].style.display = "none";-->
+    <#--            }-->
+    <#--            for (i = 0; i < dots.length; i++) {-->
+    <#--                dots[i].className = dots[i].className.replace(" active", "");-->
+    <#--            }-->
+    <#--            slides[slideIndex - 1].style.display = "block";-->
+    <#--            dots[slideIndex - 1].className += " active";-->
+    <#--            captionText.innerHTML = dots[slideIndex - 1].alt;-->
+    <#--        }-->
+
+    function zoomPhoto() {
+        var v = document.getElementById("info-image");
+        v.className += "dblclick-info-image";
+    }
+</script>
+<#include "../animal/footer.ftl">
 
