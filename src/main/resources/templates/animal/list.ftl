@@ -208,26 +208,8 @@
                                 </#list>
                             </div>
                         </div>
-                        <div class="row justify-content-center">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item  <#if !animals.hasPreviousPage >disabled</#if>">
-                                    <a class="page-link"
-                                       href="?page=${animals.currentPageNumber - 1}${pageSubmissionUrl}"
-                                       tabindex="-1">Previous</a>
-                                </li>
-                                <#list 1..animals.totalPageNumber as pageNumber>
-                                    <li class="page-item <#if animals.currentPageNumber == pageNumber>active</#if>">
-                                        <a class="page-link"
-                                           href="?page=${pageNumber}${pageSubmissionUrl}">${pageNumber}</a>
-                                    </li>
-                                </#list>
-                                <li class="page-item <#if ! animals.hasNextPage >disabled</#if>">
-                                    <a class="page-link"
-                                       href="?page=${animals.currentPageNumber + 1}${pageSubmissionUrl}"
-                                       tabindex="-1">Next</a>
-                                </li>
-                            </ul>
-                        </div>
+
+
 
                     </div>
                 </div>

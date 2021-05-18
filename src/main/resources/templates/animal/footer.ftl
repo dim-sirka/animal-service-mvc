@@ -49,7 +49,7 @@
                                     <div id="text-4" class="widget widget_text"><h5>Розташування притулку</h5>
                                         <div class="textwidget">
                                             <div class="card card-cascade narrower">
-                                                <div class="card-body card-body-cascade text-center">
+                                                <div class="card-body card-body-cascade text-center" style="padding: 0.7rem">
                                                     <div id="map-container-google-9"
                                                          class="z-depth-1-half map-container-5" style="height: 300px">
                                                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10492.428344708474!2d24.7648442!3d48.8942963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6a789a2223e12e2d!2z0JHQniDQlNGW0Lwg0KHRltGA0LrQsCAuINCf0YDQuNGC0YPQu9C-0Lo!5e0!3m2!1suk!2sua!4v1618412934686!5m2!1suk!2sua"

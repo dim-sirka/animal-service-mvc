@@ -21,7 +21,7 @@
     </div>
 </div>
 </div>
-<div class="card" style="margin-bottom: 0%; background-color:white">
+<div class="main-card" style="margin-bottom: 0%; background-color:white">
     <div class="row"
          style="margin: 15px 25px;">
         <div class="col md-6">
@@ -177,10 +177,14 @@
         animation-duration: .3s;
     }
 
-    .card {
+    .main-card {
         background: #eee;
         padding: 3em;
         line-height: 1.5em;
+    }
+
+    .card-body{
+        padding: 0.7rem;
     }
 
 
