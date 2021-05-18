@@ -100,7 +100,7 @@
                                         <@sec.authorize access="isAuthenticated()">
 
                                             <li class="nav-menu-item-163">
-                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white; margin: 0 20px;"
+                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white;"
                                                    href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                                    aria-haspopup="true" aria-expanded="false">
                                                     Замовлення
