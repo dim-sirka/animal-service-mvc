@@ -18,9 +18,8 @@
           rel="stylesheet" id="bootstrap-css">
 </head>
 
-<body>
-<#--class="home page-template page-template-full_width page-template-full_width-php page page-id-5 ajax_fade page_not_loaded  qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-11.0 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"-->
-<#--itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow: auto;"-->
+<body class="home page-template page-template-full_width page-template-full_width-php page page-id-5 ajax_fade page_not_loaded  qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-11.0 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
+itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow: auto;">
 <div class="wrapper">
     <div class="wrapper_inner">
         <header class="scroll_header_top_area  stick transparent scrolled_not_transparent with_border ajax_header_animation page_header">
@@ -168,11 +167,11 @@
                 </div>
             </div>
         </header>
-        <a id="back_to_top" href="https://bridge82.qodeinteractive.com/pets/#" class="off">
+        <a id="back_to_top" class="off">
         <span class="fa-stack">
             <i class="fa fa-arrow-up" style=""></i>
         </span>
         </a>
-        <div class="content" style="min-height: 69px; padding-top: 0px;">
+        <div class="content">
             <div class="content_inner  " style="position: relative; visibility: visible; display: block; opacity: 1;">
                 <div class="title_outer title_without_animation" data-height="373">

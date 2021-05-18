@@ -101,20 +101,20 @@
                                                         class="plus" id="menu-id"></span></a></li>
                                         <@sec.authorize access="isAuthenticated()">
 
-                                        <li class="nav-menu-item-163">
-                                            <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white; margin: 0 20px;"
-                                               href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                Адмінка
-                                            </a>
+                                            <li class="nav-menu-item-163">
+                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white; margin: 0 20px;"
+                                                   href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                   aria-haspopup="true" aria-expanded="false">
+                                                    Адмінка
+                                                </a>
 
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="/admin/list/orders" style="color:black;">Замовлення</a>
-                                                <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black;">Архів
-                                                    замовлень</a>
-                                                <a class="dropdown-item" href="/logout" style="color:black;">Вихід</a>
-                                            </div>
-                                        </li>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="/admin/list/orders" style="color:black;">Замовлення</a>
+                                                    <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black;">Архів
+                                                        замовлень</a>
+                                                    <a class="dropdown-item" href="/logout" style="color:black;">Вихід</a>
+                                                </div>
+                                            </li>
                                         </@sec.authorize>
                                     </ul>
                                 </nav>

@@ -28,8 +28,8 @@
              style=' text-align:left;'>
             <div class=" section_inner clearfix">
                 <div class='section_inner_margin clearfix'>
-                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
-                        <div class="vc_column-inner" style="margin-top: 15%;">
+<#--                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">-->
+                        <div class="vc_column-inner" style="margin-top: 4%; margin-left: 10%; margin-right: 10%;">
                             <div class="wpb_wrapper">
                                 <div role="form" class="wpcf7" id="wpcf7-f126-p127-o1" lang="en-US"
                                      dir="ltr">
@@ -81,18 +81,7 @@
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
-                        <div class="vc_column-inner" style="margin-top: 15%;">
-                            <div class="wpb_wrapper">
-                                <div role="form" class="wpcf7" id="wpcf7-f126-p127-o1" lang="en-US"
-                                     dir="ltr">
-                                    <div class="screen-reader-response"></div>
-                                <img src="${animal.mediaLinks}" alt="..." class="img-thumbnail">
-                                </div>
-                            </div>
-                        </div>
+<#--                        </div>-->
                     </div>
                 </div>
             </div>

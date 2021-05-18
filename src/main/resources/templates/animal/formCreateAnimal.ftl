@@ -81,23 +81,13 @@
 <#--        </div>-->
 <#--    </div>-->
 <#--</div>-->
-
-
-
-
-
-
-
-
-
 <div class="full_width">
     <div class="full_width_inner">
         <div class="vc_row wpb_row section vc_row-fluid  vc_custom_1478091158622 grid_section"
              style=' text-align:left;'>
             <div class=" section_inner clearfix">
                 <div class='section_inner_margin clearfix'>
-                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
-                        <div class="vc_column-inner" style="margin-top: 15%;">
+                        <div class="vc_column-inner" style="margin-top: 4%; margin-left: 10%; margin-right: 10%;">
                             <div class="wpb_wrapper">
                                 <div role="form" class="wpcf7" id="wpcf7-f126-p127-o1" lang="en-US"
                                      dir="ltr">
@@ -131,7 +121,7 @@
                                                         aria-invalid="false"
                                                         placeholder="Опис:"/></span></p>
                                         <div class="row">
-                                            <div class="col">
+                                            <div class="col" style="text-align: center;">
                                                 <button name="Submit" type="submit" class="btn btn-outline-dark"
                                                         data-submit="...Sending">
                                                     Зберегти
@@ -144,7 +134,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
 <#--                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">-->
 <#--                        <div class="vc_column-inner" style="margin-top: 15%;">-->
 <#--                            <div class="wpb_wrapper">-->
