@@ -86,11 +86,17 @@
                                                                      src="https://pixy.org/src/120/1206832.jpg"
                                                                 >
                                                             </#if>
-                                                            <#--                                                        <p id="labelForImg" style=" background-color: #d38960;">Не влаштовано</p>-->
-                                                            <p id="labelForImg" style=" background-color: #ff0000">
-                                                                Потребує
-                                                                допомоги</p>
-                                                            <#--                                                        <p id="labelForImg" style=" background-color: #6096d3;">Влаштовано</p>-->
+
+                                                            <#if animals.content[0].animalStatus == "FREE">
+                                                                <p id="labelForImg" style=" background-color: #d38960;">
+                                                                    Шукає сім'ю</p>
+                                                            <#elseif animals.content[0].animalStatus == "TREATMENT">
+                                                                <p id="labelForImg" style=" background-color: #ff0000">
+                                                                    Потребує допомоги</p>
+                                                            <#elseif animals.content[0].animalStatus == "ARCHIVE">
+                                                                <p id="labelForImg" style=" background-color: #6096d3;">
+                                                                    Влаштовано</p>
+                                                            </#if>
                                                             <p id="visitCounter">
                                                                 <i class="fa fa-eye"
                                                                    style="font-size: 18px; color: #f8f9fa">${animal.visitCounter}</i>

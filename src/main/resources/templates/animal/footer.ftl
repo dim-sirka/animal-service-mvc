@@ -120,6 +120,10 @@
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163">
                                                 <a href="/animals?animalStatus=ARCHIVE">Архів</a>
                                             </li>
+                                            <li id="menu-item-163"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163">
+                                                <a href="/contact">Контакти</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
