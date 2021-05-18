@@ -65,7 +65,7 @@
     }
 </style>
 <#if animals.totalPageNumber != 0 >
-    <div>
+    <div style="margin-bottom: 5%">
         <div class="container pt-5">
             <div class="row">
                 <div class="col-md-8 order-md-2 col-lg-9">
