@@ -73,7 +73,7 @@
                                 <nav class="main_menu drop_down right">
                                     <ul id="menu-main-menu" class="">
                                         <li id="nav-menu-item-34"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
+                                            class="menu-item menu-item-type-post_type menu-item-object-page active narrow">
                                             <a href="/about" class=" current " style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Про нас</span><span
                                                         class="plus"></span></a></li>
@@ -121,8 +121,6 @@
                                         </@sec.authorize>
                                     </ul>
                                 </nav>
-
-                                <script type="text/javascript">shineLinks('menu-act');</script>
 
                                 <nav class="mobile_menu">
                                     <ul id="menu-main-menu-1" class="">

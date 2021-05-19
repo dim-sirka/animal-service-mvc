@@ -139,20 +139,20 @@
                                         </@sec.authorize>
                                     </ul>
                                     <script>
-                                        alert(window.location.pathname);
-                                        if (window.location.href == "http://localhost:8080/animals?animalStatus=FREE") {
+                                        varriable_path=window.location.pathname+window.location.search;
+                                        if (varriable_path == "/animals?animalStatus=FREE") {
                                             variable = document.getElementById("id-2");
                                             variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
-                                        } else if (window.location.href == "http://localhost:8080/animals?animalStatus=TREATMENT") {
+                                        } else if (varriable_path == "/animals?animalStatus=TREATMENT") {
                                             variable = document.getElementById("id-3");
                                             variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
-                                        } else if (window.location.href == "http://localhost:8080/animals?animalStatus=ARCHIVE") {
+                                        } else if (varriable_path == "/animals?animalStatus=ARCHIVE") {
                                             variable = document.getElementById("id-4");
                                             variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
-                                        } else if (window.location.href == "http://localhost:8080/contact") {
+                                        } else if (varriable_path == "/contact") {
                                             variable = document.getElementById("id-5");
                                             variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
-                                        } else if (window.location.href == "http://localhost:8080/admin/list/orders" || window.location.href == "http://localhost:8080/admin/list/archive_orders") {
+                                        } else if (varriable_path == "/admin/list/orders" || varriable_path == "/admin/list/archive_orders") {
                                             variable = document.getElementById("id-6");
                                             variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
                                         }
