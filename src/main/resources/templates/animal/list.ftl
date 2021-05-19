@@ -54,6 +54,7 @@
                                 <div class="btn-group float-md-right ml-3">
                                     <button type="button" class="btn btn-lg btn-light"><span
                                                 class="fa fa-arrow-left"></span></button>
+                                    <button type="button" class="btn btn-lg btn-light">7</button>
                                     <button type="button" class="btn btn-lg btn-light"><span
                                                 class="fa fa-arrow-right"></span></button>
                                 </div>
@@ -69,40 +70,39 @@
                         <div class="container">
                             <div class="row">
                                 <#list animals.content as animal>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6" >
                                         <div class="vc_column-inner">
                                             <div class="wpb_wrapper">
                                                 <div class="qode-specification-list">
+                                                    <#if animals.content[0].animalStatus == "FREE">
+                                                        <p id="labelForImg" style="background-color: #6f00cc; text-align: center; margin-bottom: -25px">
+                                                            Шукає сім'ю</p>
+                                                    <#elseif animals.content[0].animalStatus == "TREATMENT">
+                                                        <p id="labelForImg" style=" background-color: #ff0000; text-align: center; margin-bottom: -25px">
+                                                            Потребує допомоги</p>
+                                                    <#elseif animals.content[0].animalStatus == "ARCHIVE">
+                                                        <p id="labelForImg" style=" background-color: #6096d3; text-align: center; margin-bottom: -25px">
+                                                            Влаштовано</p>
+                                                    </#if>
                                                     <div class="qode-specification-list-image">
                                                         <a href="/animals/${animal.id}">
                                                             <#if animal.mediaLinks??>
                                                                 <img class="card-img-top card-item-img"
-                                                                     style="height:220px; visibility: visible;"
+                                                                     style="visibility: visible;"
                                                                      src="${animal.mediaLinks[0]}"
                                                                 >
                                                             <#else>
                                                                 <img class="card-img-top card-item-img"
-                                                                     style="height:220px; visibility: visible;"
+                                                                     style="visibility: visible;"
                                                                      src="https://pixy.org/src/120/1206832.jpg"
                                                                 >
                                                             </#if>
-
-                                                            <#if animals.content[0].animalStatus == "FREE">
-                                                                <p id="labelForImg" style=" background-color: #d38960;">
-                                                                    Шукає сім'ю</p>
-                                                            <#elseif animals.content[0].animalStatus == "TREATMENT">
-                                                                <p id="labelForImg" style=" background-color: #ff0000">
-                                                                    Потребує допомоги</p>
-                                                            <#elseif animals.content[0].animalStatus == "ARCHIVE">
-                                                                <p id="labelForImg" style=" background-color: #6096d3;">
-                                                                    Влаштовано</p>
-                                                            </#if>
-                                                            <p id="visitCounter">
-                                                                <i class="fa fa-eye"
-                                                                   style="font-size: 18px; color: #f8f9fa">${animal.visitCounter}</i>
-                                                            </p>
                                                         </a>
                                                     </div>
+                                                    <p id="visitCounter">
+                                                        <i class="fa fa-eye"
+                                                           style="font-size: 18px; color: #f8f9fa">${animal.visitCounter}</i>
+                                                    </p>
                                                     <div class="list-item-id-unique">
                                                         ID ${animal.id}
                                                     </div>
@@ -270,29 +270,28 @@
         background-color: #000000;
         opacity: 0.8;
         font-size: 18px;
-        width: 43px;
-        height: 34px;
+        margin-top: -25px;
+        width: 80px;
+        text-align: center;
         color: #ffffff;
-        margin-top: 152px
+        margin-bottom: 0;
     }
 
     #labelForImg {
         background-color: #d38960;
         opacity: 0.8;
         font-size: 18px;
-        width: 170px;
-        height: 34px;
+        width: 100%;
         color: #ffffff;
-        margin-top: -220px
     }
 
     .list-item-id-unique {
-        position: absolute;
-        bottom: 367px;
-        right: 15px;
+        position: relative;
         background-color: #4a4a4a;
         color: #fff;
         padding: 3px 10px;
         font-size: 13px;
+        text-align: center;
+        margin-left: 80%;
     }
 </style>
