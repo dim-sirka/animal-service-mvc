@@ -111,10 +111,10 @@ itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow:
                                                 </a>
 
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="/admin/list/orders" style="color:black;">Замовлення</a>
-                                                    <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black;">Архів
+                                                    <a class="dropdown-item" href="/admin/list/orders" style="color:black; line-height: 35px;">Замовлення</a>
+                                                    <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black; line-height: 35px;">Архів
                                                         замовлень</a>
-                                                    <a class="dropdown-item" href="/logout" style="color:black;">Вихід</a>
+                                                    <a class="dropdown-item" href="/logout" style="color:black; line-height: 35px;">Вихід</a>
                                                 </div>
                                             </li>
                                         </@sec.authorize>
