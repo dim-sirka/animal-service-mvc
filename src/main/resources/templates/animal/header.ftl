@@ -24,7 +24,7 @@
 </head>
 
 <body class="home page-template page-template-full_width page-template-full_width-php page page-id-5 ajax_fade page_not_loaded  qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-11.0 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
-itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow: auto;">
+      itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow: auto;">
 <div class="wrapper">
     <div class="wrapper_inner">
         <header class="scroll_header_top_area  stick transparent scrolled_not_transparent with_border ajax_header_animation page_header">
@@ -75,55 +75,89 @@ itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow:
                                     </div>
                                 </div>
                                 <nav class="main_menu drop_down right">
-                                    <ul id="menu-main-menu" class="">
-                                        <li id="nav-menu-item-34"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
+                                    <ul id="menu-main-menu" class="myDiv">
+                                        <li id="id-1"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page narrow">
                                             <a href="/about" class=" current " style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Про нас</span><span
                                                         class="plus"></span></a></li>
-                                        <li id="nav-menu-item-164"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
-                                            <a href="/animals?animalStatus=FREE" class="" id="id-item-32" style="padding: 0 20px;"><i
+                                        <li id="id-2"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page narrow">
+                                            <#--                                            <#if animals.content[0].animalStatus == "FREE">active</#if>-->
+                                            <a href="/animals?animalStatus=FREE" class="" id="id-item-32"
+                                               style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Віддаємо</span><span
                                                         class="plus"></span></a></li>
-                                        <li id="nav-menu-item-161"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=TREATMENT" class="" style="padding: 0 20px;"><i
+                                        <li id="id-3"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page narrow">
+                                            <#--                                            <#if animals.content[0].animalStatus == "TREATMENT">active</#if>-->
+                                            <a
+                                                    href="/animals?animalStatus=TREATMENT" class=""
+                                                    style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Лікування</span><span
                                                         class="plus"></span></a></li>
-                                        <li id="nav-menu-item-162"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=ARCHIVE" class="" style="padding: 0 20px;"><i
+                                        <li id="id-4"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page narrow">
+                                            <#--                                            <#if animals.content[0].animalStatus == "ARCHIVE">active</#if>-->
+                                            <a
+                                                    href="/animals?animalStatus=ARCHIVE" class=""
+                                                    style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Архів</span><span
                                                         class="plus"></span></a></li>
-                                        <li id="nav-menu-item-163"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
+                                        <li id="id-5"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page narrow"><a
                                                     href="/contact" class="" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Контакти</span><span
                                                         class="plus"></span></a></li>
                                         <@sec.authorize access="isAuthenticated()">
 
-                                            <li class="nav-menu-item-163">
-                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white; padding: 0 15px"
-                                                   href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                                   aria-haspopup="true" aria-expanded="false">
-                                                    Замовлення
-                                                </a>
+                                            <li id="id-6"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page narrow">
+
+                                                <a
+                                                        href="#" class="menu_icon blank fa" id="navbarDropdown"
+                                                        role="button"
+                                                        data-toggle="dropdown"><span>Замовлення</span><span
+                                                            class="plus"></span></a>
+
 
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="/admin/list/orders" style="color:black; line-height: 35px; text-align: center;">Замовлення</a>
-                                                    <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black; line-height: 35px; text-align: center;">Архів
+                                                    <a class="dropdown-item" href="/admin/list/orders"
+                                                       style="color:black; line-height: 35px; text-align: center;">Замовлення</a>
+                                                    <a class="dropdown-item" href="/admin/list/archive_orders"
+                                                       style="color:black; line-height: 35px; text-align: center;">Архів
                                                         замовлень</a>
                                                 </div>
                                             </li>
 
-                                            <li id="nav-menu-item-163"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
+                                            <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page narrow ">
+                                                <a
                                                         href="/logout" class="" style="padding: 0 20px"><i
                                                             class="menu_icon blank fa"></i><span>Вихід</span><span
                                                             class="plus"></span></a></li>
                                         </@sec.authorize>
                                     </ul>
+                                    <script>
+                                        alert(window.location.pathname);
+                                        if (window.location.href == "http://localhost:8080/animals?animalStatus=FREE") {
+                                            variable = document.getElementById("id-2");
+                                            variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
+                                        } else if (window.location.href == "http://localhost:8080/animals?animalStatus=TREATMENT") {
+                                            variable = document.getElementById("id-3");
+                                            variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
+                                        } else if (window.location.href == "http://localhost:8080/animals?animalStatus=ARCHIVE") {
+                                            variable = document.getElementById("id-4");
+                                            variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
+                                        } else if (window.location.href == "http://localhost:8080/contact") {
+                                            variable = document.getElementById("id-5");
+                                            variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
+                                        } else if (window.location.href == "http://localhost:8080/admin/list/orders" || window.location.href == "http://localhost:8080/admin/list/archive_orders") {
+                                            variable = document.getElementById("id-6");
+                                            variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
+                                        }
+
+                                    </script>
                                 </nav>
                                 <nav class="mobile_menu">
                                     <ul id="menu-main-menu-1" class="">
@@ -151,23 +185,25 @@ itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow:
                                                         class="fa fa-angle-down"></i></span></li>
 
                                         <@sec.authorize access="isAuthenticated()">
-                                        <li id="mobile-menu-item-164"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="/admin/list/orders" class=""><span>Замовлення</span></a><span
-                                                    class="mobile_arrow"><i class="fa fa-angle-right"></i><i
-                                                        class="fa fa-angle-down"></i></span></li>
+                                            <li id="mobile-menu-item-164"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                                                        href="/admin/list/orders"
+                                                        class=""><span>Замовлення</span></a><span
+                                                        class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                            class="fa fa-angle-down"></i></span></li>
 
-                                        <li id="mobile-menu-item-165"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="/admin/list/archive_orders" class=""><span>Архів адміна</span></a><span
-                                                    class="mobile_arrow"><i class="fa fa-angle-right"></i><i
-                                                        class="fa fa-angle-down"></i></span></li>
+                                            <li id="mobile-menu-item-165"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                                                        href="/admin/list/archive_orders"
+                                                        class=""><span>Архів адміна</span></a><span
+                                                        class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                            class="fa fa-angle-down"></i></span></li>
 
-                                        <li id="mobile-menu-item-166"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                    href="/logout" class=""><span>Вихід</span></a><span
-                                                    class="mobile_arrow"><i class="fa fa-angle-right"></i><i
-                                                        class="fa fa-angle-down"></i></span></li>
+                                            <li id="mobile-menu-item-166"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                                                        href="/logout" class=""><span>Вихід</span></a><span
+                                                        class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                            class="fa fa-angle-down"></i></span></li>
                                         </@sec.authorize>
                                     </ul>
                                 </nav>
