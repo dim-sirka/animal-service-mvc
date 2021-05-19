@@ -14,6 +14,9 @@
                         <#elseif animals.content[0].animalStatus == "TREATMENT">
                             <h1><span>Нам потрібна ваша підтримка!</span></h1>
                             <span class="subtitle">Не залишайся байдужим.</span>
+                        <#elseif animals.content[0].animalStatus == "ARCHIVE">
+                            <h1><span>Архів</span></h1>
+                            <span class="subtitle">Тварини, які вже знайшли нових власників</span>
                         </#if>
                     </div>
                 </div>
