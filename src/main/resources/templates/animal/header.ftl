@@ -78,45 +78,50 @@ itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow:
                                     <ul id="menu-main-menu" class="">
                                         <li id="nav-menu-item-34"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
-                                            <a href="/about" class=" current "><i
+                                            <a href="/about" class=" current " style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Про нас</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-164"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
-                                            <a href="/animals?animalStatus=FREE" class="" id="id-item-32"><i
+                                            <a href="/animals?animalStatus=FREE" class="" id="id-item-32" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Віддаємо</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-161"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=TREATMENT" class=""><i
+                                                    href="/animals?animalStatus=TREATMENT" class="" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Лікування</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-162"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=ARCHIVE" class=""><i
+                                                    href="/animals?animalStatus=ARCHIVE" class="" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Архів</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-163"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/contact" class=""><i
+                                                    href="/contact" class="" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Контакти</span><span
                                                         class="plus"></span></a></li>
                                         <@sec.authorize access="isAuthenticated()">
 
                                             <li class="nav-menu-item-163">
-                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white;"
+                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white; padding: 0 15px"
                                                    href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                                    aria-haspopup="true" aria-expanded="false">
                                                     Замовлення
                                                 </a>
 
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="/admin/list/orders" style="color:black; line-height: 35px;">Замовлення</a>
-                                                    <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black; line-height: 35px;">Архів
+                                                    <a class="dropdown-item" href="/admin/list/orders" style="color:black; line-height: 35px; text-align: center;">Замовлення</a>
+                                                    <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black; line-height: 35px; text-align: center;">Архів
                                                         замовлень</a>
-                                                    <a class="dropdown-item" href="/logout" style="color:black; line-height: 35px;">Вихід</a>
                                                 </div>
                                             </li>
+
+                                            <li id="nav-menu-item-163"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
+                                                        href="/logout" class="" style="padding: 0 20px"><i
+                                                            class="menu_icon blank fa"></i><span>Вихід</span><span
+                                                            class="plus"></span></a></li>
                                         </@sec.authorize>
                                     </ul>
                                 </nav>
