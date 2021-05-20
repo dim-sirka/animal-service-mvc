@@ -78,7 +78,7 @@
                                                         class="menu_icon blank fa"></i><span>Про нас</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-164"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
+                                            class="menu-item menu-item-type-post_type menu-item-object-page narrow">
                                             <a href="/animals?animalStatus=FREE" class="" id="id-item-32" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Віддаємо</span><span
                                                         class="plus"></span></a></li>

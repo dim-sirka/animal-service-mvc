@@ -38,7 +38,7 @@
     </div>
     <div class="container-fliud">
         <div class="wrapper row">
-            <div class="col-md-6" style="padding: 0;">
+            <div class="col-md-6" style="padding-top: 15px;">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <#list animal.mediaLinks as link>
@@ -65,8 +65,18 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-6" style="padding: 0;">
+            <div class="col-md-6" style="padding-left: 15px; padding-top: 15px;">
                 <h3 class="product-title">${animal.name}</h3>
+                <#if animal.animalStatus == "FREE">
+                    <p id="labelForImg" style="background-color: #6f00cc; text-align: center;">
+                        Шукає сім'ю</p>
+                <#elseif animal.animalStatus == "TREATMENT">
+                    <p id="labelForImg" style=" background-color: #ff0000; text-align: center;">
+                        Потребує допомоги</p>
+                <#elseif animal.animalStatus == "ARCHIVE">
+                    <p id="labelForImg" style=" background-color: #6096d3; text-align: center;">
+                        Влаштовано</p>
+                </#if>
                 <div class="rating">
                     <span class="review-no">${animal.visitCounter} переглядів</span>
                 </div>
@@ -110,6 +120,24 @@
 
 
 <style>
+
+    #labelForImg {
+        background-color: #d38960;
+        opacity: 0.8;
+        font-size: 18px;
+        width: 100%;
+        color: #ffffff;
+    }
+
+    .list-item-id-unique {
+        position: relative;
+        background-color: #4a4a4a;
+        color: #fff;
+        padding: 3px 10px;
+        font-size: 13px;
+        text-align: center;
+        margin-left: 80%;
+    }
     img {
         max-width: 100%;
     }
