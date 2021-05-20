@@ -30,7 +30,7 @@
         </div>
         <div class="col" style="text-align: right; padding: 0;">
             <@sec.authorize access="isAuthenticated()">
-                <a href="/admin/animals/editForm/${animal.id}" class="" >
+                <a href="/admin/animals/editForm/${animal.id}" class="">
                     <button class="btn btn-outline-dark" type="submit">Редагувати тварину</button>
                 </a>
             </@sec.authorize>
@@ -117,8 +117,6 @@
     </div>
 </div>
 </div>
-
-
 <style>
 
     #labelForImg {
@@ -129,47 +127,12 @@
         color: #ffffff;
     }
 
-    .list-item-id-unique {
-        position: relative;
-        background-color: #4a4a4a;
-        color: #fff;
-        padding: 3px 10px;
-        font-size: 13px;
-        text-align: center;
-        margin-left: 80%;
-    }
     img {
         max-width: 100%;
     }
 
-    .preview {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
     @media screen and (max-width: 996px) {
-        .preview {
-            margin-bottom: 20px;
-        }
-    }
 
-    .preview-pic {
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-    }
-
-    .preview-thumbnail.nav-tabs {
-        border: none;
-        margin-top: 15px;
     }
 
     .preview-thumbnail.nav-tabs li {
@@ -191,10 +154,6 @@
         margin-right: 0;
     }
 
-    .tab-content {
-        overflow: hidden;
-    }
-
     .tab-content img {
         width: 100%;
         -webkit-animation-name: opacity;
@@ -209,36 +168,12 @@
         line-height: 1.5em;
     }
 
-    .card-body{
-        padding: 0.7rem;
-    }
-
-
-    .details {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .colors {
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-    }
-
-    .product-title, .price, .sizes, .colors {
+    .product-title {
         text-transform: UPPERCASE;
         font-weight: bold;
     }
 
-    .checked, .price span {
+    .price span {
         color: #ff9f1a;
     }
 
@@ -250,28 +185,7 @@
         margin-top: 0;
     }
 
-    .size {
-        margin-right: 10px;
-    }
-
-    .size:first-of-type {
-        margin-left: 40px;
-    }
-
-    .color {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 10px;
-        height: 2em;
-        width: 2em;
-        border-radius: 2px;
-    }
-
-    .color:first-of-type {
-        margin-left: 20px;
-    }
-
-    .add-to-cart, .like {
+    .add-to-cart {
         background: #ff9f1a;
         padding: 1.2em 1.5em;
         border: none;
@@ -282,36 +196,9 @@
         transition: background .3s ease;
     }
 
-    .add-to-cart:hover, .like:hover {
+    .add-to-cart:hover {
         background: #b36800;
         color: #fff;
-    }
-
-    .not-available {
-        text-align: center;
-        line-height: 2em;
-    }
-
-    .not-available:before {
-        font-family: fontawesome;
-        content: "\f00d";
-        color: #fff;
-    }
-
-    .orange {
-        background: #ff9f1a;
-    }
-
-    .green {
-        background: #85ad00;
-    }
-
-    .blue {
-        background: #0076ad;
-    }
-
-    .tooltip-inner {
-        padding: 1.3em;
     }
 
     @-webkit-keyframes opacity {
@@ -359,126 +246,10 @@
         clear: both;
     }
 
-    .column {
-        float: left;
-        width: 25%;
-    }
-
-    /* The Modal (background) */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: black;
-    }
-
-    /* Modal Content */
-    .modal-content {
-        position: relative;
-        background-color: #fefefe;
-        margin: auto;
-        padding: 0;
-        width: 90%;
-        max-width: 1200px;
-    }
-
-    /* The Close Button */
-    .close {
-        color: white;
-        position: absolute;
-        top: 10px;
-        right: 25px;
-        font-size: 35px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #999;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .mySlides {
-        display: none;
-    }
-
-    .cursor {
-        cursor: pointer;
-    }
-
-    /* Next & previous buttons */
-    .prev,
-    .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -50px;
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Number text (1/3 etc) */
-    .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-    }
-
     img {
         margin-bottom: -4px;
     }
 
-    .caption-container {
-        text-align: center;
-        background-color: black;
-        padding: 2px 16px;
-        color: white;
-    }
-
-    .demo {
-        opacity: 0.6;
-    }
-
-    .active,
-    .demo:hover {
-        opacity: 1;
-    }
-
-    img.hover-shadow {
-        transition: 0.3s;
-    }
-
-    .hover-shadow:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
 </style>
 <script>
 

@@ -79,5 +79,10 @@
         </div>
     </div>
 </div>
+<script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/3f0fa.js"></script>
+<script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/5f16d.js"></script>
+<script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/00530.js"></script>
+<script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/9d9d4.js"></script>
+<script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/e5338.js"></script>
 <#include "../animal/footer.ftl">
 
