@@ -21,25 +21,24 @@
     </div>
 </div>
 </div>
-<div class="main-card" style="margin-bottom: 0%; background-color:white">
-    <div class="row"
-         style="margin-bottom: 15px;">
-        <div class="col-md-6">
+<div class="main-card" style="background-color:white">
+    <div class="row" style="margin-bottom: 15px">
+        <div class="col" style="padding: 0;">
             <a href="/animals?animalStatus=${animal.animalStatus}" class="">
-                <button class="btn btn-secondary text-center" type="submit">Назад</button>
+                <button class="btn btn-outline-dark" type="submit">Назад</button>
             </a>
         </div>
-        <div class="col-md-6 text-right">
+        <div class="col" style="text-align: right; padding: 0;">
             <@sec.authorize access="isAuthenticated()">
-                <a href="/admin/animals/editForm/${animal.id}" class="" style="text-align: right;">
-                    <button class="btn btn-secondary text-center" type="submit">Редагувати тварину</button>
+                <a href="/admin/animals/editForm/${animal.id}" class="" >
+                    <button class="btn btn-outline-dark" type="submit">Редагувати тварину</button>
                 </a>
             </@sec.authorize>
         </div>
     </div>
     <div class="container-fliud">
         <div class="wrapper row">
-            <div class="col-md-6">
+            <div class="col-md-6" style="padding: 0;">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <#list animal.mediaLinks as link>
@@ -66,7 +65,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" style="padding: 0;">
                 <h3 class="product-title">${animal.name}</h3>
                 <div class="rating">
                     <span class="review-no">${animal.visitCounter} переглядів</span>

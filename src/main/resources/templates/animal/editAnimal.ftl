@@ -71,7 +71,7 @@
                                                     Зберегти
                                                 </button>
                                             </div>
-                                            <div class="col">
+                                            <div class="col" style="text-align: right;">
                                                 <a role="button" class="btn btn-outline-dark"
                                                    href="/animals/${animal.id}">Скасувати</a>
                                             </div>
