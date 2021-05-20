@@ -40,12 +40,10 @@
                                         <p><span class="wpcf7-form-control-wrap your-subject">Ім'я тварини: <input
                                                         type="text" name="name" value="${animal.name}" size="40"
                                                         class="wpcf7-form-control wpcf7-text"
-                                                        aria-invalid="false"
                                                         placeholder="Ім'я тварини:"/></span></p>
                                         <p><span class="wpcf7-form-control-wrap your-subject">Вік тварини:<input
                                                         type="text"  name="age" value="${animal.age}" size="40"
                                                         class="wpcf7-form-control wpcf7-text"
-                                                        aria-invalid="false"
                                                         placeholder="Вік тварини:"/></span></p>
                                         <p><span class="wpcf7-form-control-wrap your-subject">Посилання на фото:<input
                                                         type="text" name="mediaLinks" value=" ${animal.mediaLinks}"
@@ -58,12 +56,11 @@
                                             <option>CAT</option>
                                             <option>OTHER</option>
                                         </select></span></p>
-
-                                        <p><span class="wpcf7-form-control-wrap your-subject">Опис:<input
-                                                        type="text" name="description" value=" ${animal.description}"
-                                                        size="40" class="wpcf7-form-control wpcf7-text"
+                                        <p><span class="wpcf7-form-control-wrap message"><textarea type="text"
+                                                        name="description" cols="40" rows="10"
+                                                        class="wpcf7-form-control wpcf7-textarea"
                                                         aria-invalid="false"
-                                                        placeholder="Опис:"/></span></p>
+                                                        placeholder="${animal.description}"></textarea></span></p>
                                         <div class="row">
                                             <div class="col">
                                                 <button name="Submit" type="submit" class="btn btn-outline-dark"

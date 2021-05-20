@@ -55,11 +55,12 @@
                                         <option>CAT</option>
                                         <option>OTHER</option>
                                     </select>
-                                    <p><span class="wpcf7-form-control-wrap your-subject"><input
-                                                    type="text" name="description" value=""
-                                                    size="40" class="wpcf7-form-control wpcf7-text"
-                                                    aria-invalid="false"
-                                                    placeholder="Опис:"/></span></p>
+                                    <p><span class="wpcf7-form-control-wrap message">
+                                            <textarea type="text"
+                                                      name="description" cols="40" rows="10"
+                                                      class="wpcf7-form-control wpcf7-textarea"
+                                                      aria-invalid="false"
+                                                      placeholder="Опис:"></textarea></span></p>
                                     <div class="row">
                                         <div class="col" style="text-align: center;">
                                             <button name="Submit" type="submit" class="btn btn-outline-dark"
