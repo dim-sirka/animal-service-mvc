@@ -156,7 +156,6 @@
                                             variable = document.getElementById("id-6");
                                             variable.className = variable.className.replace("menu-item menu-item-type-post_type menu-item-object-page narrow", "menu-item menu-item-type-post_type menu-item-object-page active narrow");
                                         }
-
                                     </script>
                                 </nav>
                                 <nav class="mobile_menu">

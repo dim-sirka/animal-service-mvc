@@ -23,15 +23,15 @@
 </div>
 <div class="main-card" style="margin-bottom: 0%; background-color:white">
     <div class="row"
-         style="margin: 15px 25px;">
-        <div class="col md-6">
-            <a href="/animals?animalStatus=${animal.animalStatus}" class="row ml-1">
+         style="margin-bottom: 15px;">
+        <div class="col-md-6">
+            <a href="/animals?animalStatus=${animal.animalStatus}" class="">
                 <button class="btn btn-secondary text-center" type="submit">Назад</button>
             </a>
         </div>
-        <div class="col md-6">
+        <div class="col-md-6 text-right">
             <@sec.authorize access="isAuthenticated()">
-                <a href="/admin/animals/editForm/${animal.id}" class="row ml-1" style="text-align: right;">
+                <a href="/admin/animals/editForm/${animal.id}" class="" style="text-align: right;">
                     <button class="btn btn-secondary text-center" type="submit">Редагувати тварину</button>
                 </a>
             </@sec.authorize>
