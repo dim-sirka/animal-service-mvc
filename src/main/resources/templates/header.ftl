@@ -11,10 +11,13 @@
     <link rel="apple-touch-icon" href="https://i.ibb.co/QvVyg75/dim-sirka-Texture.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://bridge82.qodeinteractive.com/wp-content/cache/minify/2bf8a.css" media="all">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet" id="bootstrap-css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </head>
 <body class="home page-template page-template-full_width page-template-full_width-php page page-id-5 ajax_fade page_not_loaded  qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-11.0 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
       itemscope="" itemtype="http://schema.org/WebPage" style="height: auto; overflow: auto;">
@@ -64,57 +67,61 @@
                                                                 style="color: #ffffff;font-size: 15px;"></span></span></a></span>
                                         </div>
                                         <div class="side_menu_button">
-                                            <@sec.authorize access="isAuthenticated()">
-                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
-                                                        style="margin: 15px 10px;">Вихід
-                                                </button>
-                                            </@sec.authorize>
                                         </div>
                                     </div>
                                 </div>
                                 <nav class="main_menu drop_down right">
                                     <ul id="menu-main-menu" class="">
                                         <li id="nav-menu-item-34"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active narrow">
-                                            <a href="/about" class=" current "><i
+                                            class="menu-item menu-item-type-post_type menu-item-object-page active narrow">
+                                            <a href="/about" class=" current " style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Про нас</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-164"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=FREE" class=""><i
+                                            class="menu-item menu-item-type-post_type menu-item-object-page narrow">
+                                            <a href="/animals?animalStatus=FREE" class="" id="id-item-32" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Віддаємо</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-161"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=TREATMENT" class=""><i
+                                                    href="/animals?animalStatus=TREATMENT" class="" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Лікування</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-162"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=ARCHIVE" class=""><i
+                                                    href="/animals?animalStatus=ARCHIVE" class="" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Архів</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-163"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="https://bridge82.qodeinteractive.com/contact-us/" class=""><i
+                                                    href="/contact" class="" style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Контакти</span><span
                                                         class="plus"></span></a></li>
                                         <@sec.authorize access="isAuthenticated()">
 
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" style="color: white; margin: 0 20px;"
-                                               href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                Замовлення
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="/admin/list/orders">Замовлення</a>
-                                                <a class="dropdown-item" href="/admin/list/archive_orders">Архів
-                                                    замовлень</a>
-                                            </div>
-                                            </@sec.authorize>
+                                            <li class="nav-menu-item-163">
+                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white; padding: 0 15px"
+                                                   href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                   aria-haspopup="true" aria-expanded="false">
+                                                    Замовлення
+                                                </a>
+
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="/admin/list/orders" style="color:black; line-height: 35px; text-align: center;">Замовлення</a>
+                                                    <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black; line-height: 35px; text-align: center;">Архів
+                                                        замовлень</a>
+                                                </div>
+                                            </li>
+
+                                            <li id="nav-menu-item-163"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
+                                                        href="/logout" class="" style="padding: 0 20px"><i
+                                                            class="menu_icon blank fa"></i><span>Вихід</span><span
+                                                            class="plus"></span></a></li>
+                                        </@sec.authorize>
                                     </ul>
                                 </nav>
+
                                 <nav class="mobile_menu">
                                     <ul id="menu-main-menu-1" class="">
                                         <li id="mobile-menu-item-164"
@@ -139,6 +146,26 @@
                                                     href="/animals?animalStatus=ARCHIVE" class=""><span>Архів</span></a><span
                                                     class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                         class="fa fa-angle-down"></i></span></li>
+
+                                        <@sec.authorize access="isAuthenticated()">
+                                            <li id="mobile-menu-item-164"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                                                        href="/admin/list/orders" class=""><span>Замовлення</span></a><span
+                                                        class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                            class="fa fa-angle-down"></i></span></li>
+
+                                            <li id="mobile-menu-item-165"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                                                        href="/admin/list/archive_orders" class=""><span>Архів адміна</span></a><span
+                                                        class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                            class="fa fa-angle-down"></i></span></li>
+
+                                            <li id="mobile-menu-item-166"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page "><a
+                                                        href="/logout" class=""><span>Вихід</span></a><span
+                                                        class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                            class="fa fa-angle-down"></i></span></li>
+                                        </@sec.authorize>
                                     </ul>
                                 </nav>
                             </div>

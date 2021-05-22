@@ -12,8 +12,7 @@
             <div class="container_inner clearfix">
                 <div class="title_subtitle_holder">
                     <div class="title_subtitle_holder_inner">
-                        <h1><span>Реєстрація замовлення</span></h1>
-                        <span class="subtitle">Введіть ваші дані</span>
+                        <h1><span>Зв'яжись з нами</span></h1>
                     </div>
                 </div>
             </div>
@@ -24,49 +23,46 @@
 <div class="full_width">
     <div class="full_width_inner">
         <div class="vc_row wpb_row section vc_row-fluid  vc_custom_1478091158622 grid_section"
-             style=' text-align:center;'>
-            <#if success??>
-                <div class="alert alert-success">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Success!</strong> Ваше замовлення зареєстровано!
-                </div>
-            </#if>
+             style=' text-align:left;'>
             <div class=" section_inner clearfix">
-                <div class='section_inner_margin clearfix'>
+                <div class="vc_column-inner" style="margin: 5%;">
                     <div class="wpb_wrapper">
                         <div role="form" class="wpcf7" id="wpcf7-f126-p127-o1" lang="en-US"
                              dir="ltr">
                             <div class="screen-reader-response"></div>
-                            <form id="client" action="/orders/new" method="post" autocomplete="off"
-                                  class="wpcf7-form cf7_custom_style_1" novalidate="novalidate"
-                                  style="margin-top: 5%;margin-bottom: 5%;margin-left: 15%;margin-right: 15%;">
-                                <input type="hidden" name="animalId" placeholder="" value="<#if id??>${id}<#else></#if>"
-                                       type="number" tabindex="1" required autofocus/>
+                            <form action="/contact-us/#wpcf7-f126-p127-o1" method="post"
+                                  class="wpcf7-form cf7_custom_style_1" novalidate="novalidate">
+                                <div style="display: none;">
+                                    <input type="hidden" name="_wpcf7" value="126"/>
+                                    <input type="hidden" name="_wpcf7_version" value="5.1.6"/>
+                                    <input type="hidden" name="_wpcf7_locale" value="en_US"/>
+                                    <input type="hidden" name="_wpcf7_unit_tag"
+                                           value="wpcf7-f126-p127-o1"/>
+                                    <input type="hidden" name="_wpcf7_container_post"
+                                           value="127"/>
+                                </div>
                                 <p><span class="wpcf7-form-control-wrap full-name"><input
-                                                type="text" name="userName" value="" size="40"
+                                                type="text" name="full-name" value="" size="40"
                                                 class="wpcf7-form-control wpcf7-text"
                                                 aria-invalid="false"
-                                                placeholder="Ваше ім'я та прізвище:"/></span></p>
+                                                placeholder="Ваше Ім'я"/></span></p>
                                 <p><span class="wpcf7-form-control-wrap email"><input
-                                                type="email" name="userEmail" value="" size="40"
+                                                type="email" name="email" value="" size="40"
                                                 class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email"
                                                 aria-invalid="false"
-                                                placeholder="Ваша електронна адреса:"/></span></p>
+                                                placeholder="Ваш e-mail адрес"/></span></p>
                                 <p><span class="wpcf7-form-control-wrap your-subject"><input
-                                                type="text" name="userPhoneNumber" value=""
+                                                type="text" name="your-subject" value=""
                                                 size="40" class="wpcf7-form-control wpcf7-text"
                                                 aria-invalid="false"
-                                                placeholder="Ваш номер телефону:"/></span></p>
-                                <p><input type="submit" value="Надіслати"
-                                          class="wpcf7-form-control wpcf7-submit"/></p>
-                                <div class="wpcf7-response-output wpcf7-display-none"></div>
-                                <#if error??>
-                                    <div>
-                                        <h5 class="text-danger">Errors: </h5>
-                                        <pre class="text-danger">${error}</pre>
-                                    </div>
-                                </#if>
-                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                                placeholder="Тема"/></span></p>
+                                <p><span class="wpcf7-form-control-wrap message"><textarea
+                                                name="message" cols="40" rows="10"
+                                                class="wpcf7-form-control wpcf7-textarea"
+                                                aria-invalid="false"
+                                                placeholder="Опишіть тут"></textarea></span></p>
+                                <p style="text-align: center;"><input type="submit" value="Надіслати"
+                                                                      class="wpcf7-form-control wpcf7-submit"/></p>
                             </form>
                         </div>
                     </div>
@@ -81,4 +77,3 @@
 <script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/9d9d4.js"></script>
 <script src="https://bridge82.qodeinteractive.com/wp-content/cache/minify/e5338.js"></script>
 <#include "../animal/footer.ftl">
-
