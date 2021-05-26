@@ -41,7 +41,6 @@ Web-app for the animal shelter "Dim Sirka".
 * docker-compose down -- stop animal-service app and animal-db containers
 
 ## Link to DB ERD diagram
-https://ibb.co/QKjx9Cb
-
+https://ibb.co/QKjx9Cb - deprecated variant
 ## Link to Arhitecture diagram
 https://drive.google.com/file/d/1130uKal0WG4RHCYmSUmd5GWPayJ31Hi6/view?usp=sharing
