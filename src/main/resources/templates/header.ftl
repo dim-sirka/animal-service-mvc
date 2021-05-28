@@ -15,8 +15,12 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           rel="stylesheet" id="bootstrap-css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 
 </head>
 <body class="home page-template page-template-full_width page-template-full_width-php page page-id-5 ajax_fade page_not_loaded  qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-11.0 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
@@ -30,9 +34,12 @@
                         <div class="container">
                             <div class="container_inner clearfix">
                                 <div class="header_inner_left">
-                                    <div class="mobile_menu_button">
+                                    <div class="mobile_menu_button" style="width: 100%">
                                         <span>
-                                            <i class="qode_icon_font_awesome fa fa-bars "></i> 
+                                            <i class="qode_icon_font_awesome fa fa-bars "></i>
+                                        </span>
+                                        <span style="text-align: right;">
+                                            <img src="https://i.yapx.ru/McBkf.png" alt="Logo" style="height: 100px; width: 67px;" >
                                         </span>
                                     </div>
                                     <div class="logo_wrapper">
@@ -79,17 +86,20 @@
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-164"
                                             class="menu-item menu-item-type-post_type menu-item-object-page narrow">
-                                            <a href="/animals?animalStatus=FREE" class="" id="id-item-32" style="padding: 0 20px;"><i
+                                            <a href="/animals?animalStatus=FREE" class="" id="id-item-32"
+                                               style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Віддаємо</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-161"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=TREATMENT" class="" style="padding: 0 20px;"><i
+                                                    href="/animals?animalStatus=TREATMENT" class=""
+                                                    style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Лікування</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-162"
                                             class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-                                                    href="/animals?animalStatus=ARCHIVE" class="" style="padding: 0 20px;"><i
+                                                    href="/animals?animalStatus=ARCHIVE" class=""
+                                                    style="padding: 0 20px;"><i
                                                         class="menu_icon blank fa"></i><span>Архів</span><span
                                                         class="plus"></span></a></li>
                                         <li id="nav-menu-item-163"
@@ -100,21 +110,25 @@
                                         <@sec.authorize access="isAuthenticated()">
 
                                             <li class="nav-menu-item-163">
-                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow" style="color: white; padding: 0 15px"
+                                                <a class="menu-item menu-item-type-post_type menu-item-object-page  narrow"
+                                                   style="color: white; padding: 0 15px"
                                                    href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                                    aria-haspopup="true" aria-expanded="false">
                                                     Замовлення
                                                 </a>
 
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="/admin/list/orders" style="color:black; line-height: 35px; text-align: center;">Замовлення</a>
-                                                    <a class="dropdown-item" href="/admin/list/archive_orders" style="color:black; line-height: 35px; text-align: center;">Архів
+                                                    <a class="dropdown-item" href="/admin/list/orders"
+                                                       style="color:black; line-height: 35px; text-align: center;">Замовлення</a>
+                                                    <a class="dropdown-item" href="/admin/list/archive_orders"
+                                                       style="color:black; line-height: 35px; text-align: center;">Архів
                                                         замовлень</a>
                                                 </div>
                                             </li>
 
                                             <li id="nav-menu-item-163"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
+                                                class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
+                                                <a
                                                         href="/logout" class="" style="padding: 0 20px"><i
                                                             class="menu_icon blank fa"></i><span>Вихід</span><span
                                                             class="plus"></span></a></li>
@@ -150,13 +164,15 @@
                                         <@sec.authorize access="isAuthenticated()">
                                             <li id="mobile-menu-item-164"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                        href="/admin/list/orders" class=""><span>Замовлення</span></a><span
+                                                        href="/admin/list/orders"
+                                                        class=""><span>Замовлення</span></a><span
                                                         class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                             class="fa fa-angle-down"></i></span></li>
 
                                             <li id="mobile-menu-item-165"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                        href="/admin/list/archive_orders" class=""><span>Архів адміна</span></a><span
+                                                        href="/admin/list/archive_orders"
+                                                        class=""><span>Архів адміна</span></a><span
                                                         class="mobile_arrow"><i class="fa fa-angle-right"></i><i
                                                             class="fa fa-angle-down"></i></span></li>
 

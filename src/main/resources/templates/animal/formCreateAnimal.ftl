@@ -34,28 +34,28 @@
                                 <div class="screen-reader-response"></div>
                                 <form action="/admin/animals/new" method="post" autocomplete="off"
                                       class="wpcf7-form cf7_custom_style_1">
-                                    <p><span class="wpcf7-form-control-wrap your-subject"><input
+                                    <p><span class="wpcf7-form-control-wrap your-subject">Ім'я тварини:<input
                                                     type="text" name="name" value="" size="40"
                                                     class="wpcf7-form-control wpcf7-text"
                                                     aria-invalid="false"
                                                     placeholder="Ім'я тварини:"/></span></p>
-                                    <p><span class="wpcf7-form-control-wrap your-subject"><input
+                                    <p><span class="wpcf7-form-control-wrap your-subject">Вік тварини:<input
                                                     type="text" name="age" value="" size="40"
                                                     class="wpcf7-form-control wpcf7-text"
                                                     aria-invalid="false"
                                                     placeholder="Вік тварини:"/></span></p>
-                                    <p><span class="wpcf7-form-control-wrap your-subject"><input
+                                    <p><span class="wpcf7-form-control-wrap your-subject">Посилання на фото:<input
                                                     type="text" name="mediaLinks" value=""
                                                     size="40" class="wpcf7-form-control wpcf7-text"
                                                     aria-invalid="false"
                                                     placeholder="Посилання на фото:"/></span></p>
-                                    <select class="select-program col-md-12" name="animalType" required>
+                                    <p>Тип тварини:<span class="wpcf7-form-control-wrap message"><select class="select-program col-md-12" name="animalType" required>
                                         <option name="animalType" disabled selected>Тип тварини:</option>
                                         <option>DOG</option>
                                         <option>CAT</option>
                                         <option>OTHER</option>
-                                    </select>
-                                    <p><span class="wpcf7-form-control-wrap message">
+                                            </select></span></p>
+                                    <p>Опис:<span class="wpcf7-form-control-wrap message">
                                             <textarea type="text"
                                                       name="description" cols="40" rows="10"
                                                       class="wpcf7-form-control wpcf7-textarea"

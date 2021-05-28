@@ -34,9 +34,12 @@
                         <div class="container">
                             <div class="container_inner clearfix">
                                 <div class="header_inner_left">
-                                    <div class="mobile_menu_button">
+                                    <div class="mobile_menu_button" style="width: 100%">
                                         <span>
                                             <i class="qode_icon_font_awesome fa fa-bars "></i>
+                                        </span>
+                                        <span style="text-align: right;">
+                                            <img src="https://i.yapx.ru/McBkf.png" alt="Logo" style="height: 100px; width: 67px;" >
                                         </span>
                                     </div>
                                     <div class="logo_wrapper">
