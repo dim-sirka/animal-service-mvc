@@ -37,10 +37,10 @@
                                     </div>
                                     <div class="logo_wrapper">
                                         <div class="q_logo">
-                                            <a itemprop="url" href="https://bridge82.qodeinteractive.com/"
+                                            <a itemprop="url" href="#"
                                                style="height: 74px; visibility: visible;">
                                                 <img itemprop="image" class="normal"
-                                                     src="https://cdn1.savepice.ru/uploads/2021/5/7/f4f472152e859d515b6ff803ea78c58c-full.png"
+                                                     src="https://i.yapx.ru/McBkf.png"
                                                      alt="Logo" style="height: 100%;">
                                             </a>
                                         </div>

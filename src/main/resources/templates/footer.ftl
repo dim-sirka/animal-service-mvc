@@ -18,7 +18,7 @@
                                     <div id="text-2" class="widget widget_text">
                                         <div class="textwidget">
                                             <img
-                                                    src="https://cdn1.savepice.ru/uploads/2021/5/7/f4f472152e859d515b6ff803ea78c58c-full.png"
+                                                    src="https://i.yapx.ru/McBkf.png"
                                                     alt="logo">
                                         </div>
                                     </div>
