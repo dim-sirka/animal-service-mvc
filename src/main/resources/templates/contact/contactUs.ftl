@@ -41,22 +41,22 @@
                                     <input type="hidden" name="_wpcf7_container_post"
                                            value="127"/>
                                 </div>
-                                <p><span class="wpcf7-form-control-wrap full-name"><input
+                                <p>Ваше Ім'я:<span class="wpcf7-form-control-wrap full-name"><input
                                                 type="text" name="full-name" value="" size="40"
                                                 class="wpcf7-form-control wpcf7-text"
                                                 aria-invalid="false"
                                                 placeholder="Ваше Ім'я"/></span></p>
-                                <p><span class="wpcf7-form-control-wrap email"><input
+                                <p>Ваш e-mail адрес:<span class="wpcf7-form-control-wrap email"><input
                                                 type="email" name="email" value="" size="40"
                                                 class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email"
                                                 aria-invalid="false"
                                                 placeholder="Ваш e-mail адрес"/></span></p>
-                                <p><span class="wpcf7-form-control-wrap your-subject"><input
+                                <p>Тема:<span class="wpcf7-form-control-wrap your-subject"><input
                                                 type="text" name="your-subject" value=""
                                                 size="40" class="wpcf7-form-control wpcf7-text"
                                                 aria-invalid="false"
                                                 placeholder="Тема"/></span></p>
-                                <p><span class="wpcf7-form-control-wrap message"><textarea
+                                <p>Опишіть тут:<span class="wpcf7-form-control-wrap message"><textarea
                                                 name="message" cols="40" rows="10"
                                                 class="wpcf7-form-control wpcf7-textarea"
                                                 aria-invalid="false"
