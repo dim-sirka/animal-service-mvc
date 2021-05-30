@@ -1,5 +1,6 @@
 package com.dimsirka.animalservice.services.impl;
 
+import com.dimsirka.animalservice.dtoes.MessageDto;
 import com.dimsirka.animalservice.entities.EmailMessageType;
 import com.dimsirka.animalservice.services.EmailService;
 import lombok.extern.slf4j.Slf4j;
@@ -25,15 +26,25 @@ public class EmailServiceImpl implements EmailService {
 
     @Override
     public void sendMessage(String email, String extraMessage, EmailMessageType emailMessageType) {
+        sendMessage(email, extraMessage, emailMessageType);
+    }
+
+    @Override
+    public void sendMessage(MessageDto messageDto, String adminEmail) {
+        sendMessage(adminEmail, messageDto.getUserName(),
+                messageDto.getUserEmail() + "\n" + messageDto.getDescription());
+    }
+
+    private void sendMessage(String email, String subject, String content) {
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         try {
             mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
-            mimeMessage.setSubject(emailMessageType.getSubject());
-            mimeMessage.setContent(emailMessageType.getMessage() + extraMessage, "text/plain");
+            mimeMessage.setSubject(subject);
+            mimeMessage.setContent(content, "text/plain");
             javaMailSender.send(mimeMessage);
         } catch (Exception e) {
             log.error("Sending message with subject<{}> to user: <{}> was failed!",
-                    emailMessageType.getSubject(), email);
+                    subject, email);
         }
     }
 }
