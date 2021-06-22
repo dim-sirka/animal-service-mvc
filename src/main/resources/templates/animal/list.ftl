@@ -147,8 +147,8 @@
                                                         <#elseif animal.animalStatus == "TREATMENT">
                                                             <a itemprop="url"
                                                                class="qode-qbutton-main-color qode-qbutton-full-width qode-qbutton-square"
-                                                               href="/"
-                                                               target="_self"
+                                                               href="https://easypay.ua/ua/moneytransfer"
+                                                               target="_blank"
                                                                style="background-color:#9aa0b0;height:84px;line-height:84px"><span>Пожертвувати</span></a>
                                                         </#if>
                                                     </div>

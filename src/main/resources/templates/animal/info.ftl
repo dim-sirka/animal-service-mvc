@@ -107,7 +107,7 @@
                             <button class="add-to-cart btn btn-default" type="button">Створити замовлення</button>
                         </a>
                     <#elseif animal.animalStatus == "TREATMENT">
-                        <a href="/" class="row justify-content-center">
+                        <a href="https://easypay.ua/ua/moneytransfer" class="row justify-content-center">
                             <button class="add-to-cart btn btn-default" type="button">Пожертвувати</button>
                         </a>
                     </#if>

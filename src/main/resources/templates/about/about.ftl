@@ -38,12 +38,12 @@
                                     style="color: rgb(255, 255, 255); border-color: rgb(250, 250, 250); margin: 0px 0px 6px; background-color: rgba(255, 255, 255, 0.01);">Більше</a>
                             <a
                                     itemprop="url"
-                                    href="/animals?animalStatus=TREATMENT"
-                                    target="_self"
+                                    href="https://easypay.ua/ua/moneytransfer"
                                     data-hover-background-color="#fafafa"
                                     data-hover-border-color="rgba(255,255,255,0.1)"
                                     data-hover-color="#414141"
                                     class="qbutton  default"
+                                    target="_blank"
                                     style="color: rgb(255, 255, 255); border-color: rgb(250, 250, 250); margin: 0px 0px 6px; background-color: rgba(255, 255, 255, 0.01);">Пожертвувати</a>
                         </div>
                     </div>
