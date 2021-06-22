@@ -1,4 +1,5 @@
 <#include "header.ftl">
+<#assign pageSubmissionUrl = currencyPair???then('&currencyPair=${currencyPair}','') >
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -52,11 +53,19 @@
                                     </div>
                                 </div>
                                 <div class="btn-group float-md-right ml-3">
-                                    <button type="button" class="btn btn-lg btn-light"><span
-                                                class="fa fa-arrow-left"></span></button>
-                                    <button type="button" class="btn btn-lg btn-light">7</button>
-                                    <button type="button" class="btn btn-lg btn-light"><span
-                                                class="fa fa-arrow-right"></span></button>
+                                        <ul class="pagination">
+                                            <li class="page-item  <#if !animals.hasPreviousPage >disabled</#if>">
+                                                <a class="page-link" href="?page=${animals.currentPageNumber - 1}${pageSubmissionUrl}"
+                                                   tabindex="-1">&laquo;</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link">${animals.currentPageNumber}</a>
+                                            </li>
+                                            <li class="page-item <#if !animals.hasNextPage >disabled</#if>">
+                                                <a class="page-link" href="?page=${animals.currentPageNumber + 1}${pageSubmissionUrl}"
+                                                   tabindex="-1">&raquo;</a>
+                                            </li>
+                                        </ul>
                                 </div>
                             </div>
                         </div>
@@ -263,6 +272,9 @@
 </#if>
 
 <style>
+    .pagination {
+        padding-top: 7%;
+    }
     #visitCounter {
         background-color: #000000;
         opacity: 0.8;

@@ -24,45 +24,59 @@
     <div class="full_width_inner">
         <div class="vc_row wpb_row section vc_row-fluid  vc_custom_1478091158622 grid_section"
              style=' text-align:left;'>
+            <#if success??>
+                <div class="alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Ваше замовлення зареєстровано!
+                </div>
+            </#if>
             <div class=" section_inner clearfix">
                 <div class="vc_column-inner" style="margin: 5%;">
                     <div class="wpb_wrapper">
                         <div role="form" class="wpcf7" id="wpcf7-f126-p127-o1" lang="en-US"
                              dir="ltr">
                             <div class="screen-reader-response"></div>
-                            <form action="/contact-us/#wpcf7-f126-p127-o1" method="post"
+                            <form action="/message/new" method="post" autocomplete="off"
                                   class="wpcf7-form cf7_custom_style_1" novalidate="novalidate">
-                                <div style="display: none;">
-                                    <input type="hidden" name="_wpcf7" value="126"/>
-                                    <input type="hidden" name="_wpcf7_version" value="5.1.6"/>
-                                    <input type="hidden" name="_wpcf7_locale" value="en_US"/>
-                                    <input type="hidden" name="_wpcf7_unit_tag"
-                                           value="wpcf7-f126-p127-o1"/>
-                                    <input type="hidden" name="_wpcf7_container_post"
-                                           value="127"/>
-                                </div>
+<#--                                <div style="display: none;">-->
+<#--                                    <input type="hidden" name="_wpcf7" value="126"/>-->
+<#--                                    <input type="hidden" name="_wpcf7_version" value="5.1.6"/>-->
+<#--                                    <input type="hidden" name="_wpcf7_locale" value="en_US"/>-->
+<#--                                    <input type="hidden" name="_wpcf7_unit_tag"-->
+<#--                                           value="wpcf7-f126-p127-o1"/>-->
+<#--                                    <input type="hidden" name="_wpcf7_container_post"-->
+<#--                                           value="127"/>-->
+<#--                                </div>-->
                                 <p>Ваше Ім'я:<span class="wpcf7-form-control-wrap full-name"><input
-                                                type="text" name="full-name" value="" size="40"
+                                                type="text" name="userName" size="5"
                                                 class="wpcf7-form-control wpcf7-text"
                                                 aria-invalid="false"
                                                 placeholder="Ваше Ім'я"/></span></p>
                                 <p>Ваш e-mail адрес:<span class="wpcf7-form-control-wrap email"><input
-                                                type="email" name="email" value="" size="40"
+                                                type="email" name="userEmail"
                                                 class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email"
                                                 aria-invalid="false"
                                                 placeholder="Ваш e-mail адрес"/></span></p>
                                 <p>Тема:<span class="wpcf7-form-control-wrap your-subject"><input
-                                                type="text" name="your-subject" value=""
-                                                size="40" class="wpcf7-form-control wpcf7-text"
+                                                type="text" name="topic"
+                                                size="5" class="wpcf7-form-control wpcf7-text"
                                                 aria-invalid="false"
                                                 placeholder="Тема"/></span></p>
-                                <p>Опишіть тут:<span class="wpcf7-form-control-wrap message"><textarea
-                                                name="message" cols="40" rows="10"
-                                                class="wpcf7-form-control wpcf7-textarea"
+                                <p>Опишіть тут:<span class="wpcf7-form-control-wrap your-subject"><input
+                                                type="text"
+                                                name="description"
+                                                size="10" class="wpcf7-form-control wpcf7-text"
                                                 aria-invalid="false"
-                                                placeholder="Опишіть тут"></textarea></span></p>
+                                                placeholder="Опишіть тут"/></span></p>
                                 <p style="text-align: center;"><input type="submit" value="Надіслати"
                                                                       class="wpcf7-form-control wpcf7-submit"/></p>
+                                <#if error??>
+                                    <div>
+                                        <h5 class="text-danger">Errors: </h5>
+                                        <pre class="text-danger">${error}</pre>
+                                    </div>
+                                </#if>
+                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                             </form>
                         </div>
                     </div>
